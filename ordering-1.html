@@ -35,6 +35,7 @@
 			</li>
 		</ul>
 		<div class="citysel-drop">
+			<span class="citysel-drop--close"></span>
 			<h4>Выберите ближайший торговый комплекс:</h4>
 			<p>От выбора зависит наличие товаров и стоимость доставки</p>
 			<ul>
@@ -55,7 +56,15 @@
 				<p class="header__phone"><strong class="header__phone--title">Телефон магазина:</strong> <span class="header__address--text">8 (38532) 4-57-57</span></p>
 				<div class="header__call">
 					<h4 class="header__call--phone"><strong>без выходных</strong> <a href="tel:+73852558558"><span>(3852)</span> 558-558</a></h4>
-					<button class="header__call--order">Заказать звонок</button>
+					<div class="header__call--group">
+						<button class="header__call--order">Связаться с нами</button>
+						<ul>
+							<li><a href="#">Заказать звонок</a></li>
+							<li><a href="#">Поблагодарить</a></li>
+							<li><a href="#">Пожаловаться</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
 				</div>
 				<img src="./img/logo.png" width="250" height="60" class="header__logo" alt="">
 				<div class="header__search">
@@ -83,10 +92,10 @@
 				<li class="nav__item"><a href="#" class="nav__item--link">Как купить</a></li>
 				<li class="nav__item"><a href="#" class="nav__item--link">Корпоративным клиентам</a></li>
 				<li class="nav__item"><a href="#" class="nav__item--link">Доставка</a></li>
-				<li class="nav__item"><a href="#" class="nav__item--link">Прайс</a></li>
 				<li class="nav__item"><a href="#" class="nav__item--link">Скидки+бонусы</a></li>
 				<li class="nav__item"><a href="#" class="nav__item--link">Услуги</a></li>
 				<li class="nav__item"><a href="#" class="nav__item--link">Полезная информация</a></li>
+				<li class="nav__item"><a href="#" class="nav__item--link">Адреса магазинов</a></li>
 			</ul>
 		</nav>
 		<a href="#" class="prev-page">Оформление заказа</a>
@@ -577,7 +586,7 @@
 		<div class="footer__row">
 			<p class="footer__subscribe--title">Подпишись на рассылку и плати меньше!</p>
 			<div class="footer__subscribe">
-				<input type="text" class="footer__subscribe--input" placeholder="Ваш e-mail">
+				<input type="text" class="footer__subscribe--input" placeholder="Ваше имя">
 				<input type="text" class="footer__subscribe--input" placeholder="Ваш e-mail">
 				<button class="footer__subscribe--submit">Подписаться</button>
 			</div>

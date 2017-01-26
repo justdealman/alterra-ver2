@@ -346,7 +346,7 @@
 							<p class="catalog__table-list--code">код товара: '+$(this).find('.catalog__table--code').text()+'</p>\
 							<h5 class="catalog__table-list--price"><span>'+$(this).find('.catalog__table--price').html()+'</span> / шт.</h5>\
 							<div class="catalog__table-list--picture">\
-								<img src="'+$(this).attr('data-img')+'" class="img-contain" alt="">\
+								<img src="'+$(this).find('.catalog__table--pic img').attr('src')+'" class="img-contain" alt="">\
 							</div>\
 						');
 					});
@@ -448,9 +448,9 @@
 		e.preventDefault();
 		$('.fade-bg, .citysel-drop').stop().fadeIn(300);
 	});
-	$('.fade-bg').on('click', function(e) {
+	$('.fade-bg, .citysel-drop--close').on('click', function(e) {
 		e.preventDefault();
-		$('.fade-bg, .citysel-drop').removeClass('fixed').stop().fadeOut(300);
+		$('.fade-bg, .citysel-drop, .modal').removeClass('fixed').stop().fadeOut(300);
 		hideMobileMenu();
 	});
 	$('.citysel-drop li span').on('click', function(e) {
@@ -604,5 +604,54 @@
 		e.preventDefault();
 		$('.citysel-m').addClass('fixed');
 		$('.fade-bg').show();
+	});
+	if ( $('.about__nav').is(':visible') ) {
+		$('.about__nav a').on('click', function(e) {
+			e.preventDefault();
+			var t = $(this).parent();
+			$('html, body').stop().animate({
+				scrollTop: $('[data-scroll="'+$(this).attr('href')+'"]').position().top
+			}, 500);
+			setTimeout(function() {
+				t.addClass('active').siblings().removeClass('active');
+			}, 500);
+		});
+		$(window).on('scroll', function() {
+			if ( $(document).scrollTop() > $('.about__main').position().top ) {
+				$('.about__nav').css({
+					marginTop: $(document).scrollTop()-$('.about__main').position().top
+				});
+			} else {
+				$('.about__nav').css({
+					marginTop: 0
+				});
+			}
+			$('[data-scroll').each(function() {
+				if ( $(this).position().top <= $(document).scrollTop() ) {
+					$('.about__nav a[href="'+$(this).attr('data-scroll')+'"]').parent().addClass('active').siblings().removeClass('active');
+				}
+			});
+		});
+	}
+	$('.catalog__table--pic div').on('mouseover', function() {
+		$('.table--pic__zoom').remove();
+		$('body').append('<div class="table--pic__zoom" style="left:'+$(this).offset().left+'px;top:'+$(this).offset().top+'px"><div><div><img src="'+$(this).find('img').attr('src')+'" class="img-contain" alt=""></div></div></div>');
+		setImgContain();
+	});
+	$('.catalog__table--pic div').on('mouseout', function() {
+		$('.table--pic__zoom').remove();
+	});
+	$('[data-open]').on('click', function(e) {
+		e.preventDefault();
+		var t = $('.modal[data-target="'+$(this).attr('data-open')+'"]');
+		$('.fade-bg').stop(true,true).fadeIn(300);
+		var h = $(window).scrollTop()+($(window).height()-t.outerHeight())/2;
+		t.css({
+			'top': h+'px'
+		}).stop(true,true).fadeIn(300).siblings('[data-target]').stop(true,true).fadeOut(300);
+	});
+	$('.modal--close').on('click', function(e) {
+		e.preventDefault();
+		$('.fade-bg, .modal').stop(true,true).fadeOut(300);
 	});
 });

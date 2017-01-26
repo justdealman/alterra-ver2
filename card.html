@@ -35,6 +35,7 @@
 			</li>
 		</ul>
 		<div class="citysel-drop">
+			<span class="citysel-drop--close"></span>
 			<h4>Выберите ближайший торговый комплекс:</h4>
 			<p>От выбора зависит наличие товаров и стоимость доставки</p>
 			<ul>
@@ -55,7 +56,15 @@
 				<p class="header__phone"><strong class="header__phone--title">Телефон магазина:</strong> <span class="header__address--text">8 (38532) 4-57-57</span></p>
 				<div class="header__call">
 					<h4 class="header__call--phone"><strong>без выходных</strong> <a href="tel:+73852558558"><span>(3852)</span> 558-558</a></h4>
-					<button class="header__call--order">Заказать звонок</button>
+					<div class="header__call--group">
+						<button class="header__call--order">Связаться с нами</button>
+						<ul>
+							<li><a href="#">Заказать звонок</a></li>
+							<li><a href="#">Поблагодарить</a></li>
+							<li><a href="#">Пожаловаться</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
 				</div>
 				<img src="./img/logo.png" width="250" height="60" class="header__logo" alt="">
 				<div class="header__search">
@@ -83,10 +92,10 @@
 				<li class="nav__item"><a href="#" class="nav__item--link">Как купить</a></li>
 				<li class="nav__item"><a href="#" class="nav__item--link">Корпоративным клиентам</a></li>
 				<li class="nav__item"><a href="#" class="nav__item--link">Доставка</a></li>
-				<li class="nav__item"><a href="#" class="nav__item--link">Прайс</a></li>
 				<li class="nav__item"><a href="#" class="nav__item--link">Скидки+бонусы</a></li>
 				<li class="nav__item"><a href="#" class="nav__item--link">Услуги</a></li>
 				<li class="nav__item"><a href="#" class="nav__item--link">Полезная информация</a></li>
+				<li class="nav__item"><a href="#" class="nav__item--link">Адреса магазинов</a></li>
 			</ul>
 		</nav>
 		<a href="#" class="prev-page">Назад</a>
@@ -254,8 +263,8 @@
 								<span class="quantity-e--button quantity-e--button_minus"></span>
 								<span class="quantity-e--button quantity-e--button_plus"></span>
 							</div>
-							<button class="card__right--button card__right--add-to-basket">Добавить в корзину</button>
-							<button class="card__right--button card__right--buy_one-click">Купить в один клик</button>
+							<button class="card__right--button card__right--add-to-basket" data-open="add-to-basket">Добавить в корзину</button>
+							<button class="card__right--button card__right--buy_one-click" data-open="buy-one-click">Купить в один клик</button>
 							<div class="card__right--compare">
 								<input type="checkbox" name="add-to-compare">
 								<p class="title">Сравнить товары</p>
@@ -655,7 +664,7 @@
 		<div class="footer__row">
 			<p class="footer__subscribe--title">Подпишись на рассылку и плати меньше!</p>
 			<div class="footer__subscribe">
-				<input type="text" class="footer__subscribe--input" placeholder="Ваш e-mail">
+				<input type="text" class="footer__subscribe--input" placeholder="Ваше имя">
 				<input type="text" class="footer__subscribe--input" placeholder="Ваш e-mail">
 				<button class="footer__subscribe--submit">Подписаться</button>
 			</div>
@@ -861,6 +870,70 @@
 			<li><a href="#" class="mobile-drop__nav--link">О компании</a></li>
 			<li><a href="#" class="mobile-drop__nav--link mobile-drop__nav--link_phone">+7 (3852) 558-558</a></li>
 		</ul>
+	</div>
+	<div class="modal modal_buy-one-click" data-target="buy-one-click">
+		<span class="modal--close"></span>
+		<h3 class="modal--title">Купить в один клик</h3>
+		<div class="modal__content">
+			<div class="modal__pic">
+				<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
+			</div>
+			<div class="modal__info">
+				<h5 class="modal__info--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h5>
+				<p class="modal__info--price"><span>Цена:</span> 116 <em class="rouble-icon">г</em></p>
+				<div class="modal__info--quantity">
+					<p>Количество:</p>
+					<div class="quantity-e">
+						<input type="text" class="quantity-e--input" value="1">
+						<span class="quantity-e--button quantity-e--button_minus"></span>
+						<span class="quantity-e--button quantity-e--button_plus"></span>
+					</div>
+				</div>
+			</div>
+			<div class="modal__form">
+				<div class="modal__form--item">
+					<label>Контактное лицо</label>
+					<input type="text">
+				</div>
+				<div class="modal__form--item">
+					<label>Телефон:</label>
+					<input type="text">
+				</div>
+				<div class="modal__form--item">
+					<label>E-mail:</label>
+					<input type="text">
+				</div>
+				<button class="modal__form--button">Отправить заказ</button>
+			</div>
+			<a href="#" class="modal--back">Продолжить покупки</a>
+		</div>
+	</div>
+	<div class="modal modal_add-to-basket" data-target="add-to-basket">
+		<span class="modal--close"></span>
+		<h3 class="modal--title">Товар добавлен в корзину</h3>
+		<div class="modal__content">
+			<div class="modal__pic">
+				<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
+			</div>
+			<div class="modal__info">
+				<h5 class="modal__info--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h5>
+				<p class="modal__info--price"><span>Цена:</span> 116 <em class="rouble-icon">г</em></p>
+				<div class="modal__info--quantity">
+					<p>Количество:</p>
+					<div class="quantity-e">
+						<input type="text" class="quantity-e--input" value="1">
+						<span class="quantity-e--button quantity-e--button_minus"></span>
+						<span class="quantity-e--button quantity-e--button_plus"></span>
+					</div>
+				</div>
+			</div>
+			<div class="modal__basket">
+				<p>В корзине: <strong>10 товаров</strong></p>
+				<p>На сумму: <strong>20 558 руб.</strong></p>
+				<button class="modal__basket--button">Перейти в корзину</button>
+			</div>
+			<a href="#" class="modal--back">Продолжить покупки</a>
+		</div>
 	</div>
 	<div class="fade-bg"></div>
 	<script src="./js/libs.js"></script>
