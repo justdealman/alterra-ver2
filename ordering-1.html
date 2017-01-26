@@ -3,7 +3,7 @@
 <head>
 	<title>Alterra</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=1000, user-scalable=yes">
+	<meta name="viewport" content="width=device-width, user-scalable=yes">
 	<!--<link href="./favicon.ico" rel="shortcut icon">-->
 	<link href="./css/style.css" rel="stylesheet">
 	<!--[if IE 8]>
@@ -12,8 +12,41 @@
 </head>
 <body>
 	<div class="wrapper">
+		<div class="panel-m">
+			<p class="panel-m--city">Барнаул</p>
+			<p class="panel-m--address">Павловский тракт, 206 б</p>
+		</div>
+		<ul class="citysel-m">
+			<li class="active">
+				<h6>г. Новоалтайск, ул. Дорожная, 44/1</h6>
+				<p>Центральный торговый комплекс на авторазвязке Барнаул-Бийск-Новосибирск</p>
+			</li>
+			<li>
+				<h6>г. Барнаул, Павловский тракт, 206 б</h6>
+				<p>Центральный торговый комплекс на авторазвязке Барнаул-Бийск-Новосибирск</p>
+			</li>
+			<li>
+				<h6>г. Новоалтайск, ул. Ударника, 2</h6>
+				<p>Центральный торговый комплекс на авторазвязке Барнаул-Бийск-Новосибирск</p>
+			</li>
+			<li>
+				<h6>г. Бийск, пер. Шубенский, 75</h6>
+				<p>Центральный торговый комплекс на авторазвязке Барнаул-Бийск-Новосибирск</p>
+			</li>
+		</ul>
+		<div class="citysel-drop">
+			<h4>Выберите ближайший торговый комплекс:</h4>
+			<p>От выбора зависит наличие товаров и стоимость доставки</p>
+			<ul>
+				<li class="active"><span>Центральный торговый комплекс на авторазвязке Барнаул-Бийск-Новосибирск г. Новоалтайск, ул. Дорожная, 44/1</span></li>
+				<li><span>г. Барнаул, Павловский тракт, 206 б</span></li>
+				<li><span>г. Новоалтайск, ул. Ударника, 2</span></li>
+				<li><span>г. Бийск, пер. Шубенский, 75</span></li>
+			</ul>
+		</div>
 		<header class="header">
 			<div class="header__row">
+				<span class="mobile-menu"></span>
 				<div class="header__shop">
 					<p class="header__shop--title">Выберите ближайший магазин:</p>
 					<h5 class="header__shop--address"><span>Магазин на авторазвязке Барнаул-Бийск-Новосибирск</span></h5>
@@ -26,7 +59,7 @@
 				</div>
 				<img src="./img/logo.png" width="250" height="60" class="header__logo" alt="">
 				<div class="header__search">
-					<input type="text" class="header__search--input">
+					<input type="text" class="header__search--input" placeholder="Поиск товаров по каталогу">
 					<input type="submit" class="header__search--submit" value="">
 				</div>
 				<div class="header__basket">
@@ -56,9 +89,10 @@
 				<li class="nav__item"><a href="#" class="nav__item--link">Полезная информация</a></li>
 			</ul>
 		</nav>
+		<a href="#" class="prev-page">Оформление заказа</a>
 		<div class="content">
-			<div class="content__col-1">
-				<div class="nav-side nav-side_minimized">
+			<div class="content__col-1 mobile-hide">
+				<div class="nav-side nav-side_minimized mobile-hide">
 					<h4 class="nav-side__title nav-side__title_clickable">Каталог товаров</h4>
 					<ul class="nav-side__list">
 						<li class="nav-side__item">
@@ -241,122 +275,298 @@
 							<label><input type="checkbox">Запомнить меня</label>
 						</div>
 					</div>
-					<h2>Детали заказа</h2>
-					<div class="ordering__group">
-						<h3><i class="user-icon"></i>Тип плательщика:</h3>
-						<ul class="ordering__group--list">
-							<li class="ordering__group--item"><label><input type="radio" name="r-1" checked>Физическое лицо</label></li>
-							<li class="ordering__group--item"><label><input type="radio" name="r-1">Юридическое лицо</label></li>
-						</ul>
-						<h3>Информация о покупателе <em>(для оплаты и доставки заказа)</em></h3>
-						<div class="ordering__group--form">
-							<input type="text" placeholder="Ф.И.О.*">
+					<div class="mobile-hide">
+						<h2>Детали заказа</h2>
+						<div class="ordering__group">
+							<h3><i class="user-icon"></i>Тип плательщика:</h3>
+							<ul class="ordering__group--list">
+								<li class="ordering__group--item">
+									<label><input type="radio" name="user-type" data="switch" value="1">Физическое лицо</label>
+									<div class="ordering__group--sub is-hidden" data-user-type="1">
+										<h3>Информация о покупателе <em>(для оплаты и доставки заказа)</em></h3>
+										<div class="ordering__group--form">
+											<input type="text" placeholder="Ф.И.О.*">
+										</div>
+										<div class="ordering__group--form">
+											<input type="text" placeholder="E-mail*">
+										</div>
+										<div class="ordering__group--form">
+											<input type="text" placeholder="+7 (___) ___-_-__">
+										</div>
+										<div class="ordering__group--form">
+											<input type="text" placeholder="Номер дисконтной карты">
+										</div>
+									</div>
+								</li>
+								<li class="ordering__group--item">
+									<label><input type="radio" name="user-type" data="switch" value="2">Юридическое лицо</label>
+									<div class="ordering__group--sub is-hidden" data-user-type="2">
+										<h3>Информация о покупателе <em>(для оплаты и доставки заказа)</em></h3>
+										<div class="ordering__group--form">
+											<input type="text" placeholder="Контактное лицо">
+										</div>
+										<div class="ordering__group--form">
+											<input type="text" placeholder="Телефон">
+										</div>
+										<div class="ordering__group--form">
+											<input type="text" placeholder="E-mail">
+										</div>
+										<div class="ordering__group--form">
+											<input type="text" placeholder="ИНН">
+										</div>
+										<div class="ordering__group--form">
+											<input type="text" placeholder="КПП">
+										</div>
+									</div>
+								</li>
+							</ul>
 						</div>
-						<div class="ordering__group--form">
-							<input type="text" placeholder="E-mail*">
+						<div class="ordering__group">
+							<h3><i class="delivery-icon"></i>Способ доставки:</h3>
+							<ul class="ordering__group--list">
+								<li class="ordering__group--item">
+									<label><input type="radio" name="delivery-type" data="switch" value="1">Самовывоз <em>бесплатно</em></label>
+									<ul class="ordering__group--list_sub is-hidden" data-delivery-type="1">
+										<li class="ordering__group--item"><span>Ваш магазин: г. Новоалтайск, ул. Дорожная 44/1</span></li>
+									</ul>
+								</li>
+								<li class="ordering__group--item"><label><input type="radio" name="delivery-type" data="switch" value="2">Доставка <em><a href="#">стоимость требует уточнения</a></em></label></li>
+							</ul>
 						</div>
-						<div class="ordering__group--form">
-							<input type="text" placeholder="+7 (___) ___-_-__">
-						</div>
-						<div class="ordering__group--form">
-							<input type="text" placeholder="Номер дисконтной карты">
-						</div>
-					</div>
-					<div class="ordering__group">
-						<h3><i class="delivery-icon"></i>Способ доставки:</h3>
-						<ul class="ordering__group--list">
-							<li class="ordering__group--item">
-								<label><input type="radio" name="r-2" checked>Самовывоз <em>бесплатно</em></label>
-								<ul class="ordering__group--list_sub">
-									<li class="ordering__group--item"><label><input type="radio" name="r-3">Склад на авторазвязке Барнаул-Бийск-Новосибирск (г. Новоалтайск, ул. Дорожная 44/1)</label></li>
-									<li class="ordering__group--item"><label><input type="radio" name="r-3">Склад г. Барнаул (Павловский тракт, 206)</label></li>
-									<li class="ordering__group--item"><label><input type="radio" name="r-3">Склад г. Новоалтайск (ул. Ударника 2)</label></li>
-									<li class="ordering__group--item"><label><input type="radio" name="r-3">Склад г. Бийск (пер. Шубенский, 75)</label></li>
+						<div class="is-hidden" data-delivery-type="2">
+							<div class="ordering__group">
+								<h3>Ваш адрес:</h3>
+								<div class="ordering__group--form">
+									<input type="text" placeholder="Город, село*">
+								</div>
+								<div class="ordering__group--form">
+									<input type="text" placeholder="Номер дома*">
+								</div>
+								<div class="ordering__group--form">
+									<input type="text" placeholder="Улица">
+								</div>
+								<div class="ordering__group--form">
+									<input type="text" placeholder="Этаж">
+								</div>
+								<div class="ordering__group--form">
+									<input type="text" placeholder="Код (домофон)">
+								</div>
+								<div class="ordering__group--form">
+									<input type="text" placeholder="Номер квартиры">
+								</div>
+								<div class="ordering__group--form">
+									<textarea cols="100" rows="3" placeholder="Примечание к адресу"></textarea>
+								</div>
+								<div class="ordering__group--form ordering__group--form_checkbox">
+									<label><input type="checkbox">Нужна разгрузка</label>
+								</div>
+								<div class="ordering__group--form ordering__group--form_checkbox">
+									<label><input type="checkbox">Нужен подъем</label>
+								</div>
+							</div>
+							<div class="ordering--frame">
+								<h3>Выберите дату доставки</h3>
+								<ul>
+									<li><a href="#">01.11</a></li>
+									<li><a href="#">01.11</a></li>
+									<li><a href="#">01.11</a></li>
+									<li><a href="#">01.11</a></li>
+									<li><a href="#">01.11</a></li>
+									<li><a href="#">01.11</a></li>
+									<li><a href="#">01.11</a></li>
+									<li><a href="#">01.11</a></li>
+									<li><a href="#">01.11</a></li>
+									<li><a href="#">01.11</a></li>
+									<li class="active"><a href="#">01.11</a></li>
 								</ul>
-							</li>
-							<li class="ordering__group--item"><label><input type="radio" name="r-2">Доставка <em><a href="#">стоимость требует уточнения</a></em></label></li>
-						</ul>
+							</div>
+							<div class="ordering--frame">
+								<h3>Выберите время доставки</h3>
+								<ul>
+									<li><a href="#">08:00-12:00</a></li>
+									<li><a href="#">12:00-16:00</a></li>
+									<li class="active"><a href="#">16:00-20:00</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="ordering__group">
+							<h3><i class="payment-icon"></i>Способ оплаты:</h3>
+							<ul class="ordering__group--list">
+								<li class="ordering__group--item"><label><input type="radio" name="r-2">Оплата на сайте банковской картой</label></li>
+								<li class="ordering__group--item"><label><input type="radio" name="r-2">Наличными / картой в магазине</label></li>
+							</ul>
+						</div>
+						<h3>Состав заказа</h3>
+						<div class="basket__table">
+							<table>
+								<thead>
+									<th colspan="2">Товары</th>
+									<th>Цена</th>
+									<th>Количество</th>
+									<th>Сумма</th>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="basket__table--picture">
+											<div>
+												<img src="./pic/b-1.png" width="65" height="25" class="img-contain" alt="">
+											</div>
+										</td>
+										<td>
+											<h6 class="basket__table--code">Код товара: 0А-00001456</h6>
+											<h3 class="basket__table--title"><a href="#">Сайдинг Монтана СВЕТЛАЯ БИРЮЗА 3,0х0,232 /20</a></h3>
+										</td>
+										<td class="basket__table--price">
+											<h5><span>121</span> руб.</h5>
+										</td>
+										<td class="basket__table--quantity">
+											<div class="quantity-e">
+												<input type="text" class="quantity-e--input" value="1">
+												<span class="quantity-e--button quantity-e--button_minus"></span>
+												<span class="quantity-e--button quantity-e--button_plus"></span>
+											</div>
+										</td>
+										<td class="basket__table--total">
+											<h5><span>121</span> руб.</h5>
+										</td>
+									</tr>
+									<tr>
+										<td class="basket__table--picture">
+											<div>
+												<img src="./pic/b-1.png" width="65" height="25" class="img-contain" alt="">
+											</div>
+										</td>
+										<td>
+											<h6 class="basket__table--code">Код товара: 0А-00001456</h6>
+											<h3 class="basket__table--title"><a href="#">Сайдинг Монтана СВЕТЛАЯ БИРЮЗА 3,0х0,232 /20</a></h3>
+										</td>
+										<td class="basket__table--price">
+											<h5><span>121</span> руб.</h5>
+										</td>
+										<td class="basket__table--quantity">
+											<div class="quantity-e">
+												<input type="text" class="quantity-e--input" value="1">
+												<span class="quantity-e--button quantity-e--button_minus"></span>
+												<span class="quantity-e--button quantity-e--button_plus"></span>
+											</div>
+										</td>
+										<td class="basket__table--total">
+											<h5><span>121</span> руб.</h5>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="basket__total">
+							<h4>Товаров на: <strong>7 277 р.</strong></h4>
+							<h4>Доставка: <strong>0 р.</strong></h4>
+							<h4><em>Всего к оплате:</em> <strong>7 277 р.</strong></h4>
+						</div>
+						<div class="ordering--more-info">
+							<h3>Дополнительная информация:</h3>
+							<textarea cols="100" rows="6" placeholder="Комментарии к заказу"></textarea>
+						</div>
+						<div class="ordering--confirm">
+							<button class="basket__total--button basket__total--button_submit">Подтвердить заказ</button>
+							<h6>Нажимая кнопку «Подтвердить заказ», я подтверждаю свою дееспособность, согласие на получение информации об оформлении и получении заказа, согласие на обработку персональных данных в соответствии с указанным здесь <a href="#">текстом</a></h6>
+						</div>
 					</div>
-					<div class="ordering__group">
-						<h3><i class="payment-icon"></i>Способ оплаты:</h3>
-						<ul class="ordering__group--list">
-							<li class="ordering__group--item"><label><input type="radio" name="r-4" checked>Оплата на сайте банковской картой</label></li>
-							<li class="ordering__group--item"><label><input type="radio" name="r-4" checked>Наличными / картой в магазине</label></li>
-						</ul>
-					</div>
-					<h3>Состав заказа</h3>
-					<div class="basket__table">
-						<table>
-							<thead>
-								<th colspan="2">Товары</th>
-								<th>Цена</th>
-								<th>Количество</th>
-								<th>Сумма</th>
-							</thead>
-							<tbody>
-								<tr>
-									<td class="basket__table--picture">
-										<div>
-											<img src="./pic/b-1.png" width="65" height="25" class="img-contain" alt="">
-										</div>
-									</td>
-									<td>
-										<h6>Код товара: 0А-00001456</h6>
-										<h3><a href="#">Сайдинг Монтана СВЕТЛАЯ БИРЮЗА <br>3,0х0,232 /20</a></h3>
-									</td>
-									<td class="basket__table--price">
-										<h5>121 руб.</h5>
-									</td>
-									<td class="basket__table--quantity">
-										<div class="quantity-e">
-											<input type="text" class="quantity-e--input" value="1">
-											<span class="quantity-e--button quantity-e--button_minus"></span>
-											<span class="quantity-e--button quantity-e--button_plus"></span>
-										</div>
-									</td>
-									<td class="basket__table--total">
-										<h5>121 руб.</h5>
-									</td>
-								</tr>
-								<tr>
-									<td class="basket__table--picture">
-										<div>
-											<img src="./pic/b-1.png" width="65" height="25" class="img-contain" alt="">
-										</div>
-									</td>
-									<td>
-										<h6>Код товара: 0А-00001456</h6>
-										<h3><a href="#">Сайдинг Монтана СВЕТЛАЯ БИРЮЗА <br>3,0х0,232 /20</a></h3>
-									</td>
-									<td class="basket__table--price">
-										<h5>121 руб.</h5>
-									</td>
-									<td class="basket__table--quantity">
-										<div class="quantity-e">
-											<input type="text" class="quantity-e--input" value="1">
-											<span class="quantity-e--button quantity-e--button_minus"></span>
-											<span class="quantity-e--button quantity-e--button_plus"></span>
-										</div>
-									</td>
-									<td class="basket__table--total">
-										<h5>121 руб.</h5>
-									</td>
-								</tr>
-							</tbody>
-						</table>
-					</div>
-					<div class="basket__total">
-						<h4>Товаров на: <strong>7 277 р.</strong></h4>
-						<h4>Доставка: <strong>0 р.</strong></h4>
-						<h4><em>Всего к оплате:</em> <strong>7 277 р.</strong></h4>
-					</div>
-					<div class="ordering--more-info">
-						<h3>Дополнительная информация:</h3>
-						<textarea cols="100" rows="6" placeholder="Комментарии к заказу"></textarea>
-					</div>
-					<div class="ordering--confirm">
-						<button class="basket__total--button basket__total--button_submit">Подтвердить заказ</button>
-						<h6>Нажимая кнопку «Подтвердить заказ», я подтверждаю свою дееспособность, согласие на получение информации об оформлении и получении заказа, согласие на обработку персональных данных в соответствии с указанным здесь <a href="#">текстом</a></h6>
+					<div class="mobile-show">
+						<div class="ordering__group">
+							<h3><i class="user-icon"></i>Контактные данные:</h3>
+							<div class="ordering__group--form">
+								<label>Контактное лицо</label>
+								<input type="text">
+							</div>
+							<div class="ordering__group--form">
+								<label>Телефон</label>
+								<input type="text">
+							</div>
+							<div class="ordering__group--form">
+								<label>E-mail</label>
+								<input type="text">
+							</div>
+						</div>
+						<div class="ordering__group">
+							<h3><i class="delivery-icon"></i>Получение товара</h3>
+							<ul class="ordering__group--list">
+								<li class="ordering__group--item">
+									<label><input type="radio" name="delivery-type-m" data="switch" value="1">Самовывоз <em>бесплатно</em></label>
+									<ul class="ordering__group--list_sub is-hidden" data-delivery-type-m="1">
+										<li class="ordering__group--item">
+											<h6>Ваш магазин: <a href="#">г. Новоалтайск, ул. Дорожная, 44/1</a></h6>
+											<p><a href="#" data-order-shop-mobile>Выбрать другой</a></p>
+										</li>
+									</ul>
+								</li>
+								<li class="ordering__group--item"><label><input type="radio" name="delivery-type-m" data="switch" value="2">Доставка <em><a href="#">стоимость требует уточнения</a></em></label></li>
+							</ul>
+							<div class="is-hidden" data-delivery-type-m="2">
+								<div class="ordering__group--form">
+									<label>Способ получения товара</label>
+									<select>
+										<option selected>Доставка</option>
+										<option>Самовывоз</option>
+									</select>
+								</div>
+								<div class="ordering__group--form">
+									<label>Выберите дату доставки</label>
+									<select>
+										<option selected>31 декабря</option>
+										<option>1 января</option>
+										<option>2 января</option>
+										<option>3 января</option>
+										<option>4 января</option>
+										<option>5 января</option>
+										<option>6 января</option>
+										<option>7 января</option>
+										<option>8 января</option>
+										<option>9 января</option>
+										<option>10 января</option>
+									</select>
+								</div>
+								<div class="ordering__group--form">
+									<label>Выберите время доставки</label>
+									<select>
+										<option selected>16:00</option>
+										<option>17:00</option>
+										<option>18:00</option>
+										<option>19:00</option>
+										<option>20:00</option>
+										<option>21:00</option>
+										<option>22:00</option>
+									</select>
+								</div>
+								<div class="ordering__group--form">
+									<label>Адрес доставки</label>
+									<textarea rows="3"></textarea>
+								</div>	
+								<div class="ordering__group--form ordering__group--form_checkbox">
+									<label><input type="checkbox">Нужна разгрузка</label>
+								</div>
+								<div class="ordering__group--form ordering__group--form_checkbox">
+									<label><input type="checkbox">Нужен подъем</label>
+								</div>
+							</div>
+						</div>
+						<div class="ordering__group">
+							<h3><i class="payment-icon"></i>Оплата</h3>
+							<div class="ordering__group--form">
+								<label>Способ оплаты</label>
+								<select>
+									<option selected>Оплата на сайте картой</option>
+									<option>Оплата наличными в магазине</option>
+									<option>Оплата наличными курьеру</option>
+								</select>
+							</div>
+							<div class="ordering__group--form">
+								<label>Комментарий</label>
+								<textarea rows="3"></textarea>
+							</div>	
+						</div>
+						<div class="ordering--confirm">
+							<button class="basket__total--button basket__total--button_submit">Подтвердить заказ</button>
+						</div>
 					</div>
 				</div>
 			</div>
@@ -426,10 +636,156 @@
 			</ul>
 		</div>
 	</footer>
-	<script src="./js/jquery.js"></script>
-	<script src="./js/mobile.js"></script>
-	<script src="./js/slick.js"></script>
-	<script src="./js/uniform.js"></script>
-	<script src="./js/dynamic.js"></script>
+	<div class="footer-m mobile-show">
+		<ul class="footer-m__buttons">
+			<li><a href="#">О компании</a></li>
+			<li><a href="#">Контакты</a></li>
+		</ul>
+		<ul class="footer-m__nav">
+			<li><a href="#">Как купить дешевле</a></li>
+			<li><a href="#">Доставка</a></li>
+			<li><a href="#">Возврат товара</a></li>
+			<li><a href="#">Как купить</a></li>
+			<li><a href="#">Способ оплаты</a></li>
+			<li><a href="#">Способ получения</a></li>
+			<li><a href="#">Услуги</a></li>
+		</ul>
+		<div class="footer-m__copy">
+			<p>«Альтерра» - все для стройки и ремонта.</p>
+			<p>Все права защищены © 2009-2016</p>
+		</div>
+	</div>
+	<div class="mobile-drop">
+		<span class="mobile-drop--close"></span>
+		<div class="mobile-drop__address">
+			<p>Ваш город: Барнаул,<br> Павловский тракт, 206 Б</p>
+		</div>
+		<ul class="mobile-drop__nav">
+			<li class="mobile-drop__nav_has-sub">
+				<a href="#" class="mobile-drop__nav--link mobile-drop__nav--link_catalog">КАТАЛОГ</a>
+				<ul class="mobile-drop__catalog">
+					<li class="mobile-drop__catalog_has-sub">
+						<a href="#" class="mobile-drop__catalog--link">
+							<i class="mobile-drop__catalog--icon"><img src="./img/nav-icon-m-1.png" width="19" height="18" alt=""></i>
+							<span class="mobile-drop__catalog--text">Сайдинг, кровля, водосток</span>
+						</a>
+						<ul class="mobile-drop__subnav">
+							<li class="mobile-drop__subnav_has-sub">
+								<a href="#" class="mobile-drop__subnav--link">Сайдинг</a>
+								<ul class="mobile-drop__list">
+									<li><a href="#" class="mobile-drop__list--link"><span class="mobile-drop__list--quantity">(238)</span>Виниловый сайдинг</a></li>
+									<li><a href="#" class="mobile-drop__list--link"><span class="mobile-drop__list--quantity">(2)</span>Акриловый сайдинг</a></li>
+									<li><a href="#" class="mobile-drop__list--link"><span class="mobile-drop__list--quantity">(13)</span>Фасадные панели (цокольный сайдинг)</a></li>
+									<li><a href="#" class="mobile-drop__list--link"><span class="mobile-drop__list--quantity">(28)</span>Комплектующие к сайдингу</a></li>
+								</ul>
+							</li>
+							<li class="mobile-drop__subnav_has-sub">
+								<a href="#" class="mobile-drop__subnav--link">Профнастил, доборные элементы</a>
+							</li>
+							<li class="mobile-drop__subnav_has-sub">
+								<a href="#" class="mobile-drop__subnav--link">Лист стальной</a>
+							</li>
+							<li class="mobile-drop__subnav_has-sub">
+								<a href="#" class="mobile-drop__subnav--link">Битум, мастика, праймер</a>
+							</li>
+							<li class="mobile-drop__subnav_has-sub">
+								<a href="#" class="mobile-drop__subnav--link">Водосточная система</a>
+							</li>
+							<li class="mobile-drop__subnav_has-sub">
+								<a href="#" class="mobile-drop__subnav--link">Гибкая черепица</a>
+							</li>
+							<li class="mobile-drop__subnav_has-sub">
+								<a href="#" class="mobile-drop__subnav--link">Наплавляемая кровля</a>
+							</li>
+							<li class="mobile-drop__subnav_has-sub">
+								<a href="#" class="mobile-drop__subnav--link">Ондулин</a>
+							</li>
+							<li class="mobile-drop__subnav_has-sub">
+								<a href="#" class="mobile-drop__subnav--link">Рубероид</a>
+							</li>
+							<li class="mobile-drop__subnav_has-sub">
+								<a href="#" class="mobile-drop__subnav--link">Шифер</a>
+							</li>
+						</ul>
+					</li>
+					<li class="mobile-drop__catalog_has-sub">
+						<a href="#" class="mobile-drop__catalog--link">
+							<i class="mobile-drop__catalog--icon"><img src="./img/nav-icon-m-2.png" width="19" height="17" alt=""></i>
+							<span class="mobile-drop__catalog--text">Теплоизоляционные материалы</span>
+						</a>	
+					</li>
+					<li class="mobile-drop__catalog_has-sub">
+						<a href="#" class="mobile-drop__catalog--link">
+							<i class="mobile-drop__catalog--icon"><img src="./img/nav-icon-m-3.png" width="22" height="19" alt=""></i>
+							<span class="mobile-drop__catalog--text">Кирпич, цемент, газобетон, плитка</span>
+						</a>	
+					</li>
+					<li class="mobile-drop__catalog_has-sub">
+						<a href="#" class="mobile-drop__catalog--link">
+							<i class="mobile-drop__catalog--icon"><img src="./img/nav-icon-m-4.png" width="22" height="20" alt=""></i>
+							<span class="mobile-drop__catalog--text">Металлопрокат</span>
+						</a>	
+					</li>
+					<li class="mobile-drop__catalog_has-sub">
+						<a href="#" class="mobile-drop__catalog--link">
+							<i class="mobile-drop__catalog--icon"><img src="./img/nav-icon-m-5.png" width="21" height="21" alt=""></i>
+							<span class="mobile-drop__catalog--text">Внутренняя  отделка</span>
+						</a>	
+					</li>
+					<li class="mobile-drop__catalog_has-sub">
+						<a href="#" class="mobile-drop__catalog--link">
+							<i class="mobile-drop__catalog--icon"><img src="./img/nav-icon-m-6.png" width="20" height="14" alt=""></i>
+							<span class="mobile-drop__catalog--text">Древесные материалы</span>
+						</a>	
+					</li>
+					<li class="mobile-drop__catalog_has-sub">
+						<a href="#" class="mobile-drop__catalog--link">
+							<i class="mobile-drop__catalog--icon"><img src="./img/nav-icon-m-7.png" width="20" height="21" alt=""></i>
+							<span class="mobile-drop__catalog--text">Лакокрасочные материалы</span>
+						</a>	
+					</li>
+					<li class="mobile-drop__catalog_has-sub">
+						<a href="#" class="mobile-drop__catalog--link">
+							<i class="mobile-drop__catalog--icon"><img src="./img/nav-icon-m-8.png" width="21" height="18" alt=""></i>
+							<span class="mobile-drop__catalog--text">Отопление, водоснабжение, канализация</span>
+						</a>	
+					</li>
+					<li class="mobile-drop__catalog_has-sub">
+						<a href="#" class="mobile-drop__catalog--link">
+							<i class="mobile-drop__catalog--icon"><img src="./img/nav-icon-m-9.png" width="21" height="19" alt=""></i>
+							<span class="mobile-drop__catalog--text">Ванная и кухня</span>
+						</a>	
+					</li>
+					<li class="mobile-drop__catalog_has-sub">
+						<a href="#" class="mobile-drop__catalog--link">
+							<i class="mobile-drop__catalog--icon"><img src="./img/nav-icon-m-10.png" width="19" height="13" alt=""></i>
+							<span class="mobile-drop__catalog--text">Сад и огород</span>
+						</a>	
+					</li>
+					<li class="mobile-drop__catalog_has-sub">
+						<a href="#" class="mobile-drop__catalog--link">
+							<i class="mobile-drop__catalog--icon"><img src="./img/nav-icon-m-11.png" width="21" height="20" alt=""></i>
+							<span class="mobile-drop__catalog--text">Инструменты, Хозтовары</span>
+						</a>	
+					</li>
+					<li class="mobile-drop__catalog_has-sub">
+						<a href="#" class="mobile-drop__catalog--link">
+							<i class="mobile-drop__catalog--icon"><img src="./img/nav-icon-m-12.png" width="20" height="19" alt=""></i>
+							<span class="mobile-drop__catalog--text">Электрика</span>
+						</a>	
+					</li>
+				</ul>
+			</li>
+			<li><a href="#" class="mobile-drop__nav--link mobile-drop__nav--link_basket">Корзина<span class="mobile-drop__nav--basket-quantity">0</span></a></li>
+			<li><a href="#" class="mobile-drop__nav--link mobile-drop__nav--link_lk">Вход / регистрация</a></li>
+			<li><a href="#" class="mobile-drop__nav--link">Контакты</a></li>
+			<li><a href="#" class="mobile-drop__nav--link">Способ оплаты</a></li>
+			<li><a href="#" class="mobile-drop__nav--link">О компании</a></li>
+			<li><a href="#" class="mobile-drop__nav--link mobile-drop__nav--link_phone">+7 (3852) 558-558</a></li>
+		</ul>
+	</div>
+	<div class="fade-bg"></div>
+	<script src="./js/libs.js"></script>
+	<script src="./js/scripts.js"></script>
 </body>
 </html>

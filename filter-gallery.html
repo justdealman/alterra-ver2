@@ -3,7 +3,7 @@
 <head>
 	<title>Alterra</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=1000, user-scalable=yes">
+	<meta name="viewport" content="width=device-width, user-scalable=yes">
 	<!--<link href="./favicon.ico" rel="shortcut icon">-->
 	<link href="./css/style.css" rel="stylesheet">
 	<!--[if IE 8]>
@@ -12,8 +12,41 @@
 </head>
 <body>
 	<div class="wrapper">
+		<div class="panel-m">
+			<p class="panel-m--city">Барнаул</p>
+			<p class="panel-m--address">Павловский тракт, 206 б</p>
+		</div>
+		<ul class="citysel-m">
+			<li class="active">
+				<h6>г. Новоалтайск, ул. Дорожная, 44/1</h6>
+				<p>Центральный торговый комплекс на авторазвязке Барнаул-Бийск-Новосибирск</p>
+			</li>
+			<li>
+				<h6>г. Барнаул, Павловский тракт, 206 б</h6>
+				<p>Центральный торговый комплекс на авторазвязке Барнаул-Бийск-Новосибирск</p>
+			</li>
+			<li>
+				<h6>г. Новоалтайск, ул. Ударника, 2</h6>
+				<p>Центральный торговый комплекс на авторазвязке Барнаул-Бийск-Новосибирск</p>
+			</li>
+			<li>
+				<h6>г. Бийск, пер. Шубенский, 75</h6>
+				<p>Центральный торговый комплекс на авторазвязке Барнаул-Бийск-Новосибирск</p>
+			</li>
+		</ul>
+		<div class="citysel-drop">
+			<h4>Выберите ближайший торговый комплекс:</h4>
+			<p>От выбора зависит наличие товаров и стоимость доставки</p>
+			<ul>
+				<li class="active"><span>Центральный торговый комплекс на авторазвязке Барнаул-Бийск-Новосибирск г. Новоалтайск, ул. Дорожная, 44/1</span></li>
+				<li><span>г. Барнаул, Павловский тракт, 206 б</span></li>
+				<li><span>г. Новоалтайск, ул. Ударника, 2</span></li>
+				<li><span>г. Бийск, пер. Шубенский, 75</span></li>
+			</ul>
+		</div>
 		<header class="header">
 			<div class="header__row">
+				<span class="mobile-menu"></span>
 				<div class="header__shop">
 					<p class="header__shop--title">Выберите ближайший магазин:</p>
 					<h5 class="header__shop--address"><span>Магазин на авторазвязке Барнаул-Бийск-Новосибирск</span></h5>
@@ -27,7 +60,7 @@
 				<img src="./img/logo.png" width="250" height="60" class="header__logo" alt="">
 				<div class="header__search">
 					<input type="text" class="header__search--input">
-					<input type="submit" class="header__search--submit" value="">
+					<input type="submit" class="header__search--submit" placeholder="Поиск товаров по каталогу">
 				</div>
 				<div class="header__basket">
 					<h6 class="header__basket--quantity">2</h6>
@@ -58,7 +91,7 @@
 		</nav>
 		<div class="content">
 			<div class="content__col-1">
-				<div class="nav-side nav-side_minimized">
+				<div class="nav-side nav-side_minimized mobile-hide">
 					<h4 class="nav-side__title nav-side__title_clickable">Каталог товаров</h4>
 					<ul class="nav-side__list">
 						<li class="nav-side__item">
@@ -137,8 +170,8 @@
 				</div>
 				<div class="filter-side">
 					<div class="filter-side__item">
-						<h4 class="filter-side--title">Цена</h4>
-						<div class="filter-side__price-range">
+						<h4 class="filter-side--title filter-side--title_clickable">Цена</h4>
+						<div class="filter-side--list filter-side__price-range">
 							<div class="slider" data-min="0" data-max="500" data-step="1" data-start="170" data-end="335"></div>
 							<div class="range">
 								<p>От</p>
@@ -178,6 +211,7 @@
 						</ul>
 					</div>
 					<div class="filter-side__controls">
+						<p class="filter-side--result">подобрано товаров: 68</p>
 						<button class="filter-side--button filter-side--button_submit">Подобрать</button>
 						<button class="filter-side--button filter-side--button_clear">Очистить</button>
 					</div>
@@ -199,7 +233,7 @@
 						<div class="catalog__filter--item">
 							<p class="catalog__filter--title">Сортировать по:</p>
 							<div class="catalog__filter--select catalog__filter--select_sort">
-								<select>
+								<select class="custom">
 									<option selected>Возрастанию цены</option>
 									<option>Убыванию цены</option>
 									<option>Наличию</option>
@@ -209,7 +243,7 @@
 						<div class="catalog__filter--item">
 							<p class="catalog__filter--title">Отображение товаров:</p>
 							<div class="catalog__filter--select catalog__filter--select_view">
-								<select>
+								<select class="custom">
 									<option selected>Галерея</option>
 									<option>Таблица</option>
 									<option>Список</option>
@@ -219,7 +253,7 @@
 						<div class="catalog__filter--item">
 							<p class="catalog__filter--title">Отображать по:</p>
 							<div class="catalog__filter--select catalog__filter--select_quantity">
-								<select>
+								<select class="custom">
 									<option>24</option>
 									<option selected>48</option>
 									<option>96</option>
@@ -227,18 +261,32 @@
 							</div>
 							<p class="catalog__filter--title">товаров</p>
 						</div>
+						<div class="catalog__filter--mobile">
+							<div class="catalog__filter--select">
+								<select class="custom">
+									<option selected>Цена по возрастанию</option>
+									<option>Цена по убыванию</option>
+								</select>
+							</div>
+						</div>
 					</div>
+					<p class="catalog--page-count">товары 1-12 из 100</p>
 					<ul class="catalog__list">
 						<li class="catalog__item">
 							<div class="item-elem">
 								<a href="#" class="item-elem--link">
 									<h4 class="item-elem--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h4>
+									<p class="item-elem--code">код товара: 0А-00014689</p>
 									<p class="item-elem--tag">Акция!</p>
 									<div class="item-elem--picture">
 										<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
 									</div>
 								</a>
-								<label class="item-elem--compare"><input type="checkbox">Сравнить</label>
+								<div class="item-elem--compare">
+									<input type="checkbox" name="add-to-compare">
+									<p class="title">Сравнить</p>
+									<p class="link"><a href="#">К сравнению</a></p>
+								</div>
 								<h5 class="item-elem--price"><span>116 <em class="rouble-icon">г</em></span> / шт.</h5>
 								<div class="quantity-e">
 									<input type="text" class="quantity-e--input" value="1">
@@ -252,12 +300,17 @@
 							<div class="item-elem">
 								<a href="#" class="item-elem--link">
 									<h4 class="item-elem--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h4>
+									<p class="item-elem--code">код товара: 0А-00014689</p>
 									<p class="item-elem--tag">Акция!</p>
 									<div class="item-elem--picture">
 										<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
 									</div>
 								</a>
-								<label class="item-elem--compare"><input type="checkbox">Сравнить</label>
+								<div class="item-elem--compare">
+									<input type="checkbox" name="add-to-compare">
+									<p class="title">Сравнить</p>
+									<p class="link"><a href="#">К сравнению</a></p>
+								</div>
 								<h5 class="item-elem--price"><span>116 <em class="rouble-icon">г</em></span> / шт.</h5>
 								<div class="quantity-e">
 									<input type="text" class="quantity-e--input" value="1">
@@ -271,12 +324,17 @@
 							<div class="item-elem">
 								<a href="#" class="item-elem--link">
 									<h4 class="item-elem--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h4>
+									<p class="item-elem--code">код товара: 0А-00014689</p>
 									<p class="item-elem--tag">Акция!</p>
 									<div class="item-elem--picture">
 										<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
 									</div>
 								</a>
-								<label class="item-elem--compare"><input type="checkbox">Сравнить</label>
+								<div class="item-elem--compare">
+									<input type="checkbox" name="add-to-compare">
+									<p class="title">Сравнить</p>
+									<p class="link"><a href="#">К сравнению</a></p>
+								</div>
 								<h5 class="item-elem--price"><span>116 <em class="rouble-icon">г</em></span> / шт.</h5>
 								<div class="quantity-e">
 									<input type="text" class="quantity-e--input" value="1">
@@ -290,12 +348,17 @@
 							<div class="item-elem">
 								<a href="#" class="item-elem--link">
 									<h4 class="item-elem--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h4>
+									<p class="item-elem--code">код товара: 0А-00014689</p>
 									<p class="item-elem--tag">Акция!</p>
 									<div class="item-elem--picture">
 										<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
 									</div>
 								</a>
-								<label class="item-elem--compare"><input type="checkbox">Сравнить</label>
+								<div class="item-elem--compare">
+									<input type="checkbox" name="add-to-compare">
+									<p class="title">Сравнить</p>
+									<p class="link"><a href="#">К сравнению</a></p>
+								</div>
 								<h5 class="item-elem--price"><span>116 <em class="rouble-icon">г</em></span> / шт.</h5>
 								<div class="quantity-e">
 									<input type="text" class="quantity-e--input" value="1">
@@ -309,12 +372,17 @@
 							<div class="item-elem">
 								<a href="#" class="item-elem--link">
 									<h4 class="item-elem--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h4>
+									<p class="item-elem--code">код товара: 0А-00014689</p>
 									<p class="item-elem--tag">Акция!</p>
 									<div class="item-elem--picture">
 										<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
 									</div>
 								</a>
-								<label class="item-elem--compare"><input type="checkbox">Сравнить</label>
+								<div class="item-elem--compare">
+									<input type="checkbox" name="add-to-compare">
+									<p class="title">Сравнить</p>
+									<p class="link"><a href="#">К сравнению</a></p>
+								</div>
 								<h5 class="item-elem--price"><span>116 <em class="rouble-icon">г</em></span> / шт.</h5>
 								<div class="quantity-e">
 									<input type="text" class="quantity-e--input" value="1">
@@ -328,12 +396,17 @@
 							<div class="item-elem">
 								<a href="#" class="item-elem--link">
 									<h4 class="item-elem--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h4>
+									<p class="item-elem--code">код товара: 0А-00014689</p>
 									<p class="item-elem--tag">Акция!</p>
 									<div class="item-elem--picture">
 										<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
 									</div>
 								</a>
-								<label class="item-elem--compare"><input type="checkbox">Сравнить</label>
+								<div class="item-elem--compare">
+									<input type="checkbox" name="add-to-compare">
+									<p class="title">Сравнить</p>
+									<p class="link"><a href="#">К сравнению</a></p>
+								</div>
 								<h5 class="item-elem--price"><span>116 <em class="rouble-icon">г</em></span> / шт.</h5>
 								<div class="quantity-e">
 									<input type="text" class="quantity-e--input" value="1">
@@ -347,12 +420,17 @@
 							<div class="item-elem">
 								<a href="#" class="item-elem--link">
 									<h4 class="item-elem--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h4>
+									<p class="item-elem--code">код товара: 0А-00014689</p>
 									<p class="item-elem--tag">Акция!</p>
 									<div class="item-elem--picture">
 										<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
 									</div>
 								</a>
-								<label class="item-elem--compare"><input type="checkbox">Сравнить</label>
+								<div class="item-elem--compare">
+									<input type="checkbox" name="add-to-compare">
+									<p class="title">Сравнить</p>
+									<p class="link"><a href="#">К сравнению</a></p>
+								</div>
 								<h5 class="item-elem--price"><span>116 <em class="rouble-icon">г</em></span> / шт.</h5>
 								<div class="quantity-e">
 									<input type="text" class="quantity-e--input" value="1">
@@ -366,12 +444,17 @@
 							<div class="item-elem">
 								<a href="#" class="item-elem--link">
 									<h4 class="item-elem--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h4>
+									<p class="item-elem--code">код товара: 0А-00014689</p>
 									<p class="item-elem--tag">Акция!</p>
 									<div class="item-elem--picture">
 										<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
 									</div>
 								</a>
-								<label class="item-elem--compare"><input type="checkbox">Сравнить</label>
+								<div class="item-elem--compare">
+									<input type="checkbox" name="add-to-compare">
+									<p class="title">Сравнить</p>
+									<p class="link"><a href="#">К сравнению</a></p>
+								</div>
 								<h5 class="item-elem--price"><span>116 <em class="rouble-icon">г</em></span> / шт.</h5>
 								<div class="quantity-e">
 									<input type="text" class="quantity-e--input" value="1">
@@ -385,12 +468,17 @@
 							<div class="item-elem">
 								<a href="#" class="item-elem--link">
 									<h4 class="item-elem--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h4>
+									<p class="item-elem--code">код товара: 0А-00014689</p>
 									<p class="item-elem--tag">Акция!</p>
 									<div class="item-elem--picture">
 										<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
 									</div>
 								</a>
-								<label class="item-elem--compare"><input type="checkbox">Сравнить</label>
+								<div class="item-elem--compare">
+									<input type="checkbox" name="add-to-compare">
+									<p class="title">Сравнить</p>
+									<p class="link"><a href="#">К сравнению</a></p>
+								</div>
 								<h5 class="item-elem--price"><span>116 <em class="rouble-icon">г</em></span> / шт.</h5>
 								<div class="quantity-e">
 									<input type="text" class="quantity-e--input" value="1">
@@ -404,12 +492,17 @@
 							<div class="item-elem">
 								<a href="#" class="item-elem--link">
 									<h4 class="item-elem--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h4>
+									<p class="item-elem--code">код товара: 0А-00014689</p>
 									<p class="item-elem--tag">Акция!</p>
 									<div class="item-elem--picture">
 										<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
 									</div>
 								</a>
-								<label class="item-elem--compare"><input type="checkbox">Сравнить</label>
+								<div class="item-elem--compare">
+									<input type="checkbox" name="add-to-compare">
+									<p class="title">Сравнить</p>
+									<p class="link"><a href="#">К сравнению</a></p>
+								</div>
 								<h5 class="item-elem--price"><span>116 <em class="rouble-icon">г</em></span> / шт.</h5>
 								<div class="quantity-e">
 									<input type="text" class="quantity-e--input" value="1">
@@ -423,12 +516,17 @@
 							<div class="item-elem">
 								<a href="#" class="item-elem--link">
 									<h4 class="item-elem--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h4>
+									<p class="item-elem--code">код товара: 0А-00014689</p>
 									<p class="item-elem--tag">Акция!</p>
 									<div class="item-elem--picture">
 										<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
 									</div>
 								</a>
-								<label class="item-elem--compare"><input type="checkbox">Сравнить</label>
+								<div class="item-elem--compare">
+									<input type="checkbox" name="add-to-compare">
+									<p class="title">Сравнить</p>
+									<p class="link"><a href="#">К сравнению</a></p>
+								</div>
 								<h5 class="item-elem--price"><span>116 <em class="rouble-icon">г</em></span> / шт.</h5>
 								<div class="quantity-e">
 									<input type="text" class="quantity-e--input" value="1">
@@ -442,12 +540,17 @@
 							<div class="item-elem">
 								<a href="#" class="item-elem--link">
 									<h4 class="item-elem--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h4>
+									<p class="item-elem--code">код товара: 0А-00014689</p>
 									<p class="item-elem--tag">Акция!</p>
 									<div class="item-elem--picture">
 										<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
 									</div>
 								</a>
-								<label class="item-elem--compare"><input type="checkbox">Сравнить</label>
+								<div class="item-elem--compare">
+									<input type="checkbox" name="add-to-compare">
+									<p class="title">Сравнить</p>
+									<p class="link"><a href="#">К сравнению</a></p>
+								</div>
 								<h5 class="item-elem--price"><span>116 <em class="rouble-icon">г</em></span> / шт.</h5>
 								<div class="quantity-e">
 									<input type="text" class="quantity-e--input" value="1">
@@ -461,12 +564,17 @@
 							<div class="item-elem">
 								<a href="#" class="item-elem--link">
 									<h4 class="item-elem--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h4>
+									<p class="item-elem--code">код товара: 0А-00014689</p>
 									<p class="item-elem--tag">Акция!</p>
 									<div class="item-elem--picture">
 										<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
 									</div>
 								</a>
-								<label class="item-elem--compare"><input type="checkbox">Сравнить</label>
+								<div class="item-elem--compare">
+									<input type="checkbox" name="add-to-compare">
+									<p class="title">Сравнить</p>
+									<p class="link"><a href="#">К сравнению</a></p>
+								</div>
 								<h5 class="item-elem--price"><span>116 <em class="rouble-icon">г</em></span> / шт.</h5>
 								<div class="quantity-e">
 									<input type="text" class="quantity-e--input" value="1">
@@ -480,12 +588,17 @@
 							<div class="item-elem">
 								<a href="#" class="item-elem--link">
 									<h4 class="item-elem--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h4>
+									<p class="item-elem--code">код товара: 0А-00014689</p>
 									<p class="item-elem--tag">Акция!</p>
 									<div class="item-elem--picture">
 										<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
 									</div>
 								</a>
-								<label class="item-elem--compare"><input type="checkbox">Сравнить</label>
+								<div class="item-elem--compare">
+									<input type="checkbox" name="add-to-compare">
+									<p class="title">Сравнить</p>
+									<p class="link"><a href="#">К сравнению</a></p>
+								</div>
 								<h5 class="item-elem--price"><span>116 <em class="rouble-icon">г</em></span> / шт.</h5>
 								<div class="quantity-e">
 									<input type="text" class="quantity-e--input" value="1">
@@ -499,12 +612,17 @@
 							<div class="item-elem">
 								<a href="#" class="item-elem--link">
 									<h4 class="item-elem--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h4>
+									<p class="item-elem--code">код товара: 0А-00014689</p>
 									<p class="item-elem--tag">Акция!</p>
 									<div class="item-elem--picture">
 										<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
 									</div>
 								</a>
-								<label class="item-elem--compare"><input type="checkbox">Сравнить</label>
+								<div class="item-elem--compare">
+									<input type="checkbox" name="add-to-compare">
+									<p class="title">Сравнить</p>
+									<p class="link"><a href="#">К сравнению</a></p>
+								</div>
 								<h5 class="item-elem--price"><span>116 <em class="rouble-icon">г</em></span> / шт.</h5>
 								<div class="quantity-e">
 									<input type="text" class="quantity-e--input" value="1">
@@ -518,12 +636,17 @@
 							<div class="item-elem">
 								<a href="#" class="item-elem--link">
 									<h4 class="item-elem--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h4>
+									<p class="item-elem--code">код товара: 0А-00014689</p>
 									<p class="item-elem--tag">Акция!</p>
 									<div class="item-elem--picture">
 										<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
 									</div>
 								</a>
-								<label class="item-elem--compare"><input type="checkbox">Сравнить</label>
+								<div class="item-elem--compare">
+									<input type="checkbox" name="add-to-compare">
+									<p class="title">Сравнить</p>
+									<p class="link"><a href="#">К сравнению</a></p>
+								</div>
 								<h5 class="item-elem--price"><span>116 <em class="rouble-icon">г</em></span> / шт.</h5>
 								<div class="quantity-e">
 									<input type="text" class="quantity-e--input" value="1">
@@ -537,12 +660,17 @@
 							<div class="item-elem">
 								<a href="#" class="item-elem--link">
 									<h4 class="item-elem--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h4>
+									<p class="item-elem--code">код товара: 0А-00014689</p>
 									<p class="item-elem--tag">Акция!</p>
 									<div class="item-elem--picture">
 										<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
 									</div>
 								</a>
-								<label class="item-elem--compare"><input type="checkbox">Сравнить</label>
+								<div class="item-elem--compare">
+									<input type="checkbox" name="add-to-compare">
+									<p class="title">Сравнить</p>
+									<p class="link"><a href="#">К сравнению</a></p>
+								</div>
 								<h5 class="item-elem--price"><span>116 <em class="rouble-icon">г</em></span> / шт.</h5>
 								<div class="quantity-e">
 									<input type="text" class="quantity-e--input" value="1">
@@ -556,12 +684,17 @@
 							<div class="item-elem">
 								<a href="#" class="item-elem--link">
 									<h4 class="item-elem--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h4>
+									<p class="item-elem--code">код товара: 0А-00014689</p>
 									<p class="item-elem--tag">Акция!</p>
 									<div class="item-elem--picture">
 										<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
 									</div>
 								</a>
-								<label class="item-elem--compare"><input type="checkbox">Сравнить</label>
+								<div class="item-elem--compare">
+									<input type="checkbox" name="add-to-compare">
+									<p class="title">Сравнить</p>
+									<p class="link"><a href="#">К сравнению</a></p>
+								</div>
 								<h5 class="item-elem--price"><span>116 <em class="rouble-icon">г</em></span> / шт.</h5>
 								<div class="quantity-e">
 									<input type="text" class="quantity-e--input" value="1">
@@ -575,12 +708,17 @@
 							<div class="item-elem">
 								<a href="#" class="item-elem--link">
 									<h4 class="item-elem--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h4>
+									<p class="item-elem--code">код товара: 0А-00014689</p>
 									<p class="item-elem--tag">Акция!</p>
 									<div class="item-elem--picture">
 										<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
 									</div>
 								</a>
-								<label class="item-elem--compare"><input type="checkbox">Сравнить</label>
+								<div class="item-elem--compare">
+									<input type="checkbox" name="add-to-compare">
+									<p class="title">Сравнить</p>
+									<p class="link"><a href="#">К сравнению</a></p>
+								</div>
 								<h5 class="item-elem--price"><span>116 <em class="rouble-icon">г</em></span> / шт.</h5>
 								<div class="quantity-e">
 									<input type="text" class="quantity-e--input" value="1">
@@ -594,12 +732,17 @@
 							<div class="item-elem">
 								<a href="#" class="item-elem--link">
 									<h4 class="item-elem--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h4>
+									<p class="item-elem--code">код товара: 0А-00014689</p>
 									<p class="item-elem--tag">Акция!</p>
 									<div class="item-elem--picture">
 										<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
 									</div>
 								</a>
-								<label class="item-elem--compare"><input type="checkbox">Сравнить</label>
+								<div class="item-elem--compare">
+									<input type="checkbox" name="add-to-compare">
+									<p class="title">Сравнить</p>
+									<p class="link"><a href="#">К сравнению</a></p>
+								</div>
 								<h5 class="item-elem--price"><span>116 <em class="rouble-icon">г</em></span> / шт.</h5>
 								<div class="quantity-e">
 									<input type="text" class="quantity-e--input" value="1">
@@ -613,12 +756,17 @@
 							<div class="item-elem">
 								<a href="#" class="item-elem--link">
 									<h4 class="item-elem--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h4>
+									<p class="item-elem--code">код товара: 0А-00014689</p>
 									<p class="item-elem--tag">Акция!</p>
 									<div class="item-elem--picture">
 										<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
 									</div>
 								</a>
-								<label class="item-elem--compare"><input type="checkbox">Сравнить</label>
+								<div class="item-elem--compare">
+									<input type="checkbox" name="add-to-compare">
+									<p class="title">Сравнить</p>
+									<p class="link"><a href="#">К сравнению</a></p>
+								</div>
 								<h5 class="item-elem--price"><span>116 <em class="rouble-icon">г</em></span> / шт.</h5>
 								<div class="quantity-e">
 									<input type="text" class="quantity-e--input" value="1">
@@ -632,12 +780,17 @@
 							<div class="item-elem">
 								<a href="#" class="item-elem--link">
 									<h4 class="item-elem--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h4>
+									<p class="item-elem--code">код товара: 0А-00014689</p>
 									<p class="item-elem--tag">Акция!</p>
 									<div class="item-elem--picture">
 										<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
 									</div>
 								</a>
-								<label class="item-elem--compare"><input type="checkbox">Сравнить</label>
+								<div class="item-elem--compare">
+									<input type="checkbox" name="add-to-compare">
+									<p class="title">Сравнить</p>
+									<p class="link"><a href="#">К сравнению</a></p>
+								</div>
 								<h5 class="item-elem--price"><span>116 <em class="rouble-icon">г</em></span> / шт.</h5>
 								<div class="quantity-e">
 									<input type="text" class="quantity-e--input" value="1">
@@ -651,12 +804,17 @@
 							<div class="item-elem">
 								<a href="#" class="item-elem--link">
 									<h4 class="item-elem--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h4>
+									<p class="item-elem--code">код товара: 0А-00014689</p>
 									<p class="item-elem--tag">Акция!</p>
 									<div class="item-elem--picture">
 										<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
 									</div>
 								</a>
-								<label class="item-elem--compare"><input type="checkbox">Сравнить</label>
+								<div class="item-elem--compare">
+									<input type="checkbox" name="add-to-compare">
+									<p class="title">Сравнить</p>
+									<p class="link"><a href="#">К сравнению</a></p>
+								</div>
 								<h5 class="item-elem--price"><span>116 <em class="rouble-icon">г</em></span> / шт.</h5>
 								<div class="quantity-e">
 									<input type="text" class="quantity-e--input" value="1">
@@ -670,12 +828,17 @@
 							<div class="item-elem">
 								<a href="#" class="item-elem--link">
 									<h4 class="item-elem--title">ПП Труба PN 20, d20мм, L4м, 4шт в уп./100шт в кор.</h4>
+									<p class="item-elem--code">код товара: 0А-00014689</p>
 									<p class="item-elem--tag">Акция!</p>
 									<div class="item-elem--picture">
 										<img src="./pic/i-1.jpg" width="160" height="140" class="img-contain" alt="">
 									</div>
 								</a>
-								<label class="item-elem--compare"><input type="checkbox">Сравнить</label>
+								<div class="item-elem--compare">
+									<input type="checkbox" name="add-to-compare">
+									<p class="title">Сравнить</p>
+									<p class="link"><a href="#">К сравнению</a></p>
+								</div>
 								<h5 class="item-elem--price"><span>116 <em class="rouble-icon">г</em></span> / шт.</h5>
 								<div class="quantity-e">
 									<input type="text" class="quantity-e--input" value="1">
@@ -685,6 +848,16 @@
 								<button class="item-elem--add-to-basket">В корзину</button>
 							</div>
 						</li>
+					</ul>
+					<p class="reload-e"><span>Загрузить еще</span></p>
+					<ul class="pages-e">
+						<li class="pages-e__item"><a href="#" class="pages-e--link pages-e--link_prev"></a></li>
+						<li class="pages-e__item"><a href="#" class="pages-e--link pages-e--link_active">1</a></li>
+						<li class="pages-e__item"><a href="#" class="pages-e--link">2</a></li>
+						<li class="pages-e__item"><a href="#" class="pages-e--link">3</a></li>
+						<li class="pages-e__item"><span class="pages-e--text">...</span></li>
+						<li class="pages-e__item"><a href="#" class="pages-e--link">15</a></li>
+						<li class="pages-e__item"><a href="#" class="pages-e--link pages-e--link_next"></a></li>
 					</ul>
 				</div>
 			</div>
@@ -754,10 +927,156 @@
 			</ul>
 		</div>
 	</footer>
-	<script src="./js/jquery.js"></script>
-	<script src="./js/mobile.js"></script>
-	<script src="./js/slick.js"></script>
-	<script src="./js/uniform.js"></script>
-	<script src="./js/dynamic.js"></script>
+	<div class="footer-m mobile-show">
+		<ul class="footer-m__buttons">
+			<li><a href="#">О компании</a></li>
+			<li><a href="#">Контакты</a></li>
+		</ul>
+		<ul class="footer-m__nav">
+			<li><a href="#">Как купить дешевле</a></li>
+			<li><a href="#">Доставка</a></li>
+			<li><a href="#">Возврат товара</a></li>
+			<li><a href="#">Как купить</a></li>
+			<li><a href="#">Способ оплаты</a></li>
+			<li><a href="#">Способ получения</a></li>
+			<li><a href="#">Услуги</a></li>
+		</ul>
+		<div class="footer-m__copy">
+			<p>«Альтерра» - все для стройки и ремонта.</p>
+			<p>Все права защищены © 2009-2016</p>
+		</div>
+	</div>
+	<div class="mobile-drop">
+		<span class="mobile-drop--close"></span>
+		<div class="mobile-drop__address">
+			<p>Ваш город: Барнаул,<br> Павловский тракт, 206 Б</p>
+		</div>
+		<ul class="mobile-drop__nav">
+			<li class="mobile-drop__nav_has-sub">
+				<a href="#" class="mobile-drop__nav--link mobile-drop__nav--link_catalog">КАТАЛОГ</a>
+				<ul class="mobile-drop__catalog">
+					<li class="mobile-drop__catalog_has-sub">
+						<a href="#" class="mobile-drop__catalog--link">
+							<i class="mobile-drop__catalog--icon"><img src="./img/nav-icon-m-1.png" width="19" height="18" alt=""></i>
+							<span class="mobile-drop__catalog--text">Сайдинг, кровля, водосток</span>
+						</a>
+						<ul class="mobile-drop__subnav">
+							<li class="mobile-drop__subnav_has-sub">
+								<a href="#" class="mobile-drop__subnav--link">Сайдинг</a>
+								<ul class="mobile-drop__list">
+									<li><a href="#" class="mobile-drop__list--link"><span class="mobile-drop__list--quantity">(238)</span>Виниловый сайдинг</a></li>
+									<li><a href="#" class="mobile-drop__list--link"><span class="mobile-drop__list--quantity">(2)</span>Акриловый сайдинг</a></li>
+									<li><a href="#" class="mobile-drop__list--link"><span class="mobile-drop__list--quantity">(13)</span>Фасадные панели (цокольный сайдинг)</a></li>
+									<li><a href="#" class="mobile-drop__list--link"><span class="mobile-drop__list--quantity">(28)</span>Комплектующие к сайдингу</a></li>
+								</ul>
+							</li>
+							<li class="mobile-drop__subnav_has-sub">
+								<a href="#" class="mobile-drop__subnav--link">Профнастил, доборные элементы</a>
+							</li>
+							<li class="mobile-drop__subnav_has-sub">
+								<a href="#" class="mobile-drop__subnav--link">Лист стальной</a>
+							</li>
+							<li class="mobile-drop__subnav_has-sub">
+								<a href="#" class="mobile-drop__subnav--link">Битум, мастика, праймер</a>
+							</li>
+							<li class="mobile-drop__subnav_has-sub">
+								<a href="#" class="mobile-drop__subnav--link">Водосточная система</a>
+							</li>
+							<li class="mobile-drop__subnav_has-sub">
+								<a href="#" class="mobile-drop__subnav--link">Гибкая черепица</a>
+							</li>
+							<li class="mobile-drop__subnav_has-sub">
+								<a href="#" class="mobile-drop__subnav--link">Наплавляемая кровля</a>
+							</li>
+							<li class="mobile-drop__subnav_has-sub">
+								<a href="#" class="mobile-drop__subnav--link">Ондулин</a>
+							</li>
+							<li class="mobile-drop__subnav_has-sub">
+								<a href="#" class="mobile-drop__subnav--link">Рубероид</a>
+							</li>
+							<li class="mobile-drop__subnav_has-sub">
+								<a href="#" class="mobile-drop__subnav--link">Шифер</a>
+							</li>
+						</ul>
+					</li>
+					<li class="mobile-drop__catalog_has-sub">
+						<a href="#" class="mobile-drop__catalog--link">
+							<i class="mobile-drop__catalog--icon"><img src="./img/nav-icon-m-2.png" width="19" height="17" alt=""></i>
+							<span class="mobile-drop__catalog--text">Теплоизоляционные материалы</span>
+						</a>	
+					</li>
+					<li class="mobile-drop__catalog_has-sub">
+						<a href="#" class="mobile-drop__catalog--link">
+							<i class="mobile-drop__catalog--icon"><img src="./img/nav-icon-m-3.png" width="22" height="19" alt=""></i>
+							<span class="mobile-drop__catalog--text">Кирпич, цемент, газобетон, плитка</span>
+						</a>	
+					</li>
+					<li class="mobile-drop__catalog_has-sub">
+						<a href="#" class="mobile-drop__catalog--link">
+							<i class="mobile-drop__catalog--icon"><img src="./img/nav-icon-m-4.png" width="22" height="20" alt=""></i>
+							<span class="mobile-drop__catalog--text">Металлопрокат</span>
+						</a>	
+					</li>
+					<li class="mobile-drop__catalog_has-sub">
+						<a href="#" class="mobile-drop__catalog--link">
+							<i class="mobile-drop__catalog--icon"><img src="./img/nav-icon-m-5.png" width="21" height="21" alt=""></i>
+							<span class="mobile-drop__catalog--text">Внутренняя  отделка</span>
+						</a>	
+					</li>
+					<li class="mobile-drop__catalog_has-sub">
+						<a href="#" class="mobile-drop__catalog--link">
+							<i class="mobile-drop__catalog--icon"><img src="./img/nav-icon-m-6.png" width="20" height="14" alt=""></i>
+							<span class="mobile-drop__catalog--text">Древесные материалы</span>
+						</a>	
+					</li>
+					<li class="mobile-drop__catalog_has-sub">
+						<a href="#" class="mobile-drop__catalog--link">
+							<i class="mobile-drop__catalog--icon"><img src="./img/nav-icon-m-7.png" width="20" height="21" alt=""></i>
+							<span class="mobile-drop__catalog--text">Лакокрасочные материалы</span>
+						</a>	
+					</li>
+					<li class="mobile-drop__catalog_has-sub">
+						<a href="#" class="mobile-drop__catalog--link">
+							<i class="mobile-drop__catalog--icon"><img src="./img/nav-icon-m-8.png" width="21" height="18" alt=""></i>
+							<span class="mobile-drop__catalog--text">Отопление, водоснабжение, канализация</span>
+						</a>	
+					</li>
+					<li class="mobile-drop__catalog_has-sub">
+						<a href="#" class="mobile-drop__catalog--link">
+							<i class="mobile-drop__catalog--icon"><img src="./img/nav-icon-m-9.png" width="21" height="19" alt=""></i>
+							<span class="mobile-drop__catalog--text">Ванная и кухня</span>
+						</a>	
+					</li>
+					<li class="mobile-drop__catalog_has-sub">
+						<a href="#" class="mobile-drop__catalog--link">
+							<i class="mobile-drop__catalog--icon"><img src="./img/nav-icon-m-10.png" width="19" height="13" alt=""></i>
+							<span class="mobile-drop__catalog--text">Сад и огород</span>
+						</a>	
+					</li>
+					<li class="mobile-drop__catalog_has-sub">
+						<a href="#" class="mobile-drop__catalog--link">
+							<i class="mobile-drop__catalog--icon"><img src="./img/nav-icon-m-11.png" width="21" height="20" alt=""></i>
+							<span class="mobile-drop__catalog--text">Инструменты, Хозтовары</span>
+						</a>	
+					</li>
+					<li class="mobile-drop__catalog_has-sub">
+						<a href="#" class="mobile-drop__catalog--link">
+							<i class="mobile-drop__catalog--icon"><img src="./img/nav-icon-m-12.png" width="20" height="19" alt=""></i>
+							<span class="mobile-drop__catalog--text">Электрика</span>
+						</a>	
+					</li>
+				</ul>
+			</li>
+			<li><a href="#" class="mobile-drop__nav--link mobile-drop__nav--link_basket">Корзина<span class="mobile-drop__nav--basket-quantity">0</span></a></li>
+			<li><a href="#" class="mobile-drop__nav--link mobile-drop__nav--link_lk">Вход / регистрация</a></li>
+			<li><a href="#" class="mobile-drop__nav--link">Контакты</a></li>
+			<li><a href="#" class="mobile-drop__nav--link">Способ оплаты</a></li>
+			<li><a href="#" class="mobile-drop__nav--link">О компании</a></li>
+			<li><a href="#" class="mobile-drop__nav--link mobile-drop__nav--link_phone">+7 (3852) 558-558</a></li>
+		</ul>
+	</div>
+	<div class="fade-bg"></div>
+	<script src="./js/libs.js"></script>
+	<script src="./js/scripts.js"></script>
 </body>
 </html>
