@@ -361,7 +361,7 @@
 						t.append('\
 							<h4 class="catalog__table-list--title">'+$(this).find('.catalog__table--title').text()+'</h4>\
 							<p class="catalog__table-list--code">код товара: '+$(this).find('.catalog__table--code').text()+'</p>\
-							<h5 class="catalog__table-list--price"><span>'+$(this).find('.catalog__table--price').html()+'</span> / шт.</h5>\
+							<h5 class="catalog__table-list--price"><span>'+$(this).find('.catalog__table--price-current').html()+'</span> / шт.</h5>\
 							<div class="catalog__table-list--picture">\
 								<img src="'+$(this).find('.catalog__table--pic img').attr('src')+'" class="img-contain" alt="">\
 							</div>\
@@ -369,6 +369,12 @@
 					});
 					setImgContain();
 				}
+				$('.nav-side__list div, .nav-side__list ul').each(function() {
+					$(this).siblings().addClass('has-sub');
+				});
+				$('.mobile-drop__catalog ul').each(function() {
+					$(this).siblings().parent().addClass('has-sub');
+				});
 			} else {
 				$('.slider-main').detach().insertBefore('.content__col-2 .catalog');
 				if ( $('.content .breadcrumbs').length > 0 ) {
@@ -380,8 +386,8 @@
 					$(this).text('г');
 				});
 				clearCardSlider();	
-				$('.mobile-drop').hide();
 				$('.wrapper, .footer-m').show();
+				hideMobileMenu();
 				$('.card__right--add-to-basket').detach().insertBefore('.card__right--buy_one-click');
 				navSideTextPos();
 				if ( $('.catalog__view').length ) {
@@ -402,7 +408,7 @@
 		}
 		t.toggleClass('mobile-drop__nav_is-opened');
 	});
-	$('.mobile-drop__catalog_has-sub > a').on('click', function(e) {
+	$('.mobile-drop__catalog_has-sub.has-sub > a').on('click', function(e) {
 		e.preventDefault();
 		var t = $(this).parent();
 		if ( !t.hasClass('mobile-drop__catalog_is-opened') ) {
@@ -412,7 +418,7 @@
 		}
 		t.toggleClass('mobile-drop__catalog_is-opened');
 	});
-	$('.mobile-drop__subnav_has-sub > a').on('click', function(e) {
+	$('.mobile-drop__subnav_has-sub.has-sub > a').on('click', function(e) {
 		e.preventDefault();
 		var t = $(this).parent();
 		if ( !t.hasClass('mobile-drop__subnav_is-opened') ) {
@@ -534,13 +540,13 @@
 			$('[data-'+$(this).attr('name')+']').hide().filter('[data-'+$(this).attr('name')+'="'+$(this).val()+'"]').show();
 		}
 	});
-	$('.nav-side__item--link').on('click', function(e) {
+	$('.nav-side__item--link.has-sub').on('click', function(e) {
 		if ( isMobile ) {
 			e.preventDefault();
 			$(this).toggleClass('nav-side__item--link_is-dropped');
 		}
 	});
-	$('.nav-side__sub--item h5 a').on('click', function(e) {
+	$('.nav-side__sub--item h5.has-sub a').on('click', function(e) {
 		if ( isMobile ) {
 			e.preventDefault();
 			$(this).parent().toggleClass('is-dropped');
@@ -596,7 +602,6 @@
 	function setRating(e) {
 		e.each(function() {
 			var h = $(this).height();
-			console.log(h);
 			$(this).css({
 				'background-position-y': -h*$(this).attr('data')
 			});
