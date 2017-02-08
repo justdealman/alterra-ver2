@@ -97,6 +97,7 @@ input, select, textarea {
 	background:none;
 	border:0;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 textarea {
@@ -107,6 +108,7 @@ button {
 	margin:0;
 	border:0;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 button::-moz-focus-inner {
@@ -332,6 +334,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	padding:9px 9px 9px 81px;
 	margin:0;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .header__search-resul--more {
@@ -395,6 +398,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	-webkit-border-radius:8px;
 	border-radius:8px;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .header__basket--title {
@@ -674,6 +678,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.23);
 	box-shadow:0 2px 4px rgba(0,0,0,0.23);
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .nav__item:hover .nav__sub {
@@ -688,6 +693,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	padding:10px 9px;
 	border-top:1px solid #003885;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .nav__sub a:hover {
@@ -818,6 +824,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	background:#ffffff;
 	border-left:3px solid #004599;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 	-webkit-box-shadow:0 2px 4px rgba(0,0,0,0.23);
 	box-shadow:0 2px 4px rgba(0,0,0,0.23);
@@ -856,6 +863,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	padding:0 14px 12px 11px;
 	margin:0 -3px 0 0;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .nav-side__sub--item:nth-child(3n+1):before {
@@ -1206,6 +1214,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	vertical-align:top;
 	margin:0 -3px 10px 0;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .item-elem {
@@ -1237,6 +1246,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	padding:10px 9px 0;
 	height:228px;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .item-elem--title {
@@ -1329,6 +1339,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	padding:0 10px;
 	margin:0;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .quantity-e {
@@ -1519,6 +1530,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	width:100px;
 	padding:0 10px;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .partners-i__slider__item--pic {
@@ -1897,6 +1909,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	color:#002365;
 	padding:0 0 0 36px;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .card__description--tip:before {
@@ -2093,6 +2106,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	-webkit-border-radius:4px;
 	border-radius:4px;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .card__right--price {
@@ -2820,6 +2834,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	-webkit-border-radius:5px;
 	border-radius:5px;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .pages-e--link_active {
@@ -2882,6 +2897,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	padding:26px 20px 24px;
 	margin:0 -3px 0 0;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .registration__col:first-child {
@@ -3069,6 +3085,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	-webkit-border-radius:5px;
 	border-radius:5px;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .lk__nav .active a, .lk__nav a:hover {
@@ -3091,6 +3108,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	-webkit-border-radius:5px;
 	border-radius:5px;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .lk--form-item {
@@ -3358,6 +3376,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	height:150px;
 	padding:20px 20px 20px 10px;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .may-need__slider--item > div {
@@ -4004,6 +4023,7 @@ div.radio span.checked {
 	-webkit-border-radius:5px;
 	border-radius:5px;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .about__slider--text:before {
@@ -4087,6 +4107,7 @@ div.radio span.checked {
 	-webkit-border-radius:5px;
 	border-radius:5px;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .about__nav a {
@@ -4159,6 +4180,7 @@ div.radio span.checked {
 	-webkit-border-radius:5px;
 	border-radius:5px;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .about__desc--sub p {
@@ -4549,6 +4571,7 @@ div.radio span.checked {
 	width:47%;
 	padding:0 0 0 30px;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .distributors__cols--pic img {
@@ -4684,6 +4707,7 @@ div.radio span.checked {
     padding:0 10px;
     margin:0 -3px 30px 0;
     -webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
     box-sizing:border-box;
   }
   .about--achievements h4 {
@@ -4703,6 +4727,7 @@ div.radio span.checked {
     padding:0 30px 33px 0;
     margin:0 -3px 0 0;
     -webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
     box-sizing:border-box;
   }
   .about--steps h4 {
@@ -4721,6 +4746,7 @@ div.radio span.checked {
 		padding:0 15px;
 		margin-right:-3px;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.distributors__benefits ul li:nth-child(5n) {
@@ -5096,6 +5122,8 @@ div.radio span.checked {
 	border:none;
 	z-index:1;
 	box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
 	opacity:0;
 }
 .selectric-input {
@@ -5584,6 +5612,7 @@ div.radio span.checked {
 	padding:0 20px 0 0;
 	margin:0 -3px 20px 0;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .contacts__item--list {
@@ -5599,6 +5628,7 @@ div.radio span.checked {
 	padding:0 20px 0 0;
 	margin:0 -3px 29px 0;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .contacts__item--list li:nth-child(3n) {
@@ -5652,6 +5682,7 @@ div.radio span.checked {
 	height:93px;
 	padding:14px 14px 10px;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .news__item--title h3 {
@@ -5686,6 +5717,7 @@ div.radio span.checked {
 	min-height:131px;
 	padding:13px 14px 18px;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .news__item--text p {
@@ -5784,6 +5816,7 @@ div.radio span.checked {
 	-webkit-border-radius:5px;
 	border-radius:5px;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .vacancy__job--main:after {
@@ -5847,6 +5880,7 @@ div.radio span.checked {
 	vertical-align:top;
 	margin:0 17px 30px 0;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .vacancy__job--join li:before {
@@ -5995,6 +6029,7 @@ div.radio span.checked {
 	font-weight:bold;
 	padding:12px 20px 11px 15px;
 	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
 .compare__title li:nth-child(2n+1) {
@@ -6294,6 +6329,7 @@ div.radio span.checked {
 		padding:0 10px;
 		margin-right:-3px;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.gallery__list li:nth-child(4n) {
@@ -6317,6 +6353,7 @@ div.radio span.checked {
 		padding:0 10px;
 		margin-right:-3px;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.news__list li:nth-child(4n) {
@@ -6692,6 +6729,7 @@ div.radio span.checked {
 		width:50%;
 		padding:0 5px;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.footer-m__buttons a {
@@ -6817,6 +6855,7 @@ div.radio span.checked {
 		padding:10px 36px 13px 45px;
 		background:#585858;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.mobile-drop__address:after {
@@ -6891,6 +6930,7 @@ div.radio span.checked {
 		-webkit-border-radius:50%;
 		border-radius:50%;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.mobile-drop__catalog--icon {
@@ -7115,6 +7155,7 @@ div.radio span.checked {
 		-webkit-border-radius:0;
 		border-radius:0;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.filter-side__item {
@@ -7280,6 +7321,7 @@ div.radio span.checked {
 		margin:0 0 0 -5px !important;
 		background:#ffffff;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.catalog .h1-title,
@@ -7332,6 +7374,7 @@ div.radio span.checked {
 		min-height:97px;
 		padding:12px 14px 8px 135px;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.item-elem--link {
@@ -7494,6 +7537,7 @@ div.radio span.checked {
 		background:#ffffff;
 		margin:0 0 0 -5px;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.card .rating-e {
@@ -7698,6 +7742,7 @@ div.radio span.checked {
 		margin:0 0 0 -5px;
 		background:#ffffff;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.card__description--nav {
@@ -7726,6 +7771,7 @@ div.radio span.checked {
 		border:1px solid #bbbbbb;
 		border-radius:0;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 		background:rgb(251,251,251);
 		background:-moz-linear-gradient(top,  rgba(251,251,251,1) 0%, rgba(225,226,225,1) 100%);
@@ -7802,6 +7848,7 @@ div.radio span.checked {
 		margin:-6px 0 -5px -5px;
 		background:#ffffff;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.card__more-m--item {
@@ -7945,6 +7992,7 @@ div.radio span.checked {
 		margin:0 0 10px -5px;
 		background:#ffffff;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.basket__total--short {
@@ -8023,6 +8071,7 @@ div.radio span.checked {
 		padding:16px 5px 19px;
 		margin:0 0 10px -5px;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.lk__user {
@@ -8050,6 +8099,7 @@ div.radio span.checked {
 		-webkit-border-radius:0;
 		border-radius:0;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.lk__orders--list {
@@ -8297,6 +8347,7 @@ div.radio span.checked {
 		margin:0 0 10px -5px;
 		background:#ffffff;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.registration--title {
@@ -8308,6 +8359,7 @@ div.radio span.checked {
 		margin:0 0 10px -5px;
 		background:#eeeeee;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.registration--title .login-icon {
@@ -8353,6 +8405,7 @@ div.radio span.checked {
 		border:1px solid #bbbbbb;
 		border-radius:0;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 		background:rgb(251,251,251);
 		background:-moz-linear-gradient(top,  rgba(251,251,251,1) 0%, rgba(225,226,225,1) 100%);
@@ -8468,6 +8521,7 @@ div.radio span.checked {
 		border:1px solid #bbbbbb;
 		border-radius:0;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 		background:rgb(251,251,251);
 		background:-moz-linear-gradient(top,  rgba(251,251,251,1) 0%, rgba(225,226,225,1) 100%);
@@ -8824,6 +8878,7 @@ div.radio span.checked {
 		margin:0 0 10px -5px;
 		background:#ffffff;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.vacancy__form--item {
@@ -8869,6 +8924,7 @@ div.radio span.checked {
 		-webkit-border-radius:5px;
 		border-radius:5px;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.vacancy__form--file-link:hover {
@@ -8880,6 +8936,7 @@ div.radio span.checked {
 		margin:0 0 10px -5px;
 		background:#ffffff;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.vacancy__job--main {
@@ -9331,6 +9388,7 @@ div.radio span.checked {
 		margin:0 0 4px -5px;
 		background:#eeeeee;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.ordering__group h3 i.user-icon {
@@ -9392,6 +9450,7 @@ div.radio span.checked {
 		-webkit-border-radius:0;
 		border-radius:0;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.catalog__view--link {
@@ -9403,6 +9462,7 @@ div.radio span.checked {
 		padding:12px 14px 8px 135px;
 		margin:-12px -14px -8px -135px;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.catalog__view--item:after {
@@ -9491,6 +9551,7 @@ div.radio span.checked {
 		padding:12px 14px 8px 135px;
 		border:1px solid #eeeeee;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.catalog__table-list--item:after {
@@ -9513,6 +9574,7 @@ div.radio span.checked {
 		padding:12px 14px 8px 135px;
 		margin:-12px -14px -8px -135px;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.catalog__table-list--title {
@@ -9856,6 +9918,7 @@ div.radio span.checked {
 		-webkit-border-radius:0;
 		border-radius:0;
 		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
 		box-sizing:border-box;
 	}
 	.modal__basket--button {
