@@ -219,35 +219,36 @@
 		});
 	}
 	function setCompareTable() {
-		var t = $('.compare');
-		var table = t.find('.compare__table');
-		table.find('.compare__table--head').remove();
-		if ( !isMobile ) {
-			var totalWidth = table.find('thead td').size()*parseInt(table.attr('data-elem-desktop'))-10;
-			$('.compare__title').remove()	
-			$('.compare').append('<ul class="compare__title"></ul>');
-			var title = $('.compare').find('.compare__title');
-			title.css({
-				top: table.find('thead').height()
-			});
-			table.find('tbody tr').each(function() {
-				title.append('<li style="height:'+$(this).height()+'px">'+$(this).find('th').text()+'</li>');
-			});
-		} else {
-			var totalWidth = table.find('thead td').size()*parseInt(table.attr('data-elem-mobile'));
-			table.find('tbody tr th').each(function() {
-				var s = $(this).parent();
-				s.before('<tr class="compare__table--head">\
-					<td colspan="'+s.children().size()+'"><strong>'+$(this).text()+'</strong></td>\
-				</tr>');
-			});
-			$('.compare__inner').on('scroll', function() {
-				$('.compare__table--head strong').css({
-					marginLeft: $(this).scrollLeft()
+		$('.compare').each(function() {
+			var table = $(this).find('.compare__table');
+			table.find('.compare__table--head').remove();
+			if ( !isMobile ) {
+				var totalWidth = table.find('thead td').size()*parseInt(table.attr('data-elem-desktop'))-10;
+				$(this).find('.compare__title').remove()	
+				$(this).append('<ul class="compare__title"></ul>');
+				var title = $(this).find('.compare__title');
+				title.css({
+					top: table.find('thead').height()
 				});
-			});
-		}
-		$('.compare__table').width(totalWidth);
+				table.find('tbody tr').each(function() {
+					title.append('<li style="height:'+$(this).height()+'px">'+$(this).find('th').text()+'</li>');
+				});
+			} else {
+				var totalWidth = table.find('thead td').size()*parseInt(table.attr('data-elem-mobile'));
+				table.find('tbody tr th').each(function() {
+					var s = $(this).parent();
+					s.before('<tr class="compare__table--head">\
+						<td colspan="'+s.children().size()+'"><strong>'+$(this).text()+'</strong></td>\
+					</tr>');
+				});
+				$(this).find('.compare__inner').on('scroll', function() {
+					$(this).find('.compare__table--head strong').css({
+						marginLeft: $(this).scrollLeft()
+					});
+				});
+			}
+			table.width(totalWidth);
+		});
 	}
 	function desktopNavPadding() {
 		if ( !isMobile ) {
