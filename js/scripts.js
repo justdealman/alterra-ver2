@@ -282,21 +282,24 @@
 				setCardSlider();
 				$('.card__right--add-to-basket').detach().insertAfter('.card__right--buy_one-click');
 				if ( $('.basket__table').length > 0 ) {
-					$('.basket__table').prepend('<div class="basket__list"></div>');
-					$('.basket__table tbody tr').each(function() {
-						$('.basket__list').append('<div class="item-elem" data="'+$(this).index()+'"></div>');
-						var t = $('.item-elem[data="'+$(this).index()+'"]');
-						t.append('\
-							<h4 class="item-elem--title">'+$(this).find('.basket__table--title').text()+'</h4>\
-							<div class="item-elem--picture">\
-								'+$(this).find('.basket__table--picture > div').html()+'\
-							</div>\
-							<p class="item-elem--code">'+$(this).find('.basket__table--code').text()+'</p>\
-							<h5 class="item-elem--price"><span>'+$(this).find('.basket__table--price span').text()+' <em class="rouble-icon">г</em></span> / шт.</h5>\
-							<p class="item-elem--total">'+$(this).find('.basket__table--total').text()+'</p>\
-						');
-						setImgContain();
-						$(this).find('.quantity-e, .basket__table--remove_button').clone().appendTo(t);
+					$('.basket__table').each(function() {
+						var e = $(this);
+						e.prepend('<div class="basket__list"></div>');
+						e.find('tbody tr').each(function() {
+							e.find('.basket__list').append('<div class="item-elem" data="'+$(this).index()+'"></div>');
+							var t = e.find('.item-elem[data="'+$(this).index()+'"]');
+							t.append('\
+								<h4 class="item-elem--title">'+$(this).find('.basket__table--title').text()+'</h4>\
+								<div class="item-elem--picture">\
+									'+$(this).find('.basket__table--picture > div').html()+'\
+								</div>\
+								<p class="item-elem--code">'+$(this).find('.basket__table--code').text()+'</p>\
+								<h5 class="item-elem--price"><span>'+$(this).find('.basket__table--price span').text()+' <em class="rouble-icon">г</em></span> / шт.</h5>\
+								<p class="item-elem--total">'+$(this).find('.basket__table--total').text()+'</p>\
+							');
+							setImgContain();
+							$(this).find('.quantity-e, .basket__table--remove_button').clone().appendTo(t);
+						});
 					});
 				}
 				if ( $('.basket__total').length > 0 ) {
@@ -502,8 +505,8 @@
 		$(this).addClass('catalog__filter--sort-m_active').siblings().removeClass();
 	});
 	$('.catalog__title').on('click', function(e) {
-		e.preventDefault();
 		if ( isMobile ) {
+			e.preventDefault();
 			$(this).toggleClass('catalog__title_is-hidden');
 		}
 	});
