@@ -239,16 +239,16 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	box-shadow:0 2px 4px rgba(0,0,0,0.23);
 }
 .header__search ::-webkit-input-placeholder  {
-	color:#2761a9;
+	color:#ffffff;
 }
 .header__search :-moz-placeholder {
-	color:#2761a9;
+	color:#ffffff;
 }
 .header__search ::-moz-placeholder {
-	color:#2761a9;
+	color:#ffffff;
 }
 .header__search :-ms-input-placeholder {
-	color:#2761a9;
+	color:#ffffff;
 }
 .header__search--input {
 	width:100%;
@@ -6722,6 +6722,18 @@ div.radio span.checked {
 		border:1px solid #2761a9;
 		-webkit-border-radius:3px;
 		border-radius:3px;
+	}
+	.header__search ::-webkit-input-placeholder  {
+		color:#4b4b4b;
+	}
+	.header__search :-moz-placeholder {
+		color:#4b4b4b;
+	}
+	.header__search ::-moz-placeholder {
+		color:#4b4b4b;
+	}
+	.header__search :-ms-input-placeholder {
+		color:#4b4b4b;
 	}
 	.header__search--submit {
 		width:32px;

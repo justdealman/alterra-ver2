@@ -141,6 +141,7 @@
 		$(this).parent().addClass('active').siblings().removeClass('active');
 	});
 	$('.lk__nav li.active a').trigger('click');
+	$('.lk__nav .lk__nav--link').off('click');
 	$('.may-need__slider').slick({
 		slidesToShow: 2,
 		slidesToScroll: 1,
