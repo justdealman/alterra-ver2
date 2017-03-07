@@ -6569,6 +6569,12 @@ div.radio span.checked {
 	.vacancy__job--join li:nth-child(3n) {
 		margin-right:17px;
 	}
+	.distributors__bonus ul {
+		margin:28px 0 28px;
+	}
+	.distributors__bonus ul h4 {
+		font-size:303px;
+	}
 }
 @media all and (min-width:1021px) {
 	.mobile-drop,
@@ -10271,6 +10277,84 @@ div.radio span.checked {
 	.ordering .basket__total {
 		width:auto;	
 		margin:0 0 10px;
+	}
+	.distributors__bonus {
+		text-align:center;
+		padding:20px 5px 10px;
+		margin:0 0 10px;
+		background:#ffffff;
+	}
+	.distributors__bonus p {
+		font-size:14px;
+	}
+	.distributors__bonus ul {
+		margin:30px 0 10px;
+	}
+	.distributors__bonus ul li {
+		float:none;
+		width:auto;
+		min-height:0;
+		padding:0;
+		margin:0 0 30px;
+	}
+	.distributors__bonus ul h4 {
+		position:static;
+		font-size:103px;
+		line-height:83px;
+		margin:0 0 10px;
+	}
+	.distributors__bonus ul h6 {
+		position:static;
+		font-size:16px;
+		padding:0;
+		margin:0;
+	}
+	.distributors__bonus ul h6:before {
+		display:none;
+	}
+	.distributors__bonus button {
+		font-size:12px;
+		line-height:15px;
+		padding:6px 10px 7px;
+	}
+	.distributors__bonus img {
+		position:static !important;
+		margin:-20px 0 -10px;
+	}
+	.distributors__services {
+		text-align:center;
+		padding:20px 5px 10px;
+		background:#ffffff;
+		border-top-width:0;
+		border-bottom:10px solid #f5f5f5;
+	}
+	.distributors__services ul {
+		width:auto;
+		margin:30px 0 0;
+	}
+	.distributors__services ul li {
+		width:auto;
+		display:block;
+		min-height:0;
+		padding:0;
+		margin:0 0 30px;
+	}
+	.distributors__services ul li span {
+		position:static;
+		width:auto;
+		height:auto;
+		margin:0 auto 10px;
+	}
+	.distributors__services ul li span img {
+		position:static;
+		-webkit-transform:scale(1);
+		transform:scale(1);
+	}
+	.distributors__services ul h5 {
+		margin:0 0 5px;
+	}
+	.distributors__services ul p {
+		margin:0;
 	}
 }
 @media all and (min-width:1021px) {
