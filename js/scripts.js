@@ -267,9 +267,28 @@
 			});
 		}
 	}
+	function discountScale() {
+		if ( $('.content').width() < 1360 ) {
+			var r = $('.content').width()/1360;
+		} else {
+			var r = 1;
+		}
+		$('.discount').css({
+			'margin-bottom': -$('.discount').outerHeight()*(1-r)+'px',
+			'-webkit-transform': 'scale('+r+')',
+			'-moz-transform': 'scale('+r+')',
+			'transform': 'scale('+r+')',
+		});
+	}
+	if ( $('.discount').length ) {
+		discountScale();
+	}
 	$(window).on('load resize', function() {
 		detectDevice();
 		desktopNavPadding();
+		if ( $('.discount').length ) {
+			discountScale();
+		}
 		if ( justSwitched ) {
 			if ( isMobile ) {
 				$('.slider-main').detach().insertBefore('.content__col-1');
