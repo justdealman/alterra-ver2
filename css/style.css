@@ -202,7 +202,6 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	line-height:16px;
 	vertical-align:top;
 	cursor:pointer;
-	padding:0 16px 0 0;
 	margin:0;
 }
 .header__shop--address:after {
@@ -216,8 +215,9 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 }
 .header__shop--address span {
 	position:relative;
+	z-index:1;
 	display:block;
-	padding:0 0 2px;
+	padding:0 16px 2px 0;
 }
 .header__shop--address span:after {
 	content:'';
@@ -225,6 +225,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	left:0;
 	bottom:0;
 	width:100%;
+	width:calc(100% - 16px);
 	border-bottom:1px dashed #002365;
 }
 .header__shop--address:hover span:after {
