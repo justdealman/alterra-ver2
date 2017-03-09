@@ -9878,13 +9878,15 @@ div.radio span.checked {
 	}
 	.gallery__list, .news__list {
 		width:auto;
-		margin:0 5px -10px;
+		margin:0 0 -10px;
 	}
 	.gallery__list li, .news__list li {
-		display:block;
-		width:auto;
-		padding:0;
-		margin:0 0 10px !important;
+		width:33.33%;
+		padding:0 5px;
+		margin:0 -3px 10px 0 !important;
+		-webkit-box-sizing:border-box;
+		-moz-box-sizing:border-box;
+		box-sizing:border-box;
 	}
 	.gallery__item, .news__item {
 		background-color:#ffffff;
@@ -11388,5 +11390,17 @@ div.radio span.checked {
 	}
 	.nav-side__item--link:hover .nav-side__item--icon img {
 		top:-64px;
+	}
+}
+@media all and (max-width:767px) {
+	.gallery__list li, .news__list li {
+		width:50%;
+	}
+}
+@media all and (max-width:540px) {
+	.gallery__list li, .news__list li {
+		display:block;
+		width:100%;
+		margin:0 0 10px !important;
 	}
 }

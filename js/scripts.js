@@ -296,11 +296,22 @@
 	if ( $('.discount').length ) {
 		discountScale();
 	}
+	function gridScale() {
+		$('.gallery__item--pic, .news__item--pic').each(function() {
+			$(this).height($(this).width()*0.62);
+		});
+	}
+	if ( $('.gallery__list').length || $('.news__list').length ) {
+		gridScale();
+	}
 	$(window).on('load resize', function() {
 		detectDevice();
 		desktopNavPadding();
 		if ( $('.discount').length ) {
 			discountScale();
+		}
+		if ( $('.gallery__list').length || $('.news__list').length ) {
+			gridScale();
 		}
 		if ( justSwitched ) {
 			if ( isMobile ) {
