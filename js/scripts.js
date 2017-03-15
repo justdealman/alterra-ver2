@@ -320,7 +320,11 @@
 				if ( $('.content .breadcrumbs').length > 0 ) {
 					$('.breadcrumbs').clone().insertAfter('header');
 				}
-				$('.filter-side__price-range .slider').detach().insertAfter('.filter-side__price-range .range');
+				$('.filter-side__price-range .slider').each(function() {
+					var t = $(this);
+					var p = $(this).parent();
+					t.detach().insertAfter(p.find('.range'));
+				});
 				$('.filter-side').prepend('<h4 class="filter-side--toggle">Фильтр по параметрам</h4>');
 				clearCardSlider();
 				setCardSlider();
@@ -428,7 +432,11 @@
 				if ( $('.content .breadcrumbs').length > 0 ) {
 					$('header').next('.breadcrumbs').remove();
 				}
-				$('.filter-side__price-range .slider').detach().insertBefore('.filter-side__price-range .range');
+				$('.filter-side__price-range .slider').each(function() {
+					var t = $(this);
+					var p = $(this).parent();
+					t.detach().insertBefore(p.find('.range'));
+				});
 				$('.filter-side--toggle, .basket__list, .basket__total--short, .lk__orders--list, .lk__user--bonus-list, .catalog__table-list').remove();
 				$('.rouble-icon').each(function() {
 					$(this).text('г');
