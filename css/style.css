@@ -1894,12 +1894,16 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	background:#002365;
 }
 .card__description--tab {
+	display:none;
 	position:relative;
 	color:#383838;
 	padding:32px 28% 1px 20px;
 	border:1px solid #b1b1b1;
 	-webkit-border-radius:5px;
 	border-radius:5px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
 }
 .card__description p {
 	font-size:14px;
@@ -1912,18 +1916,35 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	padding:0;
 	margin:0;
 }
+.card__description--tab .list {
+	width:calc(100% + 20px);
+	margin:5px 0 13px -20px;
+}
+.card__description--tab .list li {
+	color:#383838;
+	font-size:12px;
+	line-height:15px;
+	padding:4px 20px;
+}
+.card__description--tab .list li:nth-child(2n+1) {
+	background:#eeeeee;
+}
 .card__description--tip {
 	position:absolute;
 	right:20px;
-	top:33px;
+	top:0;
 	width:209px;
 	color:#002365;
-	padding:0 0 0 36px;
+	padding:33px 0 8px 0;
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
-.card__description--tip:before {
+.card__description--tip .security {
+	position:relative;
+	padding-left:36px;
+}
+.card__description--tip .security:before {
 	content:'';
 	position:absolute;
 	left:0;
@@ -1932,16 +1953,49 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	height:23px;
 	background:url('../img/shield-icon.png') no-repeat 0 0;
 }
-.card__description--tip h5 {
+.card__description--tip .security h5 {
 	font-size:12px;
 	line-height:15px;
 	text-transform:uppercase;
 	padding:0;
 	margin:0 0 21px;
 }
-.card__description--tip p {
+.card__description--tip .security p {
 	font-size:12px;
 	line-height:15px;
+}
+.card__description--tip .more {
+	width:calc(100% + 10px);
+	margin:0;
+}
+.card__description--tip .more li {
+	position:relative;
+	min-height:28px;
+	color:#002365;
+	font-size:12px;
+	line-height:14px;
+	padding:0 0 0 48px;
+	margin:0 0 17px;
+}
+.card__description--tip .more li i {
+	display:block;
+	position:absolute;
+	left:0;
+	top:50%;
+	display:block;
+	width:36px;
+	height:36px;
+	margin-top:-20px;
+}
+.card__description--tip .more li i img {
+	position:absolute;
+	top:0;
+	right:0;
+	left:0;
+	bottom:0;
+	max-width:36px;
+	max-height:36px;
+	margin:auto;
 }
 .card {
 	position:relative;
@@ -8675,6 +8729,7 @@ div.radio span.checked {
 		filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#b8b7b7', endColorstr='#6e6f6e',GradientType=0 );
 	}
 	.card__description--tab {
+		min-height:0 !important;
 		text-align:left;
 		padding:0;
 		margin:0 0 15px;

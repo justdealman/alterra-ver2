@@ -752,4 +752,17 @@
 	$('.header__search, .header__search-result').on('click', function(e) {
 		e.stopPropagation();
 	});
+	$('.card__description--nav a').on('click', function(e) {
+		e.preventDefault();
+		var tabs = $(this).parents('.card__description--nav').siblings('.card__description--tab');
+		var target = tabs.filter('[data="'+$(this).attr('href')+'"]');
+		if ( target.is(':hidden') ) {
+			tabs.hide();
+			target.show();
+			target.css({
+				'min-height': target.find('[data-min-height]').outerHeight()
+			})
+			$(this).parent().addClass('active').siblings().removeClass('active');
+		}
+	}).filter(':first').click();
 });
