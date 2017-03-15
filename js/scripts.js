@@ -584,6 +584,10 @@
 		e.preventDefault();
 		$(this).siblings('input[type="file"]').trigger('click');
 	});
+	$('input[type="file"]').on('change', function(e) {
+		var filename = $(this).val().split('\\').pop();
+		$(this).siblings('input[type="text"]').val(filename);
+	});
 	$('.ordering--autorization').on('click', function(e) {
 		e.preventDefault();
 		$('.ordering--autorization').toggleClass('ordering--autorization_is-dropped');
