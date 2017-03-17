@@ -11434,6 +11434,9 @@ div.radio span.checked {
 		line-height:68px;
 		margin:0 40px;
 	}
+	.tabb {
+		padding:0 5px !important;
+	}
 }
 @media all and (min-width:1021px) {
 	.header__lk:hover:before, .header__basket:hover:before, .header__basket--quantity {
