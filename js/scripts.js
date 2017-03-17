@@ -773,4 +773,12 @@
 			$(this).parent().addClass('active').siblings().removeClass('active');
 		}
 	}).filter(':first').click();
+	$('.header__call--order').on('click', function(e) {
+		e.preventDefault();
+		if ( isMobile ) {
+			window.location = 'tel:'+$('.citysel-m li.active').attr('data-tel');
+		} else {
+			e.stopPropagation();
+		}
+	});
 });
