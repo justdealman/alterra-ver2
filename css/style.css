@@ -7493,11 +7493,15 @@ div.radio span.checked {
 		margin:0;
 		background:url('../img/basket-icon-m.png') no-repeat center 15px;
 	}
-	.header__basket--quantity,
 	.header__basket--title,
 	.header__basket--price,
 	.header__call--order:before	{
 		display:none;
+	}
+	.header__basket--quantity {
+		top:7px;
+		left:22px;
+		z-index:3;
 	}
 	.header__call {
 		overflow:hidden;
