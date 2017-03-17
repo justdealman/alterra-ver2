@@ -2166,7 +2166,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	width:229px;
 	min-height:313px;
 	text-align:center;
-	padding:23px 19px 0 20px;
+	padding:23px 19px 9px 20px;
 	background:#eeeeee;
 	-webkit-border-radius:4px;
 	border-radius:4px;
@@ -2184,6 +2184,13 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 .card__right--price span {
 	font-size:20px;
 	font-weight:bold;
+}
+.card__right--price s {
+	display:inline-block;
+	color:#a2a2a2;
+	font-size:16px;
+	vertical-align:top;
+	margin:3px 7px -3px 0;
 }
 .card__right--price em {
 	font-size:21px;
@@ -2224,6 +2231,9 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 }
 .card__right--quantity .quantity-e--button_minus {
   top:20px;
+}
+.card__right--maxdiscount {
+	color:#ad0a00;
 }
 .card__right--button {
 	width:100%;
@@ -8507,6 +8517,7 @@ div.radio span.checked {
 		border-right:4px solid #313131;
 	}
 	.card__row {
+		min-height:0 !important;
 		border-width:0;
 		-webkit-border-radius:0;
 		border-radius:0;
@@ -8647,6 +8658,9 @@ div.radio span.checked {
 	}
 	.quantity-e--button_plus {
 		background:url('../img/quantity-buttons-m.png') no-repeat 0 -20px !important;
+	}
+	.card__right--maxdiscount {
+		text-align:center;
 	}
 	.card__right--button {
 		display:inline-block;

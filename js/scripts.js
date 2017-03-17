@@ -304,6 +304,11 @@
 	if ( $('.gallery__list').length || $('.news__list').length ) {
 		gridScale();
 	}
+	function setCardHeight() {
+		$('.card__row').css({
+			'min-height': $('.card__right').outerHeight()
+		});
+	}
 	$(window).on('load resize', function() {
 		detectDevice();
 		desktopNavPadding();
@@ -312,6 +317,9 @@
 		}
 		if ( $('.gallery__list').length || $('.news__list').length ) {
 			gridScale();
+		}
+		if ( $('.card').length ) {
+			setCardHeight();
 		}
 		if ( justSwitched ) {
 			if ( isMobile ) {
