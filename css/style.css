@@ -8311,11 +8311,18 @@ div.radio span.checked {
 		border-left:4px solid #0d47a1;
 	}
 	.item-elem:before,
-	.item-elem--tag,
 	.item-elem--compare,
 	.item-elem--add-to-basket,
 	.item-elem .quantity-e {
 		display:none;
+	}
+	.item-elem--tag {
+		right:auto;
+		left:4px;
+		top:4px;
+		font-size:10px;
+		line-height:12px;
+		padding:7px 16px 5px 15px;
 	}
 	.item-elem {
 		min-height:97px;
@@ -8527,9 +8534,16 @@ div.radio span.checked {
 		border-radius:0;
 	}
 	.card__preview,
-	.card__pictire--tag,
 	.card__information {
 		display:none;
+	}
+	.card__pictire--tag {
+		right:auto;
+		left:-5px;
+		top:-3px;
+		font-size:10px;
+		line-height:12px;
+		padding:7px 16px 5px 15px;
 	}
 	.card__left {
 		height:auto;
