@@ -781,4 +781,8 @@
 			e.stopPropagation();
 		}
 	});
+	$('.footer-m__nav .full-version a').on('click', function(e) {
+		e.preventDefault();
+		$('meta[name="viewport"]').attr('content','width=1030, user-scalable=yes');
+	});
 });

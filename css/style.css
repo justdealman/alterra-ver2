@@ -7704,6 +7704,9 @@ div.radio span.checked {
 		text-align:center;
 		padding:6px 5px;
 	}
+	.footer-m__nav .full-version {
+		margin-top:3px;
+	}
 	.footer-m__copy {
 		text-align:center;
 		padding:4px 5px 6px;
@@ -11471,7 +11474,7 @@ div.radio span.checked {
 		margin:0 40px;
 	}
 	.tabb {
-		padding:0 5px !important;
+		padding:0 10px !important;
 	}
 }
 @media all and (min-width:1021px) {
