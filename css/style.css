@@ -4072,7 +4072,9 @@ div.radio span.checked {
 	border-radius:5px;
 }
 .ordering--frame li.active a {
-	background-color:#efefef;
+	color:#ffffff;
+	background-color:#002365;
+	border-color:#002365;
 }
 .about {
 	max-width:1360px;
