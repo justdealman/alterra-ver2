@@ -3787,6 +3787,35 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	padding:0;
 	margin:0 10px 16px;
 }
+.ordering h3 span {
+	color:#e6330f;
+}
+.ordering--complete {
+	margin:0 10px 30px;
+}
+.ordering--complete h5 {
+	position:relative;
+	color:#002365;
+	font-size:14px;
+	line-height:17px;
+	padding:0 0 0 20px;
+	margin:0 0 10px;
+}
+.ordering--complete h5:before {
+	content:'—';
+	position:absolute;
+	left:0;
+	top:0;
+}
+.ordering--complete ul,
+.ordering--complete p {
+	font-size:13px;
+	line-height:16px;
+	margin:0 20px 26px;
+}
+.ordering--complete ul li {
+	margin:0 0 4px;
+}
 .ordering--autorization {
 	padding:11px 10px 13px;
 	margin:-2px 0 20px;
@@ -11504,6 +11533,29 @@ div.radio span.checked {
 	.maxwidth {
 		max-width:100%;
 		height:auto;
+	}
+	.ordering--complete {
+		padding:10px 5px 1px;
+		margin:0 0 10px;
+		background:#ffffff;
+	}
+	.ordering--complete h5 {
+		font-size:12px;
+		line-height:15px;
+		padding-left:16px;
+		margin:0 0 5px;
+	}
+	.ordering--complete p,
+	.ordering--complete ul {
+		font-size:11px;
+		line-height:15px;
+		margin:0 16px 20px;
+	}
+	.ordering--complete ul li {
+		margin:0 0 3px;
+	}
+	.ordering--complete > :last-child {
+		margin-bottom:10px;
 	}
 }
 @media all and (min-width:1021px) {
