@@ -7282,6 +7282,126 @@ div.radio span.checked {
 .modal__basket + .modal--back {
 	bottom:19px;
 }
+
+.tabb{
+	display:none;
+}
+.tabb:first-of-type{
+	display:block;
+}
+.ymaps-2-1-47-input__control {
+    font-size: 16px !important;
+	height:28px !important;
+}
+.baloonTable {
+	border:1px solid #14005D;
+	font-size:14px;
+}
+.baloonTable2 {
+	width:470px;
+}
+.baloonTable tr td {
+	padding:3px;
+	text-align:center;
+	color:#000;
+}
+.baloonTable tr.price td {
+	font-size:18px;
+	font-weight:bold;
+}
+.baloonTable tr td.head {
+	background:#14005D;
+	color:#fff
+}
+.baloonTable tr td.h50 {
+	width:50%;
+	background:#999999;
+}
+.baloonTable tr.head2 {
+	background:#54409D;
+	color:#fff !important;
+}
+.baloonTable tr.head2 td {
+	color:#fff !important;
+}
+.baloonTable tr.head2 td.neact, .baloonTable tr.nechet td.neact {
+	background:#ffffff;
+	color:#000 !important;
+	border-right:1px solid #14005D;
+}
+.baloonTable tr.nechet {
+	background:#E4F0FF;
+}
+.baloonTable button {
+	/*width:146px;*/
+	color:#ffffff;
+	font-size:14px;
+	line-height:18px;
+	text-align:center;
+	cursor:pointer;
+	padding:5px;
+	margin:5px 0 16px;
+	background:#ad0a00;
+	transition:all 0.2s ease-in-out;
+	-webkit-transition:all 0.2s ease-in-out;
+	-moz-transition:all 0.2s ease-in-out;
+	-o-transition:all 0.2s ease-in-out;
+}
+ul.buttWeight {
+	clear:both;
+	overflow:hidden;
+	width:calc(100% + 1px);
+	margin:0;
+	/*width:960px;*/
+}
+ul.buttWeight li {
+	padding:13px 0 10px;
+	height:20px;
+	background:#14005d;
+	color:#fff;
+	width:33.2%;/**/
+	width:calc(33.33% - 1px);
+	cursor:pointer;
+	text-align:center;
+	float:left;
+	margin:0 1px 0 0;
+	font-size:18px;
+}
+ul.buttWeight li label {
+	cursor:pointer;
+	width:100%;
+}
+ul.buttWeight li.active {
+	background:#930800;
+}
+.radioWeight {
+	display:none;
+}
+ul.delivtime {
+	clear:both;
+	overflow:hidden;
+	margin:0 auto 15px;
+	width:450px;
+}
+ul.delivtime li {
+	float:left;
+	width:33.33%;
+	text-align:center;
+	font-size:14px;
+}
+h3.stoim {
+	margin:15px 0 10px !important;
+}
+h3.stoim_title {
+	color:#14005d;
+	text-align:center;
+}
+#mapid {
+	width:100%;
+	height:650px;
+	margin:0 auto;
+	background:rgba(0,0,0,0.1);
+}
 @media all and (max-width:1430px) {
 	.gallery__list {
 		width:calc(100% + 20px);
@@ -11556,6 +11676,32 @@ div.radio span.checked {
 	}
 	.ordering--complete > :last-child {
 		margin-bottom:10px;
+	}
+	ul.buttWeight {
+		width:auto;
+	}
+	ul.buttWeight li {
+		float:none;
+		width:100%;
+		height:auto;
+		font-size:13px;
+		line-height:16px;
+		padding:6px 0 5px;
+		margin:0 0 1px;
+	}
+	#mapid {
+		height:300px;
+	}
+}
+@media all and (max-width:500px) {
+	ul.delivtime {
+		width:auto;
+		margin:0;
+	}
+	ul.delivtime li {
+		float:none;
+		width:100%;
+		margin:0 0 15px;
 	}
 }
 @media all and (min-width:1021px) {
