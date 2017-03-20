@@ -309,6 +309,15 @@
 			'min-height': $('.card__right').outerHeight()
 		});
 	}
+	function addToBasketButton(e) {
+		if ( isMobile && e.attr('data-complete') == 'true' ) {
+			e.html(e.attr('data-complete-text'));
+			e.addClass('complete-mobile');
+		} else {
+			e.html(e.attr('data-default-text'));
+			e.removeClass('complete-mobile');
+		}
+	}
 	$(window).on('load resize', function() {
 		detectDevice();
 		desktopNavPadding();
@@ -320,6 +329,7 @@
 		}
 		if ( $('.card').length ) {
 			setCardHeight();
+			addToBasketButton($('.card__right--add-to-basket'));
 		}
 		if ( justSwitched ) {
 			if ( isMobile ) {
@@ -784,5 +794,14 @@
 	$('.footer-m__nav .full-version a').on('click', function(e) {
 		e.preventDefault();
 		$('meta[name="viewport"]').attr('content','width=1030, user-scalable=yes');
+	});
+	$('.card__right--add-to-basket').on('click', function(e) {
+		if ( isMobile && $(this).attr('data-complete') == 'true' ) {
+			location.href = $(this).attr('data-complete-link');
+		}
+		if ( isMobile ) {
+			$(this).attr('data-complete','true');
+			addToBasketButton($(this));
+		}
 	});
 });

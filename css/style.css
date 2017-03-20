@@ -11478,6 +11478,11 @@ div.radio span.checked {
 	.tabb {
 		padding:0 10px !important;
 	}
+	.card__right--add-to-basket.complete-mobile {
+		color:#c12a0b;
+		padding:3px 9px;
+		background-color:transparent;
+	}
 }
 @media all and (min-width:1021px) {
 	.header__lk:hover:before, .header__basket:hover:before, .header__basket--quantity {
