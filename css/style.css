@@ -9024,12 +9024,12 @@ div.radio span.checked {
 		border-left:4px solid #0d47a1;
 	}
 	.lk__nav li.active a {
-		color:#000000;
-		background-color:#eeeeee;
-		border-color:#eeeeee;
+		color:#ffffff;
+		background-color:#0d47a1;
+		border-color:#0d47a1;
 	}
 	.lk__nav li.active a:after {
-		border-left-color:#000000;
+		border-left-color:#ffffff;
 	}
 	.lk__row {
 		width:auto;
@@ -9765,12 +9765,12 @@ div.radio span.checked {
 		border-left:4px solid #0d47a1;
 	}
 	.vacancy__nav .active a {
-		color:#000000;
-		background-color:#eeeeee;
-		border-color:#eeeeee;
+		color:#ffffff;
+		background-color:#0d47a1;
+		border-color:#0d47a1;
 	}
 	.vacancy__nav .active a:after {
-		border-left-color:#000000;
+		border-left-color:#ffffff;
 	}
 	.vacancy--title {
 		display:none;
@@ -10965,14 +10965,18 @@ div.radio span.checked {
 		border-bottom:4px solid transparent;
 		border-left:4px solid #0d47a1;
 	}
-	.distributors__nav a:hover:after, .distributors__nav .active a:after {
+	.distributors__nav a:hover:after {
 		display:block;
 		border-left-color:#000000;
 	}
+	.distributors__nav .active a:after {
+		display:block;
+		border-left-color:#ffffff;
+	}
 	.distributors__nav .active a {
-		color:#000000;
-		background-color:#eeeeee;
-		border-color:#eeeeee;
+		color:#ffffff;
+		background-color:#0d47a1;
+		border-color:#0d47a1;
 	}
 	.distributors__nav .active a:before,
 	.distributors__nav a span:before,
