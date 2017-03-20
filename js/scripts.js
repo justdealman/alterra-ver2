@@ -820,4 +820,16 @@
 			t.scrollLeft($(this).scrollLeft());
 		}
 	});
+	$('.delivery__item--title').on('click', function(e) {
+		e.preventDefault();
+		$(this).toggleClass('active');
+	});
+	$('.delivery__content--subtitle').on('click', function(e) {
+		e.preventDefault();
+		if ( !$(this).hasClass('active') ) {
+			$(this).addClass('active').parent().addClass('is-show');
+		} else {
+			$(this).removeClass('active').parent().removeClass('is-show');
+		}
+	});
 });
