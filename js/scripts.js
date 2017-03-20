@@ -262,6 +262,12 @@
 					});
 				});
 			}
+			var scrollTopElem = table.parents('.compare').prev('.compare__scroll-top');
+			if ( table.width() > table.parent('.compare__inner').width() ) {
+				scrollTopElem.show().find('div').width(totalWidth);
+			} else {
+				scrollTopElem.hide();
+			}
 		});
 	}
 	function desktopNavPadding() {
@@ -802,6 +808,16 @@
 		if ( isMobile ) {
 			$(this).attr('data-complete','true');
 			addToBasketButton($(this));
+		}
+	});
+	$('.compare__scroll-top').on('scroll', function() {
+		var t = $(this).next('.compare').find('.compare__inner')
+		t.scrollLeft($(this).scrollLeft());
+	});
+	$('.compare__inner').on('scroll', function() {
+		var t = $(this).parents('.compare').prev('.compare__scroll-top');
+		if ( t.is(':visible') ) {
+			t.scrollLeft($(this).scrollLeft());
 		}
 	});
 });

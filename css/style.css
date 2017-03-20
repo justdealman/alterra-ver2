@@ -6967,6 +6967,13 @@ div.radio span.checked {
 	overflow-x:auto;
 	margin:-2px 0 37px;
 }
+.compare__scroll-top {
+	margin:0 0 10px 230px;
+	overflow-x:scroll;
+}
+.compare__scroll-top > div {
+	height:1px;
+}
 .compare__table table {
 	width:100%;
 	table-layout:fixed;
@@ -9612,6 +9619,9 @@ div.radio span.checked {
 		padding:10px 0;
 		margin:0;
 		background:#ffffff;
+	}
+	.compare__scroll-top {
+		display:none !important;
 	}
 	.compare__inner {
 		margin:0;
