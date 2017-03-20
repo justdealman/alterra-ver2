@@ -8166,7 +8166,7 @@ div.radio span.checked {
 		width:calc(50% - 14px);
 		font-size:10px;
 		line-height:12px;
-		padding:10px 10px 8px;
+		padding:9px 10px;
 		margin:0;
 	}
 	.filter-side--button_submit {
@@ -8177,6 +8177,10 @@ div.radio span.checked {
 		color:#ffffff;
 		background:#a2a2a2;
 		border-color:#a2a2a2;
+	}
+	input.filter-side--button_clear {
+		line-height:32px;
+		padding:0 10px;
 	}
 	.filter-side--result {
 		display:block;
