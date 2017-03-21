@@ -748,13 +748,15 @@
 		$('.table--pic__zoom').remove();
 	});
 	$('[data-open]').on('click', function(e) {
-		e.preventDefault();
-		var t = $('.modal[data-target="'+$(this).attr('data-open')+'"]');
-		$('.fade-bg').stop(true,true).fadeIn(300);
-		var h = $(window).scrollTop()+($(window).height()-t.outerHeight())/2;
-		t.css({
-			'top': h+'px'
-		}).stop(true,true).fadeIn(300).siblings('[data-target]').stop(true,true).fadeOut(300);
+		if ( $(this).attr('data-complete') == true ) {
+			e.preventDefault();
+			var t = $('.modal[data-target="'+$(this).attr('data-open')+'"]');
+			$('.fade-bg').stop(true,true).fadeIn(300);
+			var h = $(window).scrollTop()+($(window).height()-t.outerHeight())/2;
+			t.css({
+				'top': h+'px'
+			}).stop(true,true).fadeIn(300).siblings('[data-target]').stop(true,true).fadeOut(300);
+		}
 	});
 	$('.modal--close').on('click', function(e) {
 		e.preventDefault();
