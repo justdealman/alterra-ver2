@@ -10812,14 +10812,16 @@ h3.stoim_title {
 		border-top-color:#313131;
 		border-bottom-width:0;
 	}
-	.nav-side__sub--item h5 a span {
-		display:none;
-	}
 	.nav-side__sub--item h5 a:hover {
 		color:#000000;
 	}
 	.nav-side__sub--item:last-child h5 a:before {
 		display:none;
+	}
+	.nav-side__sub--item h5 a span {
+		float:right;
+		display:block;
+		margin:0 0 0 10px;
 	}
 	.nav-side__sub--item h5.is-dropped {
 		font-weight:bold;
