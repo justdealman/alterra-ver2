@@ -748,7 +748,7 @@
 		$('.table--pic__zoom').remove();
 	});
 	$('[data-open]').on('click', function(e) {
-		if ( $(this).attr('data-complete') == true ) {
+		if ( !$(this).is('[data-complete]') || $(this).attr('data-complete') == 'false' ) {
 			e.preventDefault();
 			var t = $('.modal[data-target="'+$(this).attr('data-open')+'"]');
 			$('.fade-bg').stop(true,true).fadeIn(300);
