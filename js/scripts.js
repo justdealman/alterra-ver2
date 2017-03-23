@@ -358,7 +358,6 @@
 						var e = $(this);
 						e.prepend('<div class="basket__list"></div>');
 						e.find('tbody tr').each(function() {
-							$(this).attr('data',$(this).index());
 							e.find('.basket__list').append('<div class="item-elem" data="'+$(this).index()+'"></div>');
 							var t = e.find('.item-elem[data="'+$(this).index()+'"]');
 							t.append('\
