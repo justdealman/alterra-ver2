@@ -358,7 +358,7 @@
 						var e = $(this);
 						e.prepend('<div class="basket__list"></div>');
 						e.find('tbody tr').each(function() {
-							e.find('.basket__list').append('<div class="item-elem" data="'+$(this).index()+'"></div>');
+							e.find('.basket__list').append('<div class="item-elem" data="'+$(this).index()+'" data-id="'+$(this).attr('data-id')+'"></div>');
 							var t = e.find('.item-elem[data="'+$(this).index()+'"]');
 							t.append('\
 								<h4 class="item-elem--title">'+$(this).find('.basket__table--title').text()+'</h4>\
@@ -386,7 +386,7 @@
 						var t = $(this).find('.lk__orders--list');
 						$(this).find('tbody tr').each(function() {
 							t.append('\
-								<li data="'+$(this).index()+'">\
+								<li data="'+$(this).index()+'" data-id="'+$(this).attr('data-id')+'">\
 									<a href="'+$(this).find('.lk__orders--more a').attr('href')+'" class="lk__orders--link"></a>\
 								</li>\
 							');
@@ -432,7 +432,7 @@
 				if ( $('.catalog__table').length ) {
 					$('.catalog__table').after('<div class="catalog__table-list"></div>');
 					$('.catalog__table tbody tr').each(function() {
-						$('.catalog__table-list').append('<div class="catalog__table-list--item" data="'+$(this).index()+'"><a href="'+$(this).find('.catalog__table--title a').attr('href')+'" class="catalog__table-list--link"></a></div>');
+						$('.catalog__table-list').append('<div class="catalog__table-list--item" data="'+$(this).index()+'" data-id="'+$(this).attr('data-id')+'"><a href="'+$(this).find('.catalog__table--title a').attr('href')+'" class="catalog__table-list--link"></a></div>');
 						var t = $('.catalog__table-list--item[data="'+$(this).index()+'"] .catalog__table-list--link');
 						t.append('\
 							<h4 class="catalog__table-list--title">'+$(this).find('.catalog__table--title').text()+'</h4>\
