@@ -11875,3 +11875,6 @@ h3.stoim_title {
 		margin:0 0 10px !important;
 	}
 }
+.element-hidden {
+	display:none;
+}

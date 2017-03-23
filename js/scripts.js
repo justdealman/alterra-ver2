@@ -834,4 +834,7 @@
 			$(this).removeClass('active').parent().removeClass('is-show');
 		}
 	});
+	$('button.filter-side--button_clear').on('click', function() {
+		$(this).siblings('input.filter-side--button_clear').trigger('click');
+	});
 });
