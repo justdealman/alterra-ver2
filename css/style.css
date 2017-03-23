@@ -1288,6 +1288,9 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	padding:0;
 	margin:0;
 }
+.item-elem--price strong {
+	display:none;
+}
 .item-elem--price span {
 	font-size:20px;
 	font-weight:bold;
@@ -11809,6 +11812,14 @@ h3.stoim_title {
 	.delivery__content--subtitle.active:after {
 		border-top-width:0;
 		border-bottom:4px solid #ffffff;
+	}
+	.item-elem--price strong {
+		display:inline;
+		color:#a2a2a2;
+		font-size:12px;
+		font-weight:normal;
+		padding-right:7px;
+		text-decoration:line-through;
 	}
 }
 @media all and (max-width:500px) {
