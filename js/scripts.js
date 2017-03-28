@@ -361,7 +361,7 @@
 							e.find('.basket__list').append('<div class="item-elem" data="'+$(this).index()+'" data-id="'+$(this).attr('data-id')+'"></div>');
 							var t = e.find('.item-elem[data="'+$(this).index()+'"]');
 							t.append('\
-								<h4 class="item-elem--title">'+$(this).find('.basket__table--title').text()+'</h4>\
+								<h4 class="item-elem--title">'+$(this).find('.basket__table--title').html()+'</h4>\
 								<div class="item-elem--picture">\
 									'+$(this).find('.basket__table--picture > div').html()+'\
 								</div>\
