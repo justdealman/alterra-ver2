@@ -583,7 +583,8 @@
 	$('.catalog__title').on('click', function(e) {
 		if ( isMobile ) {
 			e.preventDefault();
-			$(this).toggleClass('catalog__title_is-hidden');
+			document.location.href = $(this).attr('data-href');
+			//$(this).toggleClass('catalog__title_is-hidden');
 		}
 	});
 	$('.card__more-m--title').on('click', function(e) {

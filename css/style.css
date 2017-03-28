@@ -8953,7 +8953,7 @@ h3.stoim_title {
 		border-color:#eeeeee;
 		-webkit-border-radius:0;
 		border-radius:0;
-	}
+	}/*
 	.catalog__title:after {
 		content:'';
 		position:absolute;
@@ -8962,7 +8962,7 @@ h3.stoim_title {
 		border-left:4px solid transparent;
 		border-right:4px solid transparent;
 		border-bottom:4px solid #313131;
-	}
+	}*/
 	.catalog__title_is-hidden {
 		z-index:3;
 		color:#002365;
