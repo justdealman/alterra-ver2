@@ -7405,6 +7405,18 @@ h3.stoim_title {
 	margin:0 auto;
 	background:rgba(0,0,0,0.1);
 }
+.lift-to-floor {
+	margin:0 0 20px;
+}
+.lift-to-floor .col {
+	display:none;
+}
+.lift-to-floor .core img {
+	width:100%;
+	max-width:1133px;
+	height:auto;
+	vertical-align:top;
+}
 @media all and (max-width:1430px) {
 	.gallery__list {
 		width:calc(100% + 20px);
@@ -11820,6 +11832,65 @@ h3.stoim_title {
 		font-weight:normal;
 		padding-right:7px;
 		text-decoration:line-through;
+	}	
+}
+@media all and (max-width:800px) {
+	.lift-to-floor {
+		position:relative;
+		width:calc(100% + 10px);
+		margin:0 0 10px -5px;
+	}
+	.lift-to-floor .col-left {
+		position:absolute;
+		left:0;
+		top:0;
+		z-index:1;
+		display:block;
+		width:52px;
+		height:100%;
+		background:url('../img/lift-to-floor.jpg') no-repeat 0 0;
+		background-size:auto 100%;
+	}
+	.lift-to-floor .col-left:after {
+		content:'';
+		position:absolute;
+		right:-3px;
+		top:0;
+		width:3px;
+		height:100%;
+		background:-moz-linear-gradient(left, rgba(255,255,255,1) 0%, rgba(255,255,255,0) 100%);
+		background:-webkit-linear-gradient(left, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+		background:linear-gradient(to right, rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+		filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=1 );
+	}
+	.lift-to-floor .col-right {
+		position:absolute;
+		right:0;
+		top:0;
+		z-index:1;
+		display:block;
+		width:84px;
+		height:100%;
+		background:url('../img/lift-to-floor.jpg') no-repeat right 0;
+		background-size:auto 100%;
+	}
+	.lift-to-floor .col-right:after {
+		content:'';
+		position:absolute;
+		left:-3px;
+		top:0;
+		width:3px;
+		height:100%;
+		background:-moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+		background:-webkit-linear-gradient(left, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+		background:linear-gradient(to right, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+		filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#00ffffff', endColorstr='#ffffff',GradientType=1 );
+	}
+	.lift-to-floor .core {
+		overflow-x:auto;
+	}
+	.lift-to-floor .core img {
+		width:800px;
 	}
 }
 @media all and (max-width:500px) {
