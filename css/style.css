@@ -1055,6 +1055,10 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 .slider-main__item {
 	height:420px;
 }
+.slider-main--link {
+	display:block;
+	height:420px;
+}
 .slider-main .slick-prev, .slider-main .slick-next {
 	position:absolute;
 	bottom:4px;
@@ -7734,6 +7738,9 @@ h3.stoim_title {
 		display:none;
 	}
 	.slider-main__item {
+		height:auto;
+	}
+	.slider-main--link {
 		height:auto;
 	}
 	.slider-main img {
