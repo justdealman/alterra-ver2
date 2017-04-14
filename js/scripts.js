@@ -324,7 +324,18 @@
 			e.removeClass('complete-mobile');
 		}
 	}
+	function setItemTall() {
+		$('.item-elem--price i.old, .catalog__view--price i.old, .catalog__table-list--price').each(function() {
+			$(this).parents('.item-elem, .catalog__view--item, .catalog__table-list--item').addClass('tall');
+		});
+		$('.card__right--price i.title').each(function() {
+			var t = $(this).parents('.card__right--price');
+			t.siblings('.quantity-e').height(t.height());
+		});
+	}
+	setItemTall();
 	$(window).on('load resize', function() {
+		$('.special-price-tip, .tip-bg').remove();
 		detectDevice();
 		desktopNavPadding();
 		if ( $('.discount').length ) {
@@ -437,7 +448,7 @@
 						t.append('\
 							<h4 class="catalog__table-list--title">'+$(this).find('.catalog__table--title').text()+'</h4>\
 							<p class="catalog__table-list--code">код товара: '+$(this).find('.catalog__table--code').text()+'</p>\
-							<h5 class="catalog__table-list--price"><span>'+$(this).find('.catalog__table--price-current').html()+'</span> / шт.</h5>\
+							<h5 class="catalog__table-list--price">'+$(this).find('.catalog__table--price-current').html()+'</h5>\
 							<div class="catalog__table-list--picture">\
 								<img src="'+$(this).find('.catalog__table--pic img').attr('src')+'" class="img-contain" alt="">\
 							</div>\
@@ -451,6 +462,7 @@
 				$('.mobile-drop__catalog ul').each(function() {
 					$(this).siblings().parent().addClass('has-sub');
 				});
+				setItemTall();
 			} else {
 				$('.slider-main').detach().insertBefore('.content__col-2 .catalog');
 				if ( $('.content .breadcrumbs').length > 0 ) {
@@ -837,5 +849,43 @@
 	});
 	$('button.filter-side--button_clear').on('click', function() {
 		$(this).siblings('input.filter-side--button_clear').trigger('click');
+	});
+	$('.item-elem--price, .catalog__view--price, .catalog__table--price-current, .catalog__table-list--price, .card__right--price').has('i.title').on('mouseover', function() {
+		$('body').append('<p class="special-price-tip">Для участников программы <span>«Строительный сезон с Альтеррой»</span></p>');
+		var posTop = $(this).offset().top;
+		if ( !isMobile ) {
+			var posTop = $(this).offset().top;
+			if ( $(this).offset().left+$(this).outerWidth()+216 < $(window).width() ) {
+				var posLeft = $(this).offset().left+$(this).outerWidth();
+			} else {
+				var posLeft = $(this).offset().left;
+				$('.special-price-tip').addClass('left');
+			}
+		} else {
+			if ( !$(this).hasClass('card__right--price') ) {
+				$('.special-price-tip').addClass('top').prepend('<span class="close"></span>');
+				var posLeft = $(this).offset().left+$(this).outerWidth()/2;
+			} else {
+				var posLeft = $(this).offset().left+$(this).outerWidth();
+				$('.special-price-tip').addClass('top right').prepend('<span class="close"></span>');
+			}
+			var posTop = $(this).offset().top+$(this).outerHeight();
+			setTimeout(function() {
+				$('.tip-bg').remove();
+				$('body').append('<div class="tip-bg"></div>');
+			}, 100);
+		}
+		$('.special-price-tip').css({
+			'left': posLeft,
+			'top': posTop
+		});
+	});
+	$('.item-elem--price, .catalog__view--price, .catalog__table--price-current, .catalog__table-list--price, .card__right--price').has('i.title').on('mouseleave', function() {
+		if ( !isMobile && $('.special-price-tip').length ) {
+			$('.special-price-tip').remove();
+		}
+	});
+	$(document).on('click', '.special-price-tip .close, .tip-bg', function() {
+		$('.special-price-tip, .tip-bg').remove();
 	});
 });
