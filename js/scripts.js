@@ -328,12 +328,18 @@
 		$('.item-elem--price i.old, .catalog__view--price i.old, .catalog__table-list--price').each(function() {
 			$(this).parents('.item-elem, .catalog__view--item, .catalog__table-list--item').addClass('tall');
 		});
-		$('.card__right--price i.title').each(function() {
-			var t = $(this).parents('.card__right--price');
-			t.siblings('.quantity-e').height(t.height());
+		$('.card__right--price').each(function() {
+			if ( isMobile ) {
+				$(this).siblings('.quantity-e').css({
+					'min-height': $(this).height()
+				});
+			} else {
+				$(this).siblings('.quantity-e').css({
+					'min-height': 0
+				});
+			}
 		});
 	}
-	setItemTall();
 	$(window).on('load resize', function() {
 		$('.special-price-tip, .tip-bg').remove();
 		detectDevice();
@@ -349,6 +355,7 @@
 			addToBasketButton($('.card__right--add-to-basket'));
 		}
 		if ( justSwitched ) {
+			setItemTall();
 			if ( isMobile ) {
 				$('.slider-main').detach().insertBefore('.content__col-1');
 				mobileNavCenterText();
