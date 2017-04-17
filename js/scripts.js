@@ -340,6 +340,7 @@
 			}
 		});
 	}
+	setItemTall();
 	$(window).on('load resize', function() {
 		$('.special-price-tip, .tip-bg').remove();
 		detectDevice();
