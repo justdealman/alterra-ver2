@@ -1039,7 +1039,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	content:'';
 	position:absolute;
 	left:0;
-	top:420px;
+	bottom:6px;
 	width:100%;
 	height:15px;
 	background:url('../img/slider-shadow.png') no-repeat center top;
@@ -1047,17 +1047,17 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 .slider-main .slick-list {
 	overflow:hidden;
 	position:relative;
-	height:420px;
 	background:#eeeeee;
 	-webkit-border-radius:5px;
 	border-radius:5px;
 }
-.slider-main__item {
-	height:420px;
+.slider-main__item img {
+	width:100%;
+	height:auto;
+	vertical-align:top;
 }
 .slider-main--link {
 	display:block;
-	height:420px;
 }
 .slider-main .slick-prev, .slider-main .slick-next {
 	position:absolute;
@@ -5762,12 +5762,6 @@ div.radio span.checked {
 	.slider-main:after {
 		top:350px;
 	}
-	.slider-main .slick-list {
-		height:350px;
-	}
-	.slider-main__item {
-		height:350px;
-	}
 	.catalog__item {
 		width:20%;
 	}
@@ -5916,12 +5910,6 @@ div.radio span.checked {
 	}
 	.slider-main:after {
 		top:270px;
-	}
-	.slider-main .slick-list {
-		height:270px;
-	}
-	.slider-main__item {
-		height:270px;
 	}
 	.catalog__item {
 		width:25%;
