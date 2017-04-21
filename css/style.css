@@ -12185,3 +12185,22 @@ h3.stoim_title {
 .element-hidden {
 	display:none;
 }
+.card__right--compare br {
+	display:none;
+}
+@media all and (max-width:480px) {
+	.card__right--compare br {
+		display:block;
+	}
+	.card__right--quantity .quantity-e {
+		height:43px;
+	}
+	.card__right--quantity .quantity-e--button_minus {
+		top:25px !important;
+		left:25px;
+	}
+	.card__right--quantity .quantity-e--button_plus {
+		top:25px !important;
+		right:25px;
+	}
+}
