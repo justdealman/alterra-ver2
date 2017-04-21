@@ -12192,7 +12192,7 @@ h3.stoim_title {
 	.card__right--compare br {
 		display:block;
 	}
-	.card__right--quantity .quantity-e {
+	.card__right--quantity.quantity-e {
 		height:43px;
 	}
 	.card__right--quantity .quantity-e--button_minus {
