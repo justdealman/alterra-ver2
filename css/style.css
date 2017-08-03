@@ -2894,7 +2894,8 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	position:absolute;
 	left:0;
 	bottom:0;
-	width:240px;
+	width:100%;
+	max-width:240px;
 	height:1px;
 	background:#eeeeee;
 }
@@ -2933,17 +2934,15 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	float:left;
 	color:#4788cb;
 	font-size:13px;
-	line-height:22px;
-	white-space:nowrap;
-	padding:0 10px 0 0;
+	line-height:16px;
+	padding:0 0 6px;
 }
 .catalog__view--text ul li:after {
 	content:'/';
-	position:absolute;
-	right:0;
-	top:0;
+	display:inline-block;
 	width:10px;
 	text-align:center;
+	vertical-align:top;
 }
 .catalog__view--text ul li:last-child:after {
 	display:none;
@@ -5841,10 +5840,10 @@ div.radio span.checked {
     width:200px;
   }
   .catalog__view--characteristics {
-    width:calc(100% - 460px);
+    width:calc((100% - 460px) / 2 - 20px);
   }
   .catalog__view--text {
-    display:none;
+    width:calc((100% - 460px) / 2 - 20px);
   }
   .about--benefits li {
     width:16.66%;
@@ -6058,7 +6057,7 @@ div.radio span.checked {
     padding:7px 0 7px;
   }
   .catalog__view--characteristics li:after {
-    width:233px;
+    max-width:233px;
   }
   .catalog__table--code {
     width:auto;
