@@ -8495,6 +8495,12 @@ h3.stoim_title {
 		border-bottom:4px solid transparent;
 		border-left:4px solid #0d47a1;
 	}
+	.category-links a.back:after {
+		right:auto;
+		left:11px;
+		border-left-width:0;
+		border-right:4px solid #0d47a1;
+	}
 	.category-links i {
 		position:absolute;
 		left:3px;
