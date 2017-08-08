@@ -11342,6 +11342,28 @@ h3.stoim_title {
 	.catalog__table-list {
 		padding:0 0 1px;
 	}
+	.catalog__view--text {
+		display:block;
+		width:auto;
+		margin:0 0 7px;
+	}
+	.catalog__view--text p {
+		font-size:10px;
+		line-height:12px;
+		margin:0 0 7px;
+	}
+	.catalog__view--text p + ul {
+		margin:0 0 7px;
+	}
+	.catalog__view--text ul li {
+		font-size:10px;
+		line-height:12px;
+		padding:0;
+		margin:0;
+	}
+	.catalog__view--text ul li:after {
+		width:8px;
+	}
 	.catalog__table-list--item {
 		overflow:hidden;
 		position:relative;
