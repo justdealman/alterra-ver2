@@ -7939,7 +7939,7 @@ h3.stoim_title {
 .search-results__rc .link {
 	position:relative;
 	display:block;
-	height:116px;
+	min-height:132px;
 	padding:20px 19px 6px 132px;
 	border-bottom:1px solid #eeeeee;
 	-webkit-box-sizing:border-box;
@@ -7962,25 +7962,39 @@ h3.stoim_title {
 	line-height:16px;
 	font-weight:normal;
 	padding:0;
-	margin:0 0 14px;
+	margin:0 0 10px;
 }
 .search-results__rc .link:hover h4 {
 	text-decoration:underline;
 }
 .search-results__rc h6 {
+	width:calc(100% + 10px);
 	font-size:20px;
 	line-height:24px;
 	padding:0;
 	margin:0;
 }
 .search-results__rc h6 span {
-	font-size:11px;
+	font-size:14px;
 }
 .search-results__rc h6 em {
-	color:#a2a2a2;
-	font-size:16px;
+	display:block;
+	font-size:11px;
+	line-height:13px;
+	font-weight:normal;
 	font-style:normal;
-	text-decoration:line-through;
+	margin:-3px 0 0;
+}
+.search-results__rc p {
+	color:#a2a2a2;
+	font-size:20px;
+	line-height:24px;
+	font-style:normal;
+	font-weight:bold;
+	margin:5px 0 0;
+}
+.search-results__rc p span {
+	font-size:14px;
 }
 .scroll-icon {
 	display:none;
@@ -8039,6 +8053,12 @@ h3.stoim_title {
 	}
 	.distributors__bonus ul h4 {
 		font-size:303px;
+	}
+	.search-results__rc .link {
+		min-height:156px;
+	}
+	.search-results__rc h4 {
+		min-height:48px;
 	}
 }
 @media all and (max-width:1230px) {
