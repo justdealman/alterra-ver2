@@ -2964,7 +2964,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 }
 .catalog__view--group {
 	position:relative;
-	padding:21px 19px 4px;
+	padding:13px 19px 4px;
 	margin:0 0 12px;
 	background:#eeeeee;
 	-webkit-border-radius:5px;
@@ -2986,7 +2986,8 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	font-size:21px;
 	font-weight:normal;
 }
-.catalog__view--price i.title {
+.catalog__view--price i.title,
+.catalog__view--price-old i.title {
 	display:inline-block;
 	vertical-align:top;
 	font-style:normal;
@@ -2995,7 +2996,8 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	text-align:left;
 	margin:9px 5px 0 0;
 }
-.catalog__view--price i.title_red {
+.catalog__view--price i.title_red,
+.catalog__view--price-old i.title_red {
 	color:#e6330f;
 }
 .catalog__view--price i.old {
@@ -3004,15 +3006,19 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	font-style:normal;
 }
 .catalog__view--price-old {
-	position:absolute;
-	right:18px;
-	top:22px;
 	color:#a2a2a2;
-	font-size:15px;
+	font-size:14px;
 	line-height:20px;
+	font-weight:normal;
+	margin:-10px 0 15px;
+}
+.catalog__view--price-old span {
+	font-size:20px;
 	font-weight:bold;
-	text-decoration:line-through;
-	margin:0;
+}
+.catalog__view--price-old span em {
+	font-size:21px;
+	font-weight:normal;
 }
 .catalog__view--group .quantity-e {
 	display:inline-block;
@@ -11349,15 +11355,18 @@ h3.stoim_title {
 		-webkit-border-radius:0;
 		border-radius:0;
 	}
-	.catalog__view--price {
-		display:inline-block;
+	.catalog__view--price,
+	.catalog__view--price-old {
+		display:block;
 		font-weight:bold;
 		margin:0;
 	}
-	.catalog__view--price span {
+	.catalog__view--price span,
+	.catalog__view--price-old span {
 		font-size:14px;
 	}
-	.catalog__view--price em {
+	.catalog__view--price em,
+	.catalog__view--price-old span em {
 		font-size:15px;
 		font-weight:bold;
 	}
@@ -11374,7 +11383,6 @@ h3.stoim_title {
 	}
 	.catalog__view--compare,
 	.catalog__view--group .quantity-e,
-	.catalog__view--price-old,
 	.catalog__view--add-to-basket,
 	.catalog__view--characteristics {
 		display:none;
