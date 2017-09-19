@@ -576,6 +576,9 @@
 		e.preventDefault();
 		$('.fade-bg, .citysel-drop, .modal').removeClass('fixed').stop().fadeOut(300);
 		hideMobileMenu();
+		if ( $('.fade-bg').hasClass('is-visible') ) {
+			$('.fade-bg').removeClass('is-visible');	
+		}
 	});
 	$('.citysel-drop li span').on('click', function(e) {
 		e.preventDefault();
