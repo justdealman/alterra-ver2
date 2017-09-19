@@ -36,7 +36,7 @@
 			dots: true,
 			draggable: true,
 			adaptiveHeight: true
-		});
+		}).fadeIn(200);
 		$('.slider-main .slick-prev').css({
 			left: $('.slider-main .slick-dots').position().left-28
 		});
