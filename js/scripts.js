@@ -341,11 +341,19 @@
 		});
 	}
 	setItemTall();
+	function setRatio() {
+		$('[data-ratio]').each(function() {
+			var t = $(this).find('.scale');
+			t.outerHeight(t.outerWidth()*$(this).attr('data-ratio'));
+		});
+	}
+	setRatio();
 	$(window).on('load resize', function() {
 		$('.special-price-tip, .tip-bg').remove();
 		detectDevice();
 		desktopNavPadding();
 		hideSearchResult();
+		setRatio();
 		if ( $('.discount').length ) {
 			discountScale();
 		}
