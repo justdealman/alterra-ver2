@@ -13207,3 +13207,67 @@ h3.stoim_title {
 		right:25px;
 	}
 }
+
+.header_ny:before {
+	background-image:url('../img/header-ny-bg.png');
+	background-position:50% 0;
+	background-repeat:no-repeat;
+}
+.header_ny .header__logo {
+	display:block;
+	width:258px;
+	height:63px;
+	background:url('../img/logo-ny.png') no-repeat 0 0;
+}
+.header_ny .header__search {
+	overflow:visible;
+}
+.header_ny .header__search:before {
+	content:'';
+	position:absolute;
+	left:12px;
+	top:-3px;
+	width:80px;
+	height:20px;
+	background:url('../img/header-snow-1.png') no-repeat 0 0;
+}
+.header_ny .header__search:after {
+	content:'';
+	position:absolute;
+	right:40px;
+	top:-7px;
+	width:76px;
+	height:26px;
+	background:url('../img/header-snow-2.png') no-repeat 0 0;
+}
+@media all and (max-width:1020px) {
+	.header_ny .header__row {
+		z-index:1;
+	}
+	.header_ny .header__logo {
+		left:44px;
+		top:0;
+		width:149px;
+		height:45px;
+		background:url('../img/logo-ny-mobile.png') no-repeat 0 0;
+	}
+	.header_ny .header__search {
+		overflow:hidden;
+	}
+	.header_ny .header__search:before,
+	.header_ny .header__search:after {
+		display:none;
+	}
+	.header_ny:before {
+		background:url('../img/header-ny-bg-mobile.png') no-repeat 0 0;
+	}
+	.header_ny:after {
+		content:'';
+		position:absolute;
+		right:25px;
+		top:0;
+		width:119px;
+		height:50px;
+		background:url('../img/header-ny-show-mobile.png') no-repeat 0 0;
+	}
+}
