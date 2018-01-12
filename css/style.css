@@ -7294,6 +7294,9 @@ div.radio span.checked {
 .compare__table .item-elem:before {
 	height:81px;
 }
+.compare__table .item-elem.tall:before {
+	height:104px;
+}
 .compare__table .item-elem--title {
 	margin:10px 29px 28px 9px;
 }
@@ -7309,11 +7312,17 @@ div.radio span.checked {
 	bottom:47px;
 	text-align:center;
 }
+.compare__table .item-elem.tall .item-elem--price {
+	text-align:right;
+}
 .compare__table .item-elem--price-old {
 	display:none;
 }
 .compare__table .item-elem--code {
 	bottom:83px;
+}
+.compare__table .item-elem.tall .item-elem--code {
+	bottom:106px;
 }
 .catalog__slider {
 	position:relative;
@@ -9436,7 +9445,14 @@ h3.stoim_title {
 	.item-elem--price i.title {
 		font-size:10px;
 		font-weight:normal;
+		text-align:right;
 		margin:7px 2px 0 0;
+	}
+	.item-elem.tall .item-elem--price i.title {
+		display:block;
+	}
+	.compare__table .item-elem.tall {
+		height:236px;
 	}
 	.item-elem--price i.title br {
 		display:none;
