@@ -37,12 +37,14 @@
 			draggable: true,
 			adaptiveHeight: true
 		}).fadeIn(200);
-		$('.slider-main .slick-prev').css({
-			left: $('.slider-main .slick-dots').position().left-28
-		});
-		$('.slider-main .slick-next').css({
-			right: $('.slider-main .slick-dots').position().left-28
-		});
+		if ( $('.slider-main .slick-dots').length ) {
+			$('.slider-main .slick-prev').css({
+				left: $('.slider-main .slick-dots').position().left-28
+			});
+			$('.slider-main .slick-next').css({
+				right: $('.slider-main .slick-dots').position().left-28
+			});
+		}
 	}
 	$('input[type="checkbox"], input[type="radio"]').uniform();
 	$('select.custom').selectric();
