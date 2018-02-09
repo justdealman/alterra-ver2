@@ -405,7 +405,7 @@
 					});
 				}
 				if ( $('.basket__total').length > 0 ) {
-					$('.basket__total').prepend('<div class="basket__total--short"><span>'+$('.basket__total--quantity span em').text()+'</span> товаров на сумму: <span>'+$('.basket__total--price strong em').text()+'</span> руб.</div>');
+					$('.basket__total').prepend('<div class="basket__total--short"><span>'+$('.basket__total--quantity span em[data-quantity]').text()+'</span> товаров (<span>~'+$('.basket__total--quantity span em[data-weight]').text()+'</span> кг) на сумму: <span>'+$('.basket__total--price strong em[data-price]').text()+'</span> руб.</div>');
 				}
 				$('.rouble-icon').each(function() {
 					$(this).text('о');
