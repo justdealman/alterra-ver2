@@ -8258,7 +8258,86 @@ h3.stoim_title {
 	background:linear-gradient(to bottom, rgba(238,225,44,1) 0%,rgba(193,180,6,1) 100%);
 	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#eee12c', endColorstr='#c1b406',GradientType=0 );
 }
-
+.header_mini:before {
+	top:0;
+}
+.header_mini .header__row {
+	height:69px;
+}
+.header_mini .header__logo {
+	top:0;
+}
+.notfound {
+	position:relative;
+	max-width:1420px;
+	text-align:center;
+	padding:45px 18px 30px 0;
+	margin:0 auto;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+.notfound img {
+	position:relative;
+	max-width:100%;
+	height:auto;
+}
+.notfound__text {
+	position:absolute;
+	left:0;
+	top:71px;
+	z-index:1;
+	text-align:left;
+	padding:0 30px;
+}
+.notfound--title {
+	display:block;
+	font-size:18px;
+	line-height:26px;
+	font-weight:bold;
+	text-transform:uppercase;
+	padding:0;
+	margin:0 0 6px;
+}
+.notfound__text p {
+	font-size:14px;
+	line-height:22px;
+	margin:0;
+}
+.notfound__text p a {
+	color:#004599;
+	text-decoration:underline;
+}
+.notfound__text p a:hover {
+	text-decoration:none;
+}
+.outofstock {
+	display:table;
+	width:100%;
+	margin:38px 0 75px;
+}
+.outofstock__lc {
+	display:table-cell;
+	width:235px;
+}
+.outofstock--icon {
+	display:block;
+	width:235px;
+	height:235px;
+	background:url('../img/outofstock-icon.svg') no-repeat 0 0;
+	background-size:100% 100%;
+}
+.outofstock__text {
+	display:table-cell;
+	vertical-align:middle;
+	padding:0 0 12px 35px;
+}
+.outofstock__text p {
+	color:#e6330f;
+	font-size:18px;
+	line-height:26px;
+	margin:0;
+}
 @media all and (max-width:1430px) {
 	.gallery__list {
 		width:calc(100% + 20px);
@@ -12983,6 +13062,53 @@ h3.stoim_title {
 	}
 	.stock-b__intro h6 {
 		margin:25px 0 0;
+	}
+	.header_mini .header__row {
+		height:50px;
+	}
+	.header_mini .header__logo {
+		left:20px;
+		top:11px;
+	}
+	.notfound img {
+		max-width:540px;
+		width:100%;
+	}
+	.notfound {
+		padding:20px 20px 10px;
+	}
+	.notfound__text {
+		position:static;
+		padding:0;
+		margin:0 0 10px;
+	}
+	.notfound--title {
+		font-size:16px;
+		line-height:22px;
+		margin:0 0 6px;
+	}
+	.notfound__text p {
+		font-size:12px;
+		line-height:18px;
+	}
+	.outofstock {
+		width:100%;
+		max-width:480px;
+		margin:10px auto 0;
+	}
+	.outofstock__lc {
+		width:95px;
+	}
+	.outofstock--icon {
+		width:96px;
+		height:96px;
+	}
+	.outofstock__text {
+		padding:0 0 6px 15px;
+	}
+	.outofstock__text p {
+		font-size:14px;
+		line-height:17px;
 	}
 }
 @media all and (max-width:800px) {
