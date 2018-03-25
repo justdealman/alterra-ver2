@@ -688,7 +688,7 @@
 			}
 			if ( !isMobile ) {
 				t.slick({
-					slidesToShow: 6,
+					slidesToShow: 5,
 					slidesToScroll: 1,
 					infinite: true,
 					arrows: true,
@@ -698,12 +698,12 @@
 						{
 							breakpoint: 1430,
 							settings: {
-								slidesToShow: 5
+								slidesToShow: 4
 							}
 						}, {
 							breakpoint: 1247,
 							settings: {
-								slidesToShow: 4
+								slidesToShow: 3
 							}
 						},
 					]
@@ -941,6 +941,32 @@
 	$('.fade-bg').on('click', function(e) {
 		if ( $('.search-results').is(':visible') ) {
 			hideSearchResult();
+		}
+	});
+	function openBonusesMessage(e) {
+		$('.bonuses-message').show().css({
+			left: e.offset().left,
+			top: e.offset().top
+		});
+		e.addClass('is-active');
+	}
+	function closeBonusesModal() {
+		$('.bonuses-message').hide();
+		$('.item-elem--bonuses').removeClass('is-active');
+	}
+	$('.item-elem--bonuses').on('click', function() {
+		if ( !$(this).hasClass('is-active') ) {
+			openBonusesMessage($(this));
+		} else {
+			closeBonusesModal();
+		}
+	});
+	$('.bonuses-message--close').on('click', function() {
+		closeBonusesModal();
+	});
+	$(document).on('click', function(e) {
+		if ( !$(e.target).closest('.item-elem--bonuses').length && !$(e.target).closest('.bonuses-message').length ) {
+			closeBonusesModal();
 		}
 	});
 });
