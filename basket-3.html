@@ -187,40 +187,34 @@
 					<div class="basket__rc">
 						<div class="basket-elem basket-total">
 							<span class="basket-total--title">Всего <strong>90</strong> товара, весом ~ <strong>15201</strong> кг, на сумму:</span>
-							<span class="basket-total--price">2 900 р.</span>
+							<span class="basket-total--price">3 900 р.</span>
 							<button class="basket-total--button">Оформить заказ</button>
 						</div>
-						<div class="basket-elem basket-club">
-							<div class="basket-club__special">
-								<span class="basket-club--title">Купить по цене СтройКлуба:</span>
-								<span class="basket-club--price">2 500 р.</span>
-								<span class="basket-club--quantity"><strong>+</strong> от <strong>10 000</strong> до <strong>50 000</strong></span>
-								<span class="basket-club--bonuses">Бонусных рублей на карту</span>
-								<i class="basket-club--tip" data-bonus="data-self"></i>
-							</div>
-							<div class="basket-club__info">
-								<span class="basket-club--title">Как купить по цене СтройКлуба:</span>
-								<ul class="basket-club__list">
-									<li>Оформите заказ на сумму более 3 000 р.</li>
-									<li>Или <a href="#">Заполните анкету</a> до 31 мая и получите карту <a href="#">СтроКлуба</a></li>
-									<li>Если вы участник СтройКлуба - <a href="#">активируйте бонусы</a></li>
-								</ul>
+						<div class="basket-elem basket-card">
+							<span class="basket-card--title">Карта СтройКлуба № 1234567891011</span>
+							<div class="basket-card__content">
+								<span class="basket-card--info">Накопленные бонусы <span>(доступны для оплаты)</span></span>
+								<span class="basket-card--quantity">100</span>
 							</div>
 						</div>
-						<div class="basket-elem basket-balance">
-							<span class="basket-balance--title">Узнайте бонусный баланс</span>
-							<div class="basket-balance__tab is-visible" data="1">
-								<div class="basket-balance__item">
-									<input type="text" name="send-code" placeholder="+7 (___) ___-__-__">
-								</div>
-								<button class="basket-balance--button is-disabled" data-go="2">Выслать смс-код</button>
-							</div>
-							<div class="basket-balance__tab" data="2">
-								<div class="basket-balance__item">
-									<input type="text" placeholder="Введите смс код">
-								</div>
-								<button class="basket-balance--button">Подвердить</button>
-								<span class="basket-balance--resend"><a href="#" data-go="1">Отправить код повторно</a></span>
+						<div class="basket-accrual">
+							<ul class="basket-accrual__list">
+								<li>
+									<span class="basket-accrual__list--title">Бонусов за статус карты</span>
+									<span class="basket-accrual__list--quantity">200</span>
+								</li>
+								<li>
+									<span class="basket-accrual__list--title">Бонусов за крупную покупку</span>
+									<span class="basket-accrual__list--quantity">200</span>
+								</li>
+								<li class="basket-accrual__list_total">
+									<span class="basket-accrual__list--title"><strong>Итого Бонусов за этот заказ</strong></span>
+									<span class="basket-accrual__list--quantity"><strong>400*</strong></span>
+								</li>
+							</ul>
+							<div class="basket-accrual__tip">
+								<p><i>*</i> Бонусы за эту покупку зачислятся через 3 дня.</p>
+								<p>Накопленными бонусами Вы можете воспользоваться в оформлении заказа</p>
 							</div>
 						</div>
 					</div>
@@ -441,28 +435,6 @@
 		</ul>
 	</div>
 	<div class="fade-bg"></div>
-	<div class="bonuses-message bonuses-message_self" data-self>
-		<i class="bonuses-message--close"></i>
-		<span class="bonuses-message--subtitle">+ Бонусы за эту покупку</span>
-		<ul class="bonuses-message__list">
-			<li>
-				<span class="bonuses-message__list--status"><span>Статус карты</span> <em>-</em> Умелец</span>
-				<span class="bonuses-message__list--quantity">10 000 б.</span>
-			</li>
-			<li>
-				<span class="bonuses-message__list--status"><span>Статус карты</span> <em>-</em> Мастер</span>
-				<span class="bonuses-message__list--quantity">10 000 б.</span>
-			</li>
-			<li>
-				<span class="bonuses-message__list--status"><span>Статус карты</span> <em>-</em> Профи</span>
-				<span class="bonuses-message__list--quantity">10 000 б.</span>
-			</li>
-			<li>
-				<span class="bonuses-message__list--status"><span>Статус карты</span> <em>-</em> Эксперт</span>
-				<span class="bonuses-message__list--quantity">10 000 б.</span>
-			</li>
-		</ul>
-	</div>
 	<script src="./js/libs.js"></script>
 	<script src="./js/scripts.js"></script>
 </body>

@@ -256,25 +256,30 @@
 							</div>
 						</div>
 						<div class="card__right">
-							<h5 class="card__right--price">
-								<i class="title">Цена сезона:<i class="title_red">*</i></i> <span>88 888 <em class="rouble-icon">г</em></span> / шт.
-								<i class="old"><span>99 999 <em class="rouble-icon">Ь</em></span> / шт.</i>
-							</h5>
+							<div class="card__price">
+								<span class="item-elem--price-old"><strong>23 220</strong> р/шт</span>
+								<span class="item-elem--price"><span>По карте СтройКлуба:</span> <strong>25 999</strong> р/шт</span>
+							</div>
+							<div class="card__bonuses">
+								<span class="item-elem--bonuses" data-bonus="data-info">+Бонусы</span>
+							</div>
 							<p class="card__right--availability">В наличии</p>
 							<form class="quantity-e card__right--quantity">
 								<input type="text" class="quantity-e--input" value="1">
 								<span class="quantity-e--button quantity-e--button_minus"></span>
 								<span class="quantity-e--button quantity-e--button_plus"></span>
 							</form>
-							<p class="card__right--maxdiscount">Данный товар уже с максимальной скидкой</p>
+							<span class="card__right--maxdiscount">Данный товар уже с максимальной скидкой</span>
 							<button class="card__right--button card__right--add-to-basket" data-open="add-to-basket" data-default-text="Добавить в корзину" data-complete-text="Товар добавлен<br> перейти в корзину" data-complete="false" data-complete-link="/basket/">Добавить в корзину</button>
 							<button class="card__right--button card__right--buy_one-click" data-open="buy-one-click">Купить в один клик</button>
 							<div class="card__right--compare">
 								<input type="checkbox" name="add-to-compare">
-								<p class="title">Сравнить<br> товары</p>
-								<p class="link"><a href="#">Перейти<br> к сравнению</a></p>
+								<p class="title">Сравнить товары</p>
+								<p class="link"><a href="#">Перейти к сравнению</a></p>
 							</div>
-							<button class="card__right--button card__right--button_cheaper">Как купить дешевле?</button>
+							<span class="card__right--cheaper">
+								<a href="#">Как купить дешевле?</a>
+							</span>
 						</div>
 					</div>
 				</div>
@@ -362,7 +367,7 @@
 										<p class="title">Сравнить</p>
 										<p class="link"><a href="#">К сравнению</a></p>
 									</div>
-									<span class="item-elem--bonuses">+Бонусы</span>
+									<span class="item-elem--bonuses" data-bonus="data-info">+Бонусы</span>
 								</div>
 								<div class="item-elem__controls">
 									<div class="quantity-e">
@@ -392,7 +397,7 @@
 										<p class="title">Сравнить</p>
 										<p class="link"><a href="#">К сравнению</a></p>
 									</div>
-									<span class="item-elem--bonuses">+Бонусы</span>
+									<span class="item-elem--bonuses" data-bonus="data-info">+Бонусы</span>
 								</div>
 								<div class="item-elem__controls">
 									<div class="quantity-e">
@@ -422,7 +427,7 @@
 										<p class="title">Сравнить</p>
 										<p class="link"><a href="#">К сравнению</a></p>
 									</div>
-									<span class="item-elem--bonuses">+Бонусы</span>
+									<span class="item-elem--bonuses" data-bonus="data-info">+Бонусы</span>
 								</div>
 								<div class="item-elem__controls">
 									<div class="quantity-e">
@@ -452,7 +457,7 @@
 										<p class="title">Сравнить</p>
 										<p class="link"><a href="#">К сравнению</a></p>
 									</div>
-									<span class="item-elem--bonuses">+Бонусы</span>
+									<span class="item-elem--bonuses" data-bonus="data-info">+Бонусы</span>
 								</div>
 								<div class="item-elem__controls">
 									<div class="quantity-e">
@@ -482,7 +487,7 @@
 										<p class="title">Сравнить</p>
 										<p class="link"><a href="#">К сравнению</a></p>
 									</div>
-									<span class="item-elem--bonuses">+Бонусы</span>
+									<span class="item-elem--bonuses" data-bonus="data-info">+Бонусы</span>
 								</div>
 								<div class="item-elem__controls">
 									<div class="quantity-e">
@@ -515,7 +520,7 @@
 										<p class="title">Сравнить</p>
 										<p class="link"><a href="#">К сравнению</a></p>
 									</div>
-									<span class="item-elem--bonuses">+Бонусы</span>
+									<span class="item-elem--bonuses" data-bonus="data-info">+Бонусы</span>
 								</div>
 								<div class="item-elem__controls">
 									<div class="quantity-e">
@@ -545,7 +550,7 @@
 										<p class="title">Сравнить</p>
 										<p class="link"><a href="#">К сравнению</a></p>
 									</div>
-									<span class="item-elem--bonuses">+Бонусы</span>
+									<span class="item-elem--bonuses" data-bonus="data-info">+Бонусы</span>
 								</div>
 								<div class="item-elem__controls">
 									<div class="quantity-e">
@@ -575,7 +580,7 @@
 										<p class="title">Сравнить</p>
 										<p class="link"><a href="#">К сравнению</a></p>
 									</div>
-									<span class="item-elem--bonuses">+Бонусы</span>
+									<span class="item-elem--bonuses" data-bonus="data-info">+Бонусы</span>
 								</div>
 								<div class="item-elem__controls">
 									<div class="quantity-e">
@@ -605,7 +610,7 @@
 										<p class="title">Сравнить</p>
 										<p class="link"><a href="#">К сравнению</a></p>
 									</div>
-									<span class="item-elem--bonuses">+Бонусы</span>
+									<span class="item-elem--bonuses" data-bonus="data-info">+Бонусы</span>
 								</div>
 								<div class="item-elem__controls">
 									<div class="quantity-e">
@@ -635,7 +640,7 @@
 										<p class="title">Сравнить</p>
 										<p class="link"><a href="#">К сравнению</a></p>
 									</div>
-									<span class="item-elem--bonuses">+Бонусы</span>
+									<span class="item-elem--bonuses" data-bonus="data-info">+Бонусы</span>
 								</div>
 								<div class="item-elem__controls">
 									<div class="quantity-e">
@@ -665,7 +670,7 @@
 										<p class="title">Сравнить</p>
 										<p class="link"><a href="#">К сравнению</a></p>
 									</div>
-									<span class="item-elem--bonuses">+Бонусы</span>
+									<span class="item-elem--bonuses" data-bonus="data-info">+Бонусы</span>
 								</div>
 								<div class="item-elem__controls">
 									<div class="quantity-e">
@@ -695,7 +700,7 @@
 										<p class="title">Сравнить</p>
 										<p class="link"><a href="#">К сравнению</a></p>
 									</div>
-									<span class="item-elem--bonuses">+Бонусы</span>
+									<span class="item-elem--bonuses" data-bonus="data-info">+Бонусы</span>
 								</div>
 								<div class="item-elem__controls">
 									<div class="quantity-e">
@@ -725,7 +730,7 @@
 										<p class="title">Сравнить</p>
 										<p class="link"><a href="#">К сравнению</a></p>
 									</div>
-									<span class="item-elem--bonuses">+Бонусы</span>
+									<span class="item-elem--bonuses" data-bonus="data-info">+Бонусы</span>
 								</div>
 								<div class="item-elem__controls">
 									<div class="quantity-e">
@@ -755,7 +760,7 @@
 										<p class="title">Сравнить</p>
 										<p class="link"><a href="#">К сравнению</a></p>
 									</div>
-									<span class="item-elem--bonuses">+Бонусы</span>
+									<span class="item-elem--bonuses" data-bonus="data-info">+Бонусы</span>
 								</div>
 								<div class="item-elem__controls">
 									<div class="quantity-e">
@@ -785,7 +790,7 @@
 										<p class="title">Сравнить</p>
 										<p class="link"><a href="#">К сравнению</a></p>
 									</div>
-									<span class="item-elem--bonuses">+Бонусы</span>
+									<span class="item-elem--bonuses" data-bonus="data-info">+Бонусы</span>
 								</div>
 								<div class="item-elem__controls">
 									<div class="quantity-e">
@@ -815,7 +820,7 @@
 										<p class="title">Сравнить</p>
 										<p class="link"><a href="#">К сравнению</a></p>
 									</div>
-									<span class="item-elem--bonuses">+Бонусы</span>
+									<span class="item-elem--bonuses" data-bonus="data-info">+Бонусы</span>
 								</div>
 								<div class="item-elem__controls">
 									<div class="quantity-e">
@@ -1110,7 +1115,7 @@
 		</div>
 	</div>
 	<div class="fade-bg"></div>
-	<div class="bonuses-message">
+	<div class="bonuses-message" data-info>
 		<i class="bonuses-message--close"></i>
 		<span class="bonuses-message--title">Копите бонусы и оплачивайте ими до 99,9% стоимости покупок!</span>
 		<span class="bonuses-message--exchange">1 бонус = 1 рубль</span>
