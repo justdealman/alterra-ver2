@@ -3842,6 +3842,8 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	height:44px;
 	font-size:14px;
 	line-height:16px;
+	font-weight:normal;
+	text-align:left;
 	vertical-align:middle;
 	padding:6px 11px 6px 0;
 	background:#eeeeee;
@@ -3910,7 +3912,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	line-height:16px;
 	white-space:nowrap;
 	padding:0;
-	margin:18px 0 0;
+	margin:9px 0 0;
 }
 .basket-table--weight span {
 	display:block;
@@ -3921,13 +3923,13 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	line-height:17px;
 	white-space:nowrap;
 	padding:0;
-	margin:20px 0 0;
+	margin:11px 0 0;
 }
 .basket-table--price span {
 	display:block;
 }
 .basket-table .quantity-e {
-	margin:2px 0 0;
+	margin:-7px 0 0;
 }
 .basket-table--remove {
 	position:absolute;
@@ -14976,9 +14978,14 @@ h3.stoim_title {
 		-webkit-border-radius:0;
 		border-radius:0;
 	}
+	.basket-table tbody {
+		display:block;
+		width:100%;
+	}
 	.basket-table__row {
 		position:relative;
 		display:block;
+		min-height:128px;
 		padding:13px 10px 13px 130px;
 		margin:0 0 5px;
 		background:#ffffff;
