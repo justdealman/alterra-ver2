@@ -3781,6 +3781,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	vertical-align:top;
 }
 .basket__rc {
+	position:relative;
 	display:inline-block;
 	width:327px;
 	font-size:12px;
@@ -9429,6 +9430,9 @@ h3.stoim_title {
 .bonuses-message_right-item:after {
 	right:37px;
 }
+.bonuses-message_basket {
+	
+}
 .bonuses-message--close {
 	position:absolute;
 	right:0;
@@ -9485,6 +9489,15 @@ h3.stoim_title {
 .bonuses-message_self .bonuses-message--close {
 	width:28px;
 	height:26px;
+}
+.bonuses-message_basket {
+	margin:29px 0 0 -202px;
+}
+.bonuses-message_basket.bonuses-message_right-item {
+	margin-left:-240px;
+}
+.bonuses-message_basket.bonuses-message_right-item:after {
+	right:45px;
 }
 .bonuses-message--subtitle {
 	display:block;
@@ -11006,6 +11019,14 @@ h3.stoim_title {
 	}
 	.bonuses-message:after {
 		right:35px;
+	}
+	.bonuses-message_basket,
+	.bonuses-message_basket.bonuses-message_right-item {
+		margin-left:-249px;
+	}
+	.bonuses-message_basket:after,
+	.bonuses-message_basket.bonuses-message_right-item:after {
+		right:37px;
 	}
 	.bonuses-message {
 		padding:8px 9px 6px;
