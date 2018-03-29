@@ -6160,9 +6160,9 @@ div.radio span.checked {
 	}
 }
 @media all and (max-width:1247px) {
-	body {
+	/*body {
 		background:#ffffff;
-	}
+	}*/
 	.about {
 		padding:1px 20px 24px;
 	}
@@ -6756,7 +6756,7 @@ div.radio span.checked {
 	line-height:19px;
 	text-transform:uppercase;
 	padding:4px 29px 3px;
-	background-color:#ffffff;
+	background-color:#f6f6f6;
 	border:1px solid #002365;
 	-webkit-border-radius:5px;
 	border-radius:5px;
@@ -8552,6 +8552,7 @@ h3.stoim_title {
 	left:0;
 	top:0;
 	color:#f3f3f3;
+	color:rgba(0,0,0,0.04);
 	font-size:403px;
 	line-height:300px;
 	font-weight:bold;
@@ -8578,6 +8579,8 @@ h3.stoim_title {
 	height:100%;
 	height:calc(100% - 4px);
 	background:#ccdef5;
+	-webkit-border-radius:1px;
+	border-radius:1px;
 }
 .club-steps--icon_1 {
 	position:absolute;
@@ -8591,12 +8594,12 @@ h3.stoim_title {
 }
 .club-steps--icon_2 {
 	position:absolute;
-	left:-82px;
-	top:-21px;
+	left:24px;
+	top:3px;
 	z-index:2;
 	display:block;
-	width:435px;
-	height:242px;
+	width:336px;
+	height:234px;
 	background:url('../img/club-step-2.png') no-repeat 0 0;
 }
 .club-steps--icon_3 {
@@ -8667,8 +8670,8 @@ h3.stoim_title {
 }
 .club-card--icon {
 	position:absolute;
-	right:64px;
-	top:-86px;
+	right:62px;
+	top:-87px;
 	display:block;
 	width:529px;
 	height:361px;
@@ -8698,29 +8701,23 @@ h3.stoim_title {
 	text-decoration:underline;
 }
 .club-help {
+	width:1380px;
+	width:calc(100% + 20px);
 	font-size:0;
 	margin:0 0 78px;
 }
 .club-help__item {
 	position:relative;
 	display:inline-block;
+	width:33.33%;
 	vertical-align:top;
-	padding:0 0 0 115px;
+	padding:0 20px 0 115px;
 	margin:0 0 20px;
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
 	box-sizing:border-box;
 }
-.club-help__item_lc {
-	width:805px;
-	width:calc(100% - 555px);
-	padding-right:30px;
-}
-.club-help__item_rc {
-	width:555px;
-}
 .club-help__content {
-	max-width:500px;
 	color:#333333;
 }
 .club-help--title {
@@ -8755,11 +8752,20 @@ h3.stoim_title {
 .club-help--icon_2 {
 	position:absolute;
 	left:0;
+	top:5px;
+	display:block;
+	width:95px;
+	height:67px;
+	background:url('../img/club-help-icon-2.png') no-repeat 0 0;
+}
+.club-help--icon_3 {
+	position:absolute;
+	left:0;
 	top:2px;
 	display:block;
 	width:95px;
 	height:97px;
-	background:url('../img/club-help-icon-2.png') no-repeat 0 0;
+	background:url('../img/club-help-icon-3.png') no-repeat 0 0;
 }
 .club--validity {
 	display:block;
@@ -8803,6 +8809,9 @@ h3.stoim_title {
 	border:2px solid #001d66;
 	-webkit-border-radius:10px;
 	border-radius:10px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
 }
 .item-bonus:after {
 	content:'';
@@ -9046,7 +9055,10 @@ h3.stoim_title {
 	margin:0;
 }
 .club-benefits {
-	margin:0 0 173px;
+	margin:0 0 120px;
+}
+.club-benefits + .club-card {
+	margin-top:120px;
 }
 .club-benefits--title {
 	display:block;
@@ -9054,91 +9066,113 @@ h3.stoim_title {
 	font-size:30px;
 	line-height:32px;
 	padding:0;
-	margin:0 0 93px;
+	margin:0 0 55px;
 }
 .club-benefits__row {
+	width:calc(100% + 20px);
 	font-size:0;
+	margin:0 0 -20px;
 }
 .club-benefits__item {
 	position:relative;
 	display:inline-block;
-	width:360px;
+	width:25%;
 	font-size:12px;
 	vertical-align:top;
-}
-.club-benefits__item:nth-child(1),
-.club-benefits__item:nth-child(2) {
-	margin-right:140px;
-	margin-right:calc((100% - (360px * 3)) / 2);
+	padding:0 20px 0 0;
+	margin:0 0 20px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
 }
 .club-benefits--num {
 	display:block;
 	color:#f3f3f3;
-	font-size:350px;
-	line-height:260px;
+	color:rgba(0,0,0,0.04);
+	font-size:274px;
+	line-height:220px;
 	font-weight:bold;
-	text-indent:-27px;
+	text-indent:0;
 	padding:0;
-	margin:0 0 7px;
+	margin:0 0 9px;
 }
-.club-benefits__item:nth-child(2) .club-benefits--num {
-	text-indent:-8px;
-}
-.club-benefits__item:nth-child(3) .club-benefits--num {
-	text-indent:-12px;
+.club-benefits__item:nth-child(1) .club-benefits--num {
+	text-indent:-20px;
 }
 .club-benefits__item p {
+	max-width:310px;
 	position:relative;
-	color:#333333;
-	font-size:18px;
+	color:#010101;
+	font-size:16px;
 	line-height:24px;
 	padding:0 0 0 17px;
 	margin:0;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
 }
 .club-benefits__item p:before {
 	content:'';
 	position:absolute;
 	left:0;
-	top:0;
+	top:1px;
 	width:6px;
 	height:100%;
-	height:calc(100% - 2px);
-	background:#ff0000;
+	height:calc(100% - 7px);
+	background:#ccdef5;
+	-webkit-border-radius:1px;
+	border-radius:1px;
 }
-.club-benefits__item p em {
-	color:#878787;
-	font-size:14px;
-	line-height:20px;
+.club-benefits__item p span {
+	display:block;
+	color:#e6330f;
+	font-size:18px;
+	font-weight:bold;
+	margin:0 0 4px;
 }
 .club-benefits--icon_1 {
 	position:absolute;
-	left:114px;
-	top:69px;
+	left:90px;
+	top:62px;
 	z-index:1;
 	display:block;
-	width:328px;
-	height:178px;
+	width:256px;
+	height:140px;
 	background:url('../img/club-benefit-1.png') no-repeat 0 0;
+	background-size:100% 100%;
 }
 .club-benefits--icon_2 {
 	position:absolute;
-	left:99px;
-	top:67px;
+	left:85px;
+	top:61px;
 	z-index:1;
 	display:block;
-	width:258px;
-	height:161px;
+	width:202px;
+	height:125px;
 	background:url('../img/club-benefit-2.png') no-repeat 0 0;
+	background-size:100% 100%;
 }
 .club-benefits--icon_3 {
 	position:absolute;
-	left:77px;
-	top:77px;
+	left:67px;
+	top:68px;
 	z-index:1;
 	display:block;
-	width:281px;
-	height:174px;
+	width:221px;
+	height:136px;
 	background:url('../img/club-benefit-3.png') no-repeat 0 0;
+	background-size:100% 100%;
+}
+.club-benefits--icon_4 {
+	position:absolute;
+	left:101px;
+	top:62px;
+	z-index:1;
+	display:block;
+	width:168px;
+	height:132px;
+	background:url('../img/club-benefit-4.png') no-repeat 0 0;
+	background-size:100% 100%;
 }
 .club-list {
 	margin:150px 0 20px;
@@ -9223,7 +9257,7 @@ h3.stoim_title {
 }
 .club-form__item_inline {
 	display:inline-block;
-	min-width:114px;
+	min-width:92px;
 	margin-right:20px;
 }
 .club-form__item--label {
@@ -9238,19 +9272,37 @@ h3.stoim_title {
 .club-form__item--label .radio {
 	position:absolute;
 	left:0;
-	top:1px;
+	top:-1px;
 }
 .club-form__item--label .radio {
-	width:13px;
-	height:13px;
+	width:17px;
+	height:17px;
 }
 .club-form__item--label .radio span {
-	width:13px;
-	height:13px;
-	background:url('../img/checkbox-icon.png') no-repeat 0 0;
+	position:relative;
+	width:17px;
+	height:17px;
+	background:none;
+	border:1px solid rgba(0,0,0,0.1);
+	-webkit-border-radius:50%;
+	border-radius:50%;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
 }
 .club-form__item--label .radio span.checked {
-	background-position:0 -13px;
+	background:rgba(0,0,0,0.1)
+}
+.club-form__item--label .radio span.checked:before {
+	content:'';
+	position:absolute;
+	left:4px;
+	top:4px;
+	width:7px;
+	height:7px;
+	background:#002365;
+	-webkit-border-radius:50%;
+	border-radius:50%;
 }
 .club-form--button {
 	color:#ffffff;
@@ -9276,7 +9328,7 @@ h3.stoim_title {
 .club-form__input {
 	position:relative;
 	max-width:431px;
-	padding:0 0 0 95px;
+	padding:0 0 0 115px;
 	margin:1px 0 20px;
 	-webkit-box-sizing:border-box;
 	-moz-box-sizing:border-box;
@@ -9301,6 +9353,10 @@ h3.stoim_title {
 	font-size:12px;
 	line-height:17px;
 	padding:5px 0 3px;
+}
+.club-form__input--label em {
+	color:#e6330f;
+	font-style:normal;
 }
 .club-form__input input,
 .club-form__input textarea {
@@ -9466,6 +9522,83 @@ h3.stoim_title {
 	text-align:right;
 	white-space:nowrap;
 }
+.club-spend {
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+	width:1380px;
+	width:calc(100% + 20px);
+	font-size:0;
+	margin:-1px 0 28px;
+	-webkit-justify-content:space-between;
+	justify-content:space-between;
+}
+.club-spend__item {
+	display:inline-block;
+	font-size:12px;
+	padding:0 20px 0 0;
+	margin:0 0 20px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+.club-spend__item p {
+	position:relative;
+	font-size:18px;
+	line-height:24px;
+	padding:0 0 0 17px;
+	margin:0;
+}
+.club-spend__item p:before {
+	content:'';
+	position:absolute;
+	left:0;
+	top:2px;
+	width:6px;
+	height:100%;
+	height:calc(100% - 4px);
+	background:#ccdef5;
+	-webkit-border-radius:1px;
+	border-radius:1px;
+}
+.club-spend__item p span {
+	color:#e6330f;
+}
+.club-trade {
+	font-size:0;
+	color:#ffffff;
+	text-align:center;
+	padding:20px 20px 33px;
+	margin:0 0 40px;
+	background:rgb(0,35,101);
+	background:-moz-linear-gradient(left, rgba(0,35,101,1) 0%, rgba(4,54,145,1) 100%);
+	background:-webkit-linear-gradient(left, rgba(0,35,101,1) 0%,rgba(4,54,145,1) 100%);
+	background:linear-gradient(to right, rgba(0,35,101,1) 0%,rgba(4,54,145,1) 100%);
+	filter:progid:DXImageTransform.Microsoft.gradient( startColorstr='#002365', endColorstr='#043691',GradientType=1 );
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+}
+.club-trade--item {
+	display:inline-block;
+	font-size:43px;
+	line-height:50px;
+	font-weight:bold;
+	vertical-align:top;
+}
+.club-trade--item span {
+	display:block;
+	font-size:124px;
+	line-height:122px;
+}
+.club-trade--plus {
+	display:inline-block;
+	font-size:139px;
+	line-height:139px;
+	vertical-align:top;
+	padding:0 29px;
+	margin-top:19px;
+}
 
 /* desktop */
 @media all and (max-width:1430px) {
@@ -9533,7 +9666,7 @@ h3.stoim_title {
 		margin-left:10px;
 	}
 	.vacancy__nav a {
-		padding:4px 13px 3px;
+		padding:4px 10px 3px 9px;
 	}
 	.club-steps__row {
 		height:240px;
@@ -9574,10 +9707,10 @@ h3.stoim_title {
 		background-size:100% 100%;
 	}
 	.club-steps--icon_2 {
-		left:-52px;
-		top:4px;
-		width:304px;
-		height:169px;
+		left:28px;
+		top:10px;
+		width:235px;
+		height:164px;
 		background-size:100% 100%;
 	}
 	.club-steps__item_2 .club-steps--title {
@@ -9615,8 +9748,7 @@ h3.stoim_title {
 		margin:50px 0 30px;
 	}
 	.club-card {
-		width:calc(100% + 40px);
-		margin:70px 0 70px -20px;
+		margin:70px 0 70px;
 		-webkit-box-sizing:border-box;
 		-moz-box-sizing:border-box;
 		box-sizing:border-box;
@@ -9705,38 +9837,39 @@ h3.stoim_title {
 		margin:2px 0 0;
 	}
 	.club-benefits--num {
-		font-size:250px;
-		line-height:200px;
-		text-indent:-19px;
+		font-size:220px;
+		line-height:180px;
+		margin:0 0 6px;
+	}
+	.club-benefits__item:nth-child(1) .club-benefits--num {
+		text-indent:-16px;
 	}
 	.club-benefits__item {
-		width:30%;
-		margin-right:0;
-	}
-	.club-benefits__item:nth-child(1), 
-	.club-benefits__item:nth-child(2) {
-		margin-right:5%;
+		width:33.33%;
 	}
 	.club-benefits--icon_1 {
-		left:90px;
-		top:60px;
-		width:229px;
-		height:124px;
-		background-size:100% 100%;
+		left:75px;
+		top:56px;
+		width:205px;
+		height:112px;
 	}
 	.club-benefits--icon_2 {
 		left:70px;
 		top:50px;
-		width:180px;
-		height:112px;
-		background-size:100% 100%;
+		width:162px;
+		height:100px;
 	}
 	.club-benefits--icon_3 {
-		left:65px;
-		top:65px;
-		width:196px;
-		height:121px;
-		background-size:100% 100%;
+		left:60px;
+		top:60px;
+		width:177px;
+		height:109px;
+	}
+	.club-benefits--icon_4 {
+		left:85px;
+		top:52px;
+		width:134px;
+		height:105px;
 	}
 	.club-form__group {
 		margin:30px 0 30px;
@@ -9749,6 +9882,16 @@ h3.stoim_title {
 	}
 	.club-form__group--title {
 		margin:0 0 20px;
+	}
+	.club-spend {
+		display:block;
+	}
+	.club-spend__item {
+		width:50%;
+	}
+	.club-trade {
+		width:calc(100% + 40px);
+		margin-left:-20px;
 	}
 }
 @media all and (max-width:1230px) {
@@ -14446,10 +14589,10 @@ h3.stoim_title {
 		bottom:15px;
 	}
 	.club-steps--icon_2 {
-		left:-32px;
-		top:-4px;
-		width:261px;
-		height:145px;
+		left:30px;
+		top:12px;
+		width:202px;
+		height:141px;
 	}
 	.club-steps__item_2 .club-steps--title {
 		left:45px;
@@ -14465,9 +14608,8 @@ h3.stoim_title {
 		line-height:16px;
 	}
 	.club-card {
-		width:calc(100% + 10px);
 		padding:15px 10px;
-		margin:40px 0 30px -5px;
+		margin:40px 0 30px;
 	}
 	.club-card p {
 		font-size:13px;
@@ -14487,9 +14629,11 @@ h3.stoim_title {
 		height:116px;
 	}
 	.club-help {
+		width:calc(100% + 5px);
 		margin:0 0 5px;
 	}
 	.club-help__item {
+		width:50%;
 		padding:0 10px 0 95px;
 	}
 	.club-help--title {
@@ -14510,6 +14654,13 @@ h3.stoim_title {
 		background-size:100% 100%;
 	}
 	.club-help--icon_2 {
+		left:5px;
+		top:2px;
+		width:75px;
+		height:53px;
+		background-size:100% 100%;
+	}
+	.club-help--icon_3 {
 		left:5px;
 		top:-1px;
 		width:75px;
@@ -14624,8 +14775,7 @@ h3.stoim_title {
 		background-size:100% 100%;
 	}
 	.club-intro {
-		width:calc(100% + 10px);
-		margin:0 0 20px -5px;
+		margin:0 0 20px;
 	}
 	.club-intro__row {
 		height:180px;
@@ -14646,7 +14796,10 @@ h3.stoim_title {
 		display:none;
 	}
 	.club-benefits {
-		margin:0 5px;
+		margin:0 10px;
+	}
+	.club-benefits__row {
+		width:calc(100% + 10px);
 	}
 	.club-benefits--title {
 		font-size:20px;
@@ -14655,23 +14808,17 @@ h3.stoim_title {
 	}
 	.club-benefits--num {
 		color:rgba(0,0,0,0.06);
-		font-size:180px;
-		line-height:150px;
-		text-indent:-14px;
+		font-size:170px;
+		line-height:140px;
+		text-indent:0;
 	}
-	.club-benefits__item:nth-child(2) .club-benefits--num {
-		text-indent:-4px;
-	}
-	.club-benefits__item:nth-child(3) .club-benefits--num {
-		text-indent:-7px;
+	.club-benefits__item:nth-child(1) .club-benefits--num {
+		text-indent:-13px;
 	}
 	.club-benefits__item {
 		width:50%;
+		padding:0 10px 0 0;
 		margin:0 0 15px;
-	}
-	.club-benefits__item:nth-child(1),
-	.club-benefits__item:nth-child(2) {
-		margin-right:0;
 	}
 	.club-benefits__item p {
 		font-size:14px;
@@ -14686,25 +14833,31 @@ h3.stoim_title {
 		line-height:15px;
 	}
 	.club-benefits--icon_1 {
-		left:70px;
-		top:40px;
-		width:196px;
-		height:106px;
+		left:56px;
+		top:35px;
+		width:180px;
+		height:98px;
 	}
 	.club-benefits--icon_2 {
-		left:60px;
-		top:35px;
-		width:154px;
-		height:96px;
+		left:56px;
+		top:32px;
+		width:141px;
+		height:87px;
 	}
 	.club-benefits--icon_3 {
-		left:55px;
-		top:45px;
-		width:168px;
-		height:104px;
+		left:45px;
+		top:37px;
+		width:155px;
+		height:95px;
+	}
+	.club-benefits--icon_4 {
+		left:67px;
+		top:33px;
+		width:118px;
+		height:93px;
 	}
 	.club-benefits + .club-card {
-		margin-top:20px;
+		margin-top:60px;
 	}
 	.club-list {
 		margin:30px 5px 5px;
@@ -14761,10 +14914,11 @@ h3.stoim_title {
 		margin:0 0 10px;
 	}
 	.club-form__input {
+		padding-left:95px;
 		margin:1px 0 16px;
 	}
 	.club-form__item_inline {
-		min-width:95px;
+		min-width:92px;
 	}
 	.club--validity {
 		width:calc(100% + 10px);
@@ -14905,6 +15059,36 @@ h3.stoim_title {
 		margin-top:1px;
 		-webkit-transform:translateY(-50%);
 		transform:translateY(-50%);
+	}
+	.club-spend__item p {
+		font-size:16px;
+		line-height:22px;
+	}
+	.club-spend {
+		margin:0 0 8px;
+	}
+	.club-spend__item {
+		margin:0 0 16px;
+	}
+	.club-trade {
+		width:calc(100% + 10px);
+		padding:10px 0 14px;
+		margin:0 0 20px -5px;
+	}
+	.club-trade--item {
+		font-size:26px;
+		line-height:30px;
+		padding:0 5px;
+	}
+	.club-trade--item span {
+		font-size:70px;
+		line-height:70px;
+	}
+	.club-trade--plus {
+		font-size:80px;
+		line-height:80px;
+		padding:0 14px;
+		margin:8px 0 0;
 	}
 }
 @media all and (max-width:800px) {
@@ -15115,6 +15299,14 @@ h3.stoim_title {
 		-webkit-border-radius:5px;
 		border-radius:5px;
 	}
+	.club-spend {
+		width:auto;
+		margin-left:0;
+	}
+	.club-spend__item {
+		width:100%;
+		padding:0;
+	}
 }
 @media all and (max-width:640px) {
 	.club-steps__item {
@@ -15179,7 +15371,7 @@ h3.stoim_title {
 		width:100%;
 	}
 	.club-benefits + .club-card {
-		margin-top:70px;
+		margin-top:90px;
 	}
 	.club-list__item {
 		width:100%;
