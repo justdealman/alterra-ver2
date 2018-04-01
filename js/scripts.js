@@ -638,10 +638,6 @@
 			$(this).toggleClass('card__more-m--title_is-hidden');
 		}
 	});
-	$('.ordering--autorization a').on('click', function(e) {
-		e.preventDefault();
-		$('.ordering__login').toggleClass('ordering__login_is-dropped');
-	});
 	$('.vacancy__item--title').on('click', function(e) {
 		e.preventDefault();
 		$(this).toggleClass('vacancy__item--title_is-dropped');
@@ -657,10 +653,6 @@
 	$('input[type="file"]').on('change', function(e) {
 		var filename = $(this).val().split('\\').pop();
 		$(this).siblings('input[type="text"]').val(filename);
-	});
-	$('.ordering--autorization').on('click', function(e) {
-		e.preventDefault();
-		$('.ordering--autorization').toggleClass('ordering--autorization_is-dropped');
 	});
 	$('input[data="switch"]').change(function() {
 		$('[data-'+$(this).attr('name')+']').hide().filter('[data-'+$(this).attr('name')+'="'+$(this).val()+'"]').show();
@@ -1019,4 +1011,33 @@
 		e.preventDefault();
 		checkBalanceTabs($(this));
 	});
+	$('.ordering__delivery--item').on('click', function() {
+		if ( !$(this).hasClass('is-active') ) {
+			$(this).addClass('is-active').siblings().removeClass('is-active');
+		}
+	});
+	$('[data-checkable]').each(function() {
+		if ( $(this).find('input[type="checkbox"]').is(':checked') ) {
+			$(this).addClass('is-checked');
+		}
+	});
+	$('[data-checkable] input[type="checkbox"]').on('change', function() {
+		var t = $(this).parents('[data-checkable]');
+		if ( $(this).is(':checked') ) {
+			t.addClass('is-checked');
+		} else {
+			t.removeClass('is-checked');
+		}
+	});
+	$('.ordering-details--goods_drop').on('click', function() {
+		var t = $(this).parents('.ordering-details').find('.ordering-goods');
+		if ( !$(this).hasClass('is-dropped') ) {
+			t.addClass('is-visible');
+			$(this).addClass('is-dropped');
+		} else {
+			t.removeClass('is-visible');
+			$(this).removeClass('is-dropped');
+		}
+	});
+	$('.select-custom').selectric();
 });
