@@ -3799,21 +3799,24 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	padding:6px 11px 6px 0;
 	background:#eeeeee;
 }
+.basket-table__th br {
+	display:none;
+}
 .basket-table__th_photo {
 	width:12%;
 	min-width:95px;
 }
 .basket-table__th_weight {
-	width:12.3%;
+	width:12.8%;
 }
 .basket-table__th_price {
-	width:11.6%;
+	width:13.1%;
 }
 .basket-table__th_quantity {
-	width:18.2%;
+	width:15.2%;
 }
 .basket-table__th_total {
-	width:11.8%;
+	width:12.8%;
 }
 .basket-table__th_remove {
 	width:25px;
@@ -3860,10 +3863,10 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	line-height:16px;
 	white-space:nowrap;
 	padding:0;
-	margin:9px 0 0;
+	margin:2px 0 0;
 }
 .basket-table--weight span {
-	display:block;
+	white-space:nowrap;
 }
 .basket-table--price {
 	display:block;
@@ -3871,13 +3874,9 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	line-height:17px;
 	white-space:nowrap;
 	padding:0;
-	margin:11px 0 0;
 }
 .basket-table--price span {
-	display:block;
-}
-.basket-table .quantity-e {
-	margin:-7px 0 0;
+	white-space:nowrap;
 }
 .basket-table--remove {
 	position:absolute;
@@ -9985,6 +9984,9 @@ div.radio input {
 	}
 	.vacancy__nav li {
 		margin-left:10px;
+	}
+	.basket-table__th br {
+		display:block;
 	}
 }
 @media all and (min-width:1021px) {
