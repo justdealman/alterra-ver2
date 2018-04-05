@@ -6279,15 +6279,17 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	position:relative;
 	clear:both;
 	overflow:hidden;
-	margin:0 0 27px;
+	padding:10px 0;
+	margin:-10px 0 17px;
 }
 .vacancy__nav:before {
 	content:'';
 	position:absolute;
 	left:0;
-	top:14px;
+	top:50%;
 	width:100%;
 	height:1px;
+	margin-top:-5px;
 	background:#b1b1b1;
 }
 .vacancy__nav li {
@@ -6299,20 +6301,30 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	margin-right:0;
 }
 .vacancy__nav a {
-	display:block;
+	display:table;
 	color:#002365;
 	font-size:14px;
-	line-height:19px;
+	line-height:17px;
 	text-transform:uppercase;
-	padding:4px 29px 3px;
 	background-color:#f6f6f6;
 	border:1px solid #002365;
 	-webkit-border-radius:5px;
 	border-radius:5px;
 }
+.vacancy__nav em {
+	display:none;
+	font-style:normal;
+}
+.vacancy__nav a span {
+	display:table-cell;
+	padding:5px 29px 4px;
+}
 .vacancy__nav .active a, .vacancy__nav a:hover {
 	color:#ffffff;
 	background-color:#002365;
+}
+.vacancy__nav .special {
+	margin-top:-8px;
 }
 .vacancy__nav .special a {
 	color:#ffffff;
@@ -9745,11 +9757,8 @@ div.radio input {
 	.search-results__rc h4 {
 		min-height:48px;
 	}
-	.vacancy__nav li {
-		margin-left:10px;
-	}
-	.vacancy__nav a {
-		padding:4px 10px 3px 9px;
+	.vacancy__nav a span {
+		padding:5px 10px 4px 9px;
 	}
 	.club-steps__row {
 		height:240px;
@@ -9972,6 +9981,9 @@ div.radio input {
 	.search-results__rc ul > li {
 		display:block;
 		width:100%;
+	}
+	.vacancy__nav li {
+		margin-left:10px;
 	}
 }
 @media all and (min-width:1021px) {
@@ -12389,6 +12401,7 @@ div.radio input {
 		margin:0;
 	}
 	.vacancy__nav {
+		padding:0;
 		margin:0 0 10px;
 	}
 	.vacancy__nav:before {
@@ -12398,14 +12411,28 @@ div.radio input {
 		float:none;
 		margin:0 0 5px;
 	}
+	.vacancy__nav li.special {
+		margin-top:0;
+	}
 	.vacancy__nav a {
 		position:relative;
+		display:block;
 		font-size:10px;
 		line-height:12px;
-		padding:8px 25px 8px 5px;
+		padding:9px 25px 7px 5px;
 		border-color:#0d47a1;
 		-webkit-border-radius:0;
 		border-radius:0;
+	}
+	.vacancy__nav a span {
+		display:block;
+		padding:0;
+	}
+	.vacancy__nav a br {
+		display:none;
+	}
+	.vacancy__nav a em {
+		display:inline;
 	}
 	.vacancy__nav a:hover {
 		color:#002365;
