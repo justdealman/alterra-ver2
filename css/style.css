@@ -648,7 +648,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 }
 .header__phone {
 	position:absolute;
-	right:324px;
+	right:344px;
 	top:23px;
 	width:278px;
 	font-size:12px;
@@ -671,7 +671,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 }
 .header__address {
 	position:absolute;
-	right:607px;
+	right:637px;
 	top:23px;
 	width:346px;
 	font-size:12px;
@@ -5589,13 +5589,13 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
   }
 	.header__address {
     top:27px;
-		width:306px;
-		right:480px;
+		width:336px;
+		right:470px;
 	}
 	.header__phone {
     top:27px;
 		width:258px;
-		right:176px;
+		right:186px;
 	}
   .header__call {
     top:2px;
@@ -5737,14 +5737,15 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	}
 	.header__address {
 		top:19px;
-		right:387px;
-		width:191px;
+		right:367px;
+		width:221px;
 	}
 	.header__address--text {
 		display:block;
 		margin:6px 0 0;
 	}
 	.header__phone {
+		right:156px;
 		top:19px;
 		width:186px;
 	}
