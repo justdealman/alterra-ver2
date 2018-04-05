@@ -2815,13 +2815,15 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 .catalog__view--item {
 	padding:16px 19px 1px;
 	margin:0 0 20px;
-	border:1px solid #b1b1b1;
+	background:#ffffff;
 	-webkit-border-radius:5px;
 	border-radius:5px;
+	-webkit-box-shadow:0 4px 9px rgba(0,0,0,0.06), 0 0 3px rgba(0,0,0,0.08), 0 0 1px rgba(0,0,0,0.03);
+	box-shadow:0 4px 9px rgba(0,0,0,0.06), 0 0 3px rgba(0,0,0,0.08), 0 0 1px rgba(0,0,0,0.03);
 }
 .catalog__view--main {
 	display:inline-block;
-	width:220px;
+	width:200px;
 	vertical-align:top;
 	margin:0 17px 0 0;
 }
@@ -2846,7 +2848,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 }
 .catalog__view--characteristics {
 	display:inline-block;
-	width:260px;
+	width:220px;
 	vertical-align:top;
 	margin:-5px 17px 10px 0;
 }
@@ -11136,6 +11138,7 @@ div.radio input {
 		border-radius:5px 2px 2px 5px;
 	}
 	.selectric .label {
+		height:28px;
 		padding:6px 0;
 		margin:0 34px 0 9px;
 	}
@@ -12868,10 +12871,11 @@ div.radio input {
 		position:relative;
 		min-height:97px;
 		padding:12px 14px 8px 135px;
-		margin:0 0 -1px;
-		border-color:#eeeeee;
+		margin:0 0 5px;
 		-webkit-border-radius:0;
 		border-radius:0;
+		-webkit-box-shadow:0 0 0 rgba(0,0,0,0.02);
+		box-shadow:0 0 0 rgba(0,0,0,0.02);
 	}
 	.catalog__view--item.tall {
 		min-height:105px;
@@ -14703,7 +14707,7 @@ div.radio input {
 	.basket-table__row {
 		position:relative;
 		display:block;
-		min-height:128px;
+		min-height:154px;
 		padding:13px 10px 13px 130px;
 		margin:0 0 5px;
 		background:#ffffff;
