@@ -14781,11 +14781,6 @@ div.radio input {
 		right:0;
 		top:0;
 	}
-	.basket-table .quantity-e {
-		position:absolute;
-		left:10px;
-		bottom:15px;
-	}
 	.basket-table--price {
 		position:relative;
 		font-size:14px;
@@ -14898,6 +14893,38 @@ div.radio input {
 	}
 	.ordering__delivery {
 		width:calc(100% + 10px);
+	}
+	.quantity-e {
+		width:138px;
+		height:30px;
+		padding:0 45px;
+	}
+	.quantity-e--input {
+		font-size:12px;
+		padding:7px 0 6px;
+	}
+	.quantity-e--button {
+		width:44px;
+	}
+	.quantity-e--button:before {
+		left:50%;
+		top:50%;
+		margin:0 0 0 -5px;
+	}
+	.quantity-e--button_plus:after {
+		left:50%;
+		top:50%;
+		margin:-4px 0 0 -1px;
+	}
+	.basket-table .quantity-e {
+		position:absolute;
+		left:10px;
+		bottom:10px;
+		width:109px;
+		padding:0 28px;
+	}
+	.basket-table .quantity-e--button {
+		width:28px;
 	}
 }
 @media all and (max-width:800px) {
