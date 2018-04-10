@@ -11105,6 +11105,10 @@ div.radio input {
 	.item-elem__path a {
 		color:#002365;
 	}
+	.item-elem__details {
+		clear:both;
+		overflow:hidden;
+	}
 	.bonuses-message {
 		width:310px;
 		margin-left:-234px;
