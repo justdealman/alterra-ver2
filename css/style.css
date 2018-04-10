@@ -10972,7 +10972,7 @@ div.radio input {
 		display:none;
 	}
 	.catalog__filter {
-		background:#ffffff;
+		background:#f5f5f5;
 		margin:0 !important;
 	}
 	.catalog__filter--item {
@@ -11075,6 +11075,35 @@ div.radio input {
 		top:-7px;
 		font-size:10px;
 		line-height:11px;
+	}
+	.item-elem__path {
+		width:calc(100% + 129px);
+		font-size:0;
+		margin:12px 0 -8px -120px;
+	}
+	.item-elem__path li {
+		overflow:hidden;
+		display:inline-block;
+		color:#000000;
+		font-size:12px;
+		line-height:14px;
+		white-space:nowrap;
+		text-overflow:ellipsis;
+		padding:0 9px 0 0;
+		margin:0 0 8px;
+	}
+	.item-elem__path li:before {
+		content:'/';
+		color:#002365;
+		font-size:12px;
+		line-height:14px;
+		padding:0 9px 0 0;
+	}
+	.item-elem__path li:first-child:before {
+		display:none;
+	}
+	.item-elem__path a {
+		color:#002365;
 	}
 	.bonuses-message {
 		width:310px;
