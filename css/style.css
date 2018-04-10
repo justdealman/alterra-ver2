@@ -1275,6 +1275,9 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	-webkit-border-radius:5px;
 	border-radius:5px;
 }
+.item-elem:hover {
+	z-index:10;
+}
 .item-elem--link {
 	position:relative;
 	display:block;
@@ -1286,6 +1289,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 .item-elem--title {
 	overflow:hidden;
 	display:block;
+	height:54px;
 	min-height:54px;
 	font-size:12px;
 	line-height:18px;
@@ -10984,23 +10988,22 @@ div.radio input {
 		display:block;
 		width:auto;
 		padding:0;
-		margin:0 0 -1px;
+		margin:0 0 5px;
 	}
 	.catalog__list.is-one-lined .catalog__item:nth-child(4),
 	.catalog__list.is-one-lined .catalog__item:nth-child(5) {
 		display:block;
 	}
 	.item-elem {
-		margin:0 0 5px;
+		margin:0;
+		padding:13px 10px 10px 130px;
 		-webkit-box-shadow:0 0 0 rgba(0,0,0,0.02);
 		box-shadow:0 0 0 rgba(0,0,0,0.02);
 		-webkit-border-radius:0;
 		border-radius:0;
 	}
-	.item-elem {
-		padding:13px 10px 10px 130px;
-	}
 	.item-elem--title {
+		height:auto !important;
 		min-height:24px;
 		font-size:10px;
 		line-height:12px;

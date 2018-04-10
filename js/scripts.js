@@ -959,7 +959,7 @@
 		tip.show().css({
 			left: left,
 			top: top
-		}).removeClass('bonuses-message_right-item bonuses-message_right-card');;
+		}).removeClass('bonuses-message_right-item bonuses-message_right-card');
 		e.addClass('is-active');
 		if ( ( e.offset().left + tip.outerWidth() ) > $(window).width() ) {
 			if ( e.parents('.card').length ) {
@@ -1040,4 +1040,29 @@
 		}
 	});
 	$('.select-custom').selectric();
+	$('.item-elem').on('mouseenter', function() {
+		if  ( !isMobile ) {
+			var title = $(this).find('.item-elem--title');
+			title.outerHeight('auto');
+			var margin = title.outerHeight()-54;
+			$(this).css({
+				marginBottom: -margin
+			});
+			if ( $('[data-bonus]').hasClass('is-active') ) {
+				openBonusesMessage($('[data-bonus].is-active'),$('[data-bonus].is-active').attr('data-bonus'));
+			}
+		}
+	});
+	$('.item-elem').on('mouseleave', function() {
+		if  ( !isMobile ) {
+			var title = $(this).find('.item-elem--title');
+			title.outerHeight(54);
+			$(this).css({
+				marginBottom: 0
+			});
+			if ( $('[data-bonus]').hasClass('is-active') ) {
+				openBonusesMessage($('[data-bonus].is-active'),$('[data-bonus].is-active').attr('data-bonus'));
+			}
+		}
+	});
 });
