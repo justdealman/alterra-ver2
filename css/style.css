@@ -1323,6 +1323,10 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	line-height:12px;
 	text-align:left;
 }
+.item-elem--price em {
+	color:#e6330f;
+	font-style:normal;
+}
 .special-price-tip {
 	position:absolute;
 	font-size:13px;
@@ -6262,7 +6266,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	background:url('../img/mobile-menu-bg.png') no-repeat 15px 20px;
 }
 .mobile-show {
-	display:none;
+	display:none !important;
 }
 .panel-m {
 	display:none;
@@ -10009,7 +10013,7 @@ div.radio input {
 		display:none !important;
 	}
 	.mobile-show {
-		display:block;
+		display:block !important;
 	}
 	.wrapper {
 		min-height:0;
@@ -11072,7 +11076,8 @@ div.radio input {
 	}
 	.item-elem--price span {
 		left:0;
-		top:-7px;
+		top:4px;
+		width:80px;
 		font-size:10px;
 		line-height:11px;
 	}
