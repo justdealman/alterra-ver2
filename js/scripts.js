@@ -1027,4 +1027,22 @@
 			}
 		}
 	});
+	$('.autorization__nav a').on('click', function(e) {
+		e.preventDefault();
+		var p = $(this).parents('li');
+		if ( !p.hasClass('is-active') ) {
+			var tabs = $(this).parents('.autorization__group').find('.autorization__tab');
+			tabs.removeClass('is-visible').filter('[data="'+$(this).attr('href')+'"]').addClass('is-visible');
+			p.addClass('is-active').siblings().removeClass('is-active');
+		}
+	});
+	$('.autorization__type a').on('click', function(e) {
+		e.preventDefault();
+		var p = $(this).parents('li');
+		if ( !p.hasClass('is-active') ) {
+			var tabs = $(this).parents('.autorization__tab').find('.autorization__form');
+			tabs.removeClass('is-visible').filter('[data="'+$(this).attr('href')+'"]').addClass('is-visible');
+			p.addClass('is-active').siblings().removeClass('is-active');
+		}
+	});
 });
