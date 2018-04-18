@@ -12574,13 +12574,7 @@ div.radio input {
 	.compare__table tbody td {
 		font-size:11px;
 		line-height:13px;
-		padding:6px 0 5px 10px;
-	}
-	.compare__table td:first-child {
-		padding-left:5px !important;
-	}
-	.compare__table td:last-of-type {
-		padding-right:5px !important;
+		padding:6px 5px 5px 6px !important;
 	}
 	.compare__table tbody tr:nth-child(2n+1) {
 		background:#ffffff;
@@ -12592,19 +12586,35 @@ div.radio input {
 		font-weight:bold;
 		text-transform:uppercase;
 	}
-	.compare__table thead td {
-		width:auto;
-		padding:0 0 11px 10px;
+	.compare__table table {
+		overflow:hidden;
+		margin-right:5px;
 	}
-	.compare__table thead strong {
-		display:block;
+	.compare__table thead td {
+		position:relative;
+		width:160px;
+		padding:0 5px 12px 6px !important;
+	}
+	.compare__table thead td:first-child,
+	.compare__table tbody td:first-child {
+		padding-left:5px !important;
+	}
+	.compare__table thead td:after {
+		content:'';
+		position:absolute;
+		right:-1px;
+		top:0;
+		width:1px;
+		height:10000px;
+		background:#eeeeee;
+	}
+	.compare__table thead tr:last-child:after {
+		display:none;
 	}
 	.compare__table .item-elem {
 		overflow:visible;
-		height:220px;
-		padding:0;
-		margin:0 1px 0 0;
-		border-width:0;
+		width:150px;
+		padding:0 0 30px;
 	}
 	.compare__table .item-elem:after {
 		top:0;
@@ -12615,41 +12625,67 @@ div.radio input {
 		background:#eeeeee;
 		border-width:0;
 	}
+	.compare__table .item-elem--title {
+		margin:0 0 8px !important;
+	}
 	.compare__table thead td:last-of-type .item-elem:after {
 		display:none;
 	}
 	.compare__table .item-elem--picture {
 		left:0;
 		top:0;
-		width:116px;
-		height:105px;
+		width:150px;
+		height:119px;
+	}
+	.compare__table .quantity-e,
+	.compare__table .item-elem--compare,
+	.compare__table .item-elem--tag	{
+		display:none;
+	}
+	.compare__table .item-elem--link {
+		padding:119px 0 0;
+	}
+	.compare__table .item-elem--price span {
+		top:-7px;
+		width:50px;
+	}
+	.compare__table .item-elem__additional {
+		width:auto;
+		margin:2px 0 10px;
 	}
 	.compare__table .item-elem--remove {
-		top:-8px;
-		right:-9px;
+		z-index:5;
+		top:0;
+		right:-10px;
+		width:21px;
+		height:21px;
 	}
-	.compare__table .item-elem--add-to-basket {
-		display:block;
-		right:0;
-		bottom:0;
-		width:100%;
-		font-size:10px;
-		line-height:12px;
-		font-weight:normal;
-		padding:9px;
-		margin-right:0;
+	.compare__table .item-elem--remove:after {
+		left:4px;
+		top:4px;
+		width:13px;
+		height:13px;
+		background:url('../img/basket-remove-icon-m.png') no-repeat 0 0;
 	}
-	.compare__table .item-elem--price {
-		bottom:39px;
-		text-align:left;
-	}
-	.compare__table .item-elem--title {
+	.compare__table--head strong {
 		position:relative;
-		left:0;
-		top:109px;
-		width:100%;
-		height:36px;
+		display:block;
+		z-index:5;
+		width:calc(100% + 10px);
+		padding:6px 5px 5px;
+		margin:-6px 0 -5px -5px;
+		background:#ffffff;
+	}
+	.compare__table .item-elem__controls {
+		width:auto;
 		margin:0;
+	}
+	.compare__table .item-elem--button {
+		position:absolute;
+		left:0;
+		bottom:0;
+		display:block;
+		width:100%;
 	}
 	.compare__table .item-elem--code {
 		display:none;
@@ -15221,6 +15257,14 @@ div.radio input {
 	.autorization__type a {
 		font-size:13px;
 		line-height:16px;
+	}
+	.bonuses-message_compare {
+		width:311px;
+		-webkit-transform:translateX(-11px);
+		transform:translateX(-11px);
+	}
+	.bonuses-message_compare:after {
+		right:25px;
 	}
 }
 @media all and (max-width:800px) {

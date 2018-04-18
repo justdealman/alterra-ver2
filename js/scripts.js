@@ -350,6 +350,21 @@
 		});
 	}
 	setRatio();
+	function setCompareHeight() {
+		$('.compare__table').each(function() {
+			var items = $(this).find('.item-elem');
+			if ( isMobile ) {
+				var max = 0;
+				items.each(function() {
+					var h = $(this).outerHeight(); 
+					max = h > max ? h : max;
+				});
+				items.outerHeight(max);
+			} else {
+				items.outerHeight('auto');
+			}
+		});
+	}
 	$(window).on('load resize', function() {
 		$('.special-price-tip, .tip-bg').remove();
 		detectDevice();
@@ -515,6 +530,9 @@
 					});
 				}
 			}
+		}
+		if ( $('.compare__table').length ) {
+			setCompareHeight();
 		}
 		setCompareTable();
 		closeBonusesModal();
