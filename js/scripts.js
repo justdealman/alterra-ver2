@@ -1063,4 +1063,28 @@
 			p.addClass('is-active').siblings().removeClass('is-active');
 		}
 	});
+	if ( $('.basket__lc').length && $('.basket__rc').length ) {
+		$(document).on('scroll resize', function() {
+			var t = $('.basket__rc');
+			if ( !isMobile ) {
+				var shift = 9;
+				var pos = $(document).scrollTop();
+				var start = $('.basket__lc').offset().top+shift;
+				var end = start+$('.basket__lc').outerHeight()-$('.basket__rc').outerHeight()+shift-38;
+				if ( pos > start && pos < end  ) {
+					var diff = pos-start;
+				} else if ( pos <= start ) {
+					var diff = 0;
+				} else if ( pos >= end ) {
+					var diff = end-start;
+				}
+			} else {
+				var diff = 0;
+			}
+			t.css({
+				'-webkit-transform': 'translateY('+diff+'px)',
+				'transform': 'translateY('+diff+'px)'
+			});
+		});
+	}
 });

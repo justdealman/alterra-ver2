@@ -762,7 +762,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 }
 .content {
 	position:relative;
-	max-width:1360px;
+	max-width:1420px;
 	padding:20px 30px 20px;
 	margin:0 auto;
 }
@@ -3761,6 +3761,8 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	vertical-align:top;
 	padding:0 0 0 20px;
 	margin:29px 0 0;
+	-webkit-transition:transform 0.1s linear;
+	transition:transform 0.1s linear;
 }
 .basket--nav {
 	clear:both;
