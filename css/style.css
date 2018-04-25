@@ -3759,8 +3759,7 @@ div.checker,div.radio{position:relative}div.checker,div.checker input,div.checke
 	width:327px;
 	font-size:12px;
 	vertical-align:top;
-	padding:0 0 0 20px;
-	margin:29px 0 0;
+	padding:29px 0 0 20px;
 	-webkit-transition:transform 0.1s linear;
 	transition:transform 0.1s linear;
 }
@@ -9425,6 +9424,8 @@ div.radio input {
 	display:inline-block;
 	width:307px;
 	font-size:12px;
+	-webkit-transition:transform 0.1s linear;
+	transition:transform 0.1s linear;
 }
 .ordering-details {
 	margin:0 0 20px;
