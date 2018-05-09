@@ -9925,6 +9925,27 @@ div.radio input {
 	color:#d0021b;
 	font-style:normal;
 }
+.catalog__view--group .item-elem--price-old,
+.catalog__table--price .item-elem--price-old,
+.catalog__view--group .item-elem--price,
+.catalog__table--price .item-elem--price {
+	padding:0;
+}
+.catalog__table--price .item-elem--price {
+	padding-left:80px;
+}
+.catalog__view--group .item-elem--price span,
+.catalog__table--price .item-elem--price span {
+	left:0;
+	font-weight:normal;
+	white-space:normal;
+}
+.catalog__view--group .item-elem__additional,
+.catalog__table--price .item-elem__additional {
+	font-weight:normal;
+	padding:0;
+	margin:5px 0 5px;
+}
 
 /* desktop */
 @media all and (max-width:1430px) {
