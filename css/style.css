@@ -9946,7 +9946,65 @@ div.radio input {
 	padding:0;
 	margin:5px 0 5px;
 }
-
+.category-b--title {
+	display:block;
+	font-size:24px;
+	line-height:30px;
+	font-weight:bold;
+	padding:0;
+	margin:-7px 0 13px;
+}
+.category-b--special {
+	margin:0 0 35px;
+}
+.category-b--special img {
+	width:100%;
+	max-width:1024px;
+	height:auto;
+}
+.category-b__grid {
+	width:1150px;
+	width:calc(100% + 20px);
+	font-size:0;
+	margin:0 0 61px -10px;
+}
+.category-b__item {
+	display:inline-block;
+	width:20%;
+	padding:0 10px;
+	margin:0 0 20px;
+}
+.item-category-b {
+	display:block;
+	text-align:center;
+	padding:26px 19px 17px;
+	background:#ffffff;
+	-webkit-box-shadow:0 1px 5px rgba(0,35,101,0.23);
+	box-shadow:0 1px 5px rgba(0,35,101,0.23);
+	-webkit-border-radius:5px;
+	border-radius:5px;
+}
+.item-category-b--pic {
+	height:134px;
+	margin:0 11% 10px;
+}
+.item-category-b--title {
+	min-height:42px;
+	display:block;
+	color:#002365;
+	font-size:14px;
+	line-height:21px;
+	text-decoration:underline;
+	padding:0;
+	margin:0;
+}
+.item-category-b--title span {
+	color:#000000;
+	text-decoration:none;
+}
+.item-category-b:hover .item-category-b--title {
+	text-decoration:none;
+}
 /* desktop */
 @media all and (max-width:1430px) {
 	.gallery__list {
