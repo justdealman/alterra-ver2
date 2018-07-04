@@ -9955,6 +9955,7 @@ div.radio input {
 	margin:-7px 0 13px;
 }
 .category-b--special {
+	text-align:center;
 	margin:0 0 35px;
 }
 .category-b--special img {
@@ -9963,6 +9964,11 @@ div.radio input {
 	height:auto;
 }
 .category-b__grid {
+	display:-webkit-box;
+	display:-ms-flexbox;
+	display:flex;
+	-ms-flex-wrap:wrap;
+	flex-wrap:wrap;
 	width:1150px;
 	width:calc(100% + 20px);
 	font-size:0;
@@ -9975,9 +9981,11 @@ div.radio input {
 	margin:0 0 20px;
 }
 .item-category-b {
+	width:calc(20% - 20px);
 	display:block;
 	text-align:center;
 	padding:26px 19px 17px;
+	margin:0 10px 20px;
 	background:#ffffff;
 	-webkit-box-shadow:0 1px 5px rgba(0,35,101,0.23);
 	box-shadow:0 1px 5px rgba(0,35,101,0.23);
@@ -10291,6 +10299,9 @@ div.radio input {
 	}
 	.basket-table__th br {
 		display:block;
+	}
+	.item-category-b {
+		width:calc(25% - 20px);
 	}
 }
 @media all and (min-width:1021px) {
@@ -15348,6 +15359,37 @@ div.radio input {
 	.bonuses-message_compare:after {
 		right:25px;
 	}
+	.category-b--title {
+		font-size:18px;
+		line-height:21px;
+		margin:0 0 13px;
+	}
+	.category-b--special {
+		margin:0 0 20px;
+	}
+	.category-b__grid {
+		width:calc(100% + 10px);
+		margin:0 0 10px -5px;
+	}
+	.item-category-b {
+		width:calc(25% - 10px);
+		margin:0 5px 10px;
+	}
+	.catalog__description.is-mobile {
+		display:block;
+		margin:0 0 17px;
+	}
+	.item-category-b {
+		padding:14px 14px 10px;
+	}
+	.item-category-b--title {
+		min-height:0;
+		font-size:13px;
+		line-height:18px;
+	}
+	.item-category-b--pic {
+		margin:0 0 10px;
+	}
 }
 @media all and (max-width:800px) {
 	.vacancy .information {
@@ -15565,6 +15607,9 @@ div.radio input {
 		width:100%;
 		padding:0;
 	}
+	.item-category-b {
+		width:calc(33.33% - 10px);
+	}
 }
 @media all and (max-width:640px) {
 	.club-steps__item {
@@ -15658,6 +15703,9 @@ div.radio input {
 		display:block;
 		width:100%;
 		margin:0 0 10px !important;
+	}
+	.item-category-b {
+		width:calc(50% - 10px);
 	}
 }
 .element-hidden {
