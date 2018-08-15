@@ -1,20 +1,20 @@
-﻿$(function() {
-	function setImgCover() {
-		$('.img-cover').each(function() {
-			$(this).parent().css({
-				'background': 'url("'+$(this).attr('src')+'") no-repeat center center',
-				'background-size': 'cover'
-			});
+﻿function setImgCover() {
+	$('.img-cover').each(function() {
+		$(this).parent().css({
+			'background': 'url("'+$(this).attr('src')+'") no-repeat center center',
+			'background-size': 'cover'
 		});
-	}
-	function setImgContain() {
-		$('.img-contain').each(function() {
-			$(this).parent().css({
-				'background': 'url("'+$(this).attr('src')+'") no-repeat center center',
-				'background-size': 'contain'
-			});
+	});
+}
+function setImgContain() {
+	$('.img-contain').each(function() {
+		$(this).parent().css({
+			'background': 'url("'+$(this).attr('src')+'") no-repeat center center',
+			'background-size': 'contain'
 		});
-	}
+	});
+}
+$(function() {
 	setImgCover();
 	setImgContain();
 	function navSideTextPos() {
@@ -1093,3 +1093,65 @@
 		});
 	}
 });
+$('.filter__group').each(function() {
+	var size = $(this).find('.filter__list li').size();
+	if ( size <=3 ) {
+		$(this).find('.filter--more').hide();
+	}
+});
+function setFilterDrop(e) {
+	var group = e.parents('.filter__group');
+	var elem = group.find('.filter__list');
+	if ( e.hasClass('is-active') ) {
+		elem.addClass('is-visible');
+	} else {
+		elem.removeClass('is-visible');
+	}
+}
+$('.filter--more').on('click', function(e) {
+	e.preventDefault();
+	$(this).toggleClass('is-active');
+	setFilterDrop($(this));
+});
+function setFilter(e,s) {
+	var label = e.parents('label');
+	if ( e.is(':'+s) ) {
+		label.addClass('is-'+s);
+	} else {
+		label.removeClass('is-'+s);
+	}
+}
+$('.filter__list input[type="checkbox"]').each(function() {
+	if ( $(this).is(':checked') ) {
+		setFilter($(this),'checked');
+	}
+	if ( $(this).is(':disabled') ) {
+		setFilter($(this),'disabled');
+	}
+});
+$('.filter__list input[type="checkbox"]').on('change', function() {
+	setFilter($(this),'checked');
+});
+function clearFilter(e) {
+	var filter = e.parents('.filter');
+	filter.find('.filter__list input[type="checkbox"]').each(function() {
+		$(this).prop('checked',false).trigger('change').uniform();
+	});
+}
+$('.filter--clear').on('click', function(e) {
+	e.preventDefault();
+	clearFilter($(this));
+})
+function setSpecialSlider(t) {
+	if ( t.hasClass('slick-initialized') ) {
+		t.slick('unslick');
+	}
+	t.addClass('is-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		infinite: true,
+		arrows: true,
+		dots: true
+	});
+	$('.special').addClass('is-locked');
+}
