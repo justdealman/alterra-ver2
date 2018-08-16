@@ -14,9 +14,17 @@ function setImgContain() {
 		});
 	});
 }
+function setRatio() {
+	$('[data-ratio]').each(function() {
+		var t = $(this).find('.scale');
+		var r = $(this).attr('data-ratio');
+		t.outerHeight(t.outerWidth()*r);
+	});
+}
 $(function() {
 	setImgCover();
 	setImgContain();
+	setRatio();
 	function navSideTextPos() {
 		$('.nav-side__item--text').each(function() {
 			if ( $(this).outerHeight() == 15 ) {
@@ -502,6 +510,10 @@ $(function() {
 						$(this).find('.basket-table--code').detach().insertAfter($(this).find('.basket-table--title'));
 					});
 				}
+				if ( $('.special').length > 0 ) {
+					$('.breadcrumbs').detach().insertAfter($('.header'));
+					$('<h4 class="filter-side--toggle">Фильтр по параметрам</h4>').insertBefore($('.filter'));
+				}
 			} else {
 				$('.slider-main').detach().insertBefore('.content__col-2 .catalog');
 				if ( $('.content .breadcrumbs').length > 0 ) {
@@ -529,6 +541,9 @@ $(function() {
 						$(this).find('.basket-table--code').detach().insertBefore($(this).find('.basket-table--title'));
 					});
 				}
+				if ( $('.special').length > 0 ) {
+					$('.breadcrumbs').detach().prependTo($('.container__rc'));
+				}
 			}
 		}
 		if ( $('.compare__table').length ) {
@@ -536,6 +551,7 @@ $(function() {
 		}
 		setCompareTable();
 		closeBonusesModal();
+		setRatio();
 	});
 	$(window).trigger('resize');
 	$('.mobile-drop__nav_has-sub > a').on('click', function(e) {
@@ -1143,6 +1159,7 @@ $('.filter--clear').on('click', function(e) {
 	clearFilter($(this));
 })
 function setSpecialSlider(t) {
+	setRatio();
 	if ( t.hasClass('slick-initialized') ) {
 		t.slick('unslick');
 	}
@@ -1151,7 +1168,24 @@ function setSpecialSlider(t) {
 		slidesToScroll: 1,
 		infinite: true,
 		arrows: true,
-		dots: true
+		dots: true,
+		adaptiveHeight: true,
+		responsive: [
+			{
+				breakpoint: 1020,
+				settings: {
+					slidesToShow: 2
+				}
+			}, {
+				breakpoint: 640,
+				settings: {
+					slidesToShow: 1
+				}
+			}
+		]
 	});
 	$('.special').addClass('is-locked');
 }
+$('.container').on('click', '.filter-side--toggle', function() {
+	$(this).toggleClass('is-dropped');
+});
