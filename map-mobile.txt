@@ -1,0 +1,37 @@
+<div class="map-mobile">
+	<span class="map-mobile--title">Новоалтайск, зона доставки 1</span>
+	<table class="map-table">
+		<tbody>
+			<tr>
+				<td>
+					<p>Выбран магазин - г. Барнаул, Павловский тракт, 206б</p></td><td><p>Стоимость доставки уточните у оператора (3852) 558-558</p>
+				</td>
+			</tr>
+			<tr class="map-table_blue-bg">
+				<td>
+					<p>Ближайшая доставка из магазина: г. Новоалтайск, ул. Дорожная, 44/1</p>
+					<button class="map-table--button">сменить магазин</button>
+				</td>
+				<td>
+					<p><strong>Стоимость доставки до 1.5т</strong></p>
+					<table class="map-table-price">
+						<tbody>
+							<tr>
+								<td><span>до подъезда</span></td>
+								<td>300р.</td>
+							</tr>
+						</tbody>
+					</table>
+					<table class="map-table-price">
+						<tbody>
+							<tr>
+								<td><span>доставка, разгрузка и подъем</span></td>
+								<td>от 420р.</td>
+							</tr>
+						</tbody>
+					</table>
+				</td>
+			</tr>
+		</tbody>
+	</table>
+</div>
